@@ -1,0 +1,14 @@
+{
+  "name": "Systems Review Console",
+  "short_name": "Systems Review",
+  "description": "History-taking systems review: reasoning-layer reference, checklist, spaced-repetition drill and case differentials.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#10201F",
+  "theme_color": "#0F766E",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

@@ -1,0 +1,894 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Systems Review Console</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png">
+<meta name="theme-color" content="#0F766E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Systems Review">
+<meta name="mobile-web-app-capable" content="yes">
+<style>
+  :root {
+    --paper: #F4F2EC;
+    --paper-2: #EBE8DF;
+    --card: #FBFAF6;
+    --ink: #17302E;
+    --ink-soft: #3E5350;
+    --ink-faint: #6B7C79;
+    --line: #DAD6CA;
+    --accent: #0F766E;
+    --accent-soft: #d7ebe7;
+    --accent-ink: #0a544e;
+    --red: #C2452E;
+    --red-soft: #f6e0d9;
+    --green: #3f7d54;
+    --green-soft: #dcece1;
+    --blue: #3a6079;
+    --blue-soft: #dde8ef;
+    --amber: #9a6a17;
+    --amber-soft: #f0e4cb;
+    --shadow: 0 1px 2px rgba(23,48,46,.06), 0 6px 20px rgba(23,48,46,.06);
+    --radius: 12px;
+    --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #10201F;
+      --paper-2: #142826;
+      --card: #16302D;
+      --ink: #E8EEEC;
+      --ink-soft: #B4C4C1;
+      --ink-faint: #7E938F;
+      --line: #294744;
+      --accent: #4FBFB2;
+      --accent-soft: #143734;
+      --accent-ink: #7fd6cb;
+      --red: #E9836C;
+      --red-soft: #3a221c;
+      --green: #7fc294;
+      --green-soft: #1d3326;
+      --blue: #8fb4cd;
+      --blue-soft: #1c2e39;
+      --amber: #d8ab5e;
+      --amber-soft: #33280f;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.28);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #10201F;
+    --paper-2: #142826;
+    --card: #16302D;
+    --ink: #E8EEEC;
+    --ink-soft: #B4C4C1;
+    --ink-faint: #7E938F;
+    --line: #294744;
+    --accent: #4FBFB2;
+    --accent-soft: #143734;
+    --accent-ink: #7fd6cb;
+    --red: #E9836C;
+    --red-soft: #3a221c;
+    --green: #7fc294;
+    --green-soft: #1d3326;
+    --blue: #8fb4cd;
+    --blue-soft: #1c2e39;
+    --amber: #d8ab5e;
+    --amber-soft: #33280f;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.28);
+  }
+  :root[data-theme="light"] {
+    --paper: #F4F2EC;
+    --paper-2: #EBE8DF;
+    --card: #FBFAF6;
+    --ink: #17302E;
+    --ink-soft: #3E5350;
+    --ink-faint: #6B7C79;
+    --line: #DAD6CA;
+    --accent: #0F766E;
+    --accent-soft: #d7ebe7;
+    --accent-ink: #0a544e;
+    --red: #C2452E;
+    --red-soft: #f6e0d9;
+    --green: #3f7d54;
+    --green-soft: #dcece1;
+    --blue: #3a6079;
+    --blue-soft: #dde8ef;
+    --amber: #9a6a17;
+    --amber-soft: #f0e4cb;
+    --shadow: 0 1px 2px rgba(23,48,46,.06), 0 6px 20px rgba(23,48,46,.06);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 18px 96px; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .top-inner { max-width: 860px; margin: 0 auto; padding: 14px 18px 0; }
+  .brand { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .brand h1 {
+    font-family: var(--serif); font-weight: 600; font-size: 1.32rem;
+    margin: 0; letter-spacing: -.01em;
+  }
+  .brand .sub { color: var(--ink-faint); font-size: .82rem; }
+  .pulse { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 var(--accent); animation: pulse 2.6s infinite; }
+  @keyframes pulse { 0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 55%,transparent);} 70%{box-shadow:0 0 0 7px transparent;} 100%{box-shadow:0 0 0 0 transparent;} }
+  @media (prefers-reduced-motion: reduce){ .pulse{animation:none;} }
+
+  .tabs { display: flex; gap: 2px; margin-top: 12px; flex-wrap: wrap; }
+  .tab {
+    appearance: none; border: none; background: none; cursor: pointer;
+    font-family: var(--sans); font-size: .92rem; font-weight: 550;
+    color: var(--ink-faint); padding: 10px 14px 12px; border-bottom: 2.5px solid transparent;
+    transition: color .15s;
+  }
+  .tab:hover { color: var(--ink-soft); }
+  .tab[aria-selected="true"] { color: var(--accent-ink); border-bottom-color: var(--accent); }
+  .theme-btn {
+    margin-left: auto; appearance: none; background: none; border: 1px solid var(--line);
+    color: var(--ink-soft); border-radius: 20px; padding: 5px 11px; cursor: pointer; font-size: .78rem;
+    align-self: center;
+  }
+  .theme-btn:hover { border-color: var(--accent); color: var(--accent-ink); }
+
+  h2.mode-h { font-family: var(--serif); font-weight: 600; font-size: 1.5rem; margin: 26px 0 4px; letter-spacing: -.01em; text-wrap: balance; }
+  p.mode-lede { color: var(--ink-soft); margin: 0 0 20px; max-width: 60ch; }
+
+  .sys-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; }
+  .sys-card {
+    text-align: left; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 14px 15px; cursor: pointer; box-shadow: var(--shadow); transition: transform .12s, border-color .12s;
+    font-family: var(--sans); color: var(--ink);
+  }
+  .sys-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .sys-card .sc-name { font-weight: 600; font-size: 1.02rem; display: flex; align-items: center; gap: 8px; }
+  .sys-card .sc-dot { width: 9px; height: 9px; border-radius: 3px; flex: none; }
+  .sys-card .sc-scaffold { font-family: var(--mono); font-size: .7rem; color: var(--ink-faint); margin-top: 8px; letter-spacing: .01em; line-height: 1.5; }
+
+  .detail-head { display: flex; align-items: center; gap: 12px; margin: 8px 0 2px; }
+  .back {
+    appearance: none; background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+    padding: 7px 12px; cursor: pointer; color: var(--ink-soft); font-size: .85rem; font-family: var(--sans);
+  }
+  .back:hover { border-color: var(--accent); color: var(--accent-ink); }
+
+  .scaffold-band {
+    background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 14px 16px; margin: 14px 0 8px;
+  }
+  .scaffold-band .lbl { font-family: var(--mono); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+  .scaffold-flow { font-family: var(--mono); font-weight: 600; font-size: .95rem; color: var(--accent-ink); margin: 6px 0 10px; line-height: 1.6; }
+  .chunks { display: grid; gap: 6px; }
+  .chunk { display: grid; grid-template-columns: 108px 1fr; gap: 10px; font-size: .84rem; align-items: baseline; }
+  .chunk .ck { font-family: var(--mono); font-weight: 600; color: var(--ink); font-size: .72rem; text-transform: uppercase; letter-spacing: .03em; }
+  .chunk .cv { color: var(--ink-soft); }
+  .see-also {
+    margin: 0 0 8px; font-size: .82rem; color: var(--ink-soft);
+    background: var(--accent-soft); border-radius: 8px; padding: 8px 12px;
+    display: grid; grid-template-columns: auto 1fr; gap: 8px; align-items: baseline;
+  }
+  .see-also .sa-lbl { font-family: var(--mono); font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-ink); }
+
+  .q-list { display: flex; flex-direction: column; gap: 10px; margin-top: 6px; }
+  details.q {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  details.q > summary {
+    list-style: none; cursor: pointer; padding: 13px 15px; display: flex; align-items: baseline; gap: 10px;
+    font-weight: 600; font-size: 1rem;
+  }
+  details.q > summary::-webkit-details-marker { display: none; }
+  details.q > summary .qnum { font-family: var(--mono); font-size: .78rem; color: var(--accent); font-weight: 700; flex: none; }
+  details.q > summary .chev { margin-left: auto; color: var(--ink-faint); transition: transform .2s; flex: none; }
+  details.q[open] > summary .chev { transform: rotate(90deg); }
+  details.q[open] > summary { border-bottom: 1px solid var(--line); }
+  .q-body { padding: 4px 15px 16px; }
+  .ask {
+    font-family: var(--serif); font-style: italic; font-size: 1.02rem; color: var(--accent-ink);
+    border-left: 3px solid var(--accent); padding: 6px 0 6px 13px; margin: 12px 0;
+  }
+  .why { font-family: var(--serif); font-size: .98rem; color: var(--ink-soft); margin: 10px 0; line-height: 1.6; }
+  .why b, .points b, .red-flag b { color: var(--ink); font-weight: 600; }
+  .points { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-direction: column; gap: 7px; }
+  .points li { display: grid; grid-template-columns: auto 1fr; gap: 9px; font-size: .9rem; align-items: baseline; }
+  .points li .cue { color: var(--ink); }
+  .chip {
+    font-family: var(--mono); font-size: .62rem; text-transform: uppercase; letter-spacing: .06em;
+    padding: 2px 7px; border-radius: 20px; font-weight: 700; flex: none; align-self: start; margin-top: 2px;
+    white-space: nowrap;
+  }
+  .chip.in { background: var(--green-soft); color: var(--green); }
+  .chip.out { background: var(--blue-soft); color: var(--blue); }
+  .red-flag {
+    margin-top: 13px; background: var(--red-soft); border: 1px solid color-mix(in srgb, var(--red) 30%, transparent);
+    border-radius: 9px; padding: 9px 12px; font-size: .88rem; color: var(--ink);
+    display: grid; grid-template-columns: auto 1fr; gap: 9px; align-items: baseline;
+  }
+  .red-flag .rf-lbl { font-family: var(--mono); font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--red); }
+
+  /* Foundations — multi-section detail */
+  .fnd-section { margin: 26px 0 8px; padding-top: 22px; border-top: 2px solid var(--line); }
+  .fnd-section:first-of-type { border-top: none; padding-top: 4px; margin-top: 8px; }
+  .fnd-sec-h { font-family: var(--serif); font-weight: 600; font-size: 1.28rem; margin: 0 0 4px; display: flex; align-items: center; gap: 10px; letter-spacing: -.01em; }
+  .fnd-sec-n { font-family: var(--mono); font-size: .82rem; font-weight: 700; color: #fff; background: var(--accent); width: 1.7em; height: 1.7em; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+  :root[data-theme="dark"] .fnd-sec-n { color:#08201e; }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .fnd-sec-n { color:#08201e; } }
+
+  /* Spaced-repetition strip + rating */
+  .srs-strip {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    background: var(--paper-2); border: 1px solid var(--line); border-radius: 10px;
+    padding: 10px 13px; margin: 4px 0 16px; font-size: .82rem; color: var(--ink-soft);
+  }
+  .srs-strip .srs-count { font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-faint); }
+  .srs-strip .srs-due-n { color: var(--accent-ink); font-weight: 700; }
+  .weak-chips { display: flex; gap: 5px; flex-wrap: wrap; }
+  .weak-chip {
+    font-size: .72rem; padding: 3px 8px; border-radius: 20px; cursor: pointer;
+    background: var(--red-soft); color: var(--red); border: 1px solid color-mix(in srgb, var(--red) 28%, transparent);
+    font-weight: 600;
+  }
+  .weak-chip:hover { filter: brightness(1.05); }
+  .srs-badge { font-family: var(--mono); font-size: .6rem; text-transform: uppercase; letter-spacing: .05em; padding: 2px 7px; border-radius: 20px; font-weight: 700; }
+  .srs-badge.due { background: var(--accent-soft); color: var(--accent-ink); }
+  .srs-badge.box { background: var(--paper-2); color: var(--ink-faint); border: 1px solid var(--line); }
+  .srs-badge.health-weak { background: var(--red-soft); color: var(--red); border: 1px solid color-mix(in srgb, var(--red) 30%, transparent); }
+  .srs-badge.health-mixed { background: var(--amber-soft); color: var(--amber); border: 1px solid color-mix(in srgb, var(--amber) 30%, transparent); }
+  .srs-badge.health-strong { background: var(--green-soft); color: var(--green); border: 1px solid color-mix(in srgb, var(--green) 30%, transparent); }
+  .rate-row { margin-top: 18px; }
+  .rate-row .rate-lbl { font-family: var(--mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 8px; }
+  .mark-summary { font-size: .84rem; color: var(--ink-soft); margin: 2px 0 12px; }
+  button.act:disabled { opacity: .45; cursor: not-allowed; filter: none; }
+  button.act:disabled:hover { filter: none; transform: none; }
+  .drill-sec-scaffold { margin: 10px 0; }
+  .drill-sec-scaffold .dss-name { font-weight: 600; font-size: .9rem; margin-bottom: 5px; }
+
+  /* per-question recall marking */
+  .reveal-list li.qrow { flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 10px; }
+  .qrow-txt { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+  .qrow-marks { display: flex; gap: 6px; flex: none; }
+  .markbtn {
+    appearance: none; cursor: pointer; width: 30px; height: 30px; border-radius: 8px;
+    border: 1px solid var(--line); background: var(--card); color: var(--ink-faint);
+    font-size: .92rem; font-weight: 700; line-height: 1;
+    transition: transform .1s, border-color .12s, color .12s, background .12s;
+  }
+  .markbtn:hover { transform: translateY(-1px); }
+  .markbtn.r.active { background: var(--green-soft); border-color: var(--green); color: var(--green); }
+  .reveal-list li.qrow.is-r { border-left-color: var(--green); }
+  .reveal-list li.qrow.hist-strong { border-left-color: var(--green); background: color-mix(in srgb, var(--green) 7%, var(--paper-2)); }
+  .reveal-list li.qrow.hist-mixed { border-left-color: var(--amber); background: color-mix(in srgb, var(--amber) 7%, var(--paper-2)); }
+  .reveal-list li.qrow.hist-weak { border-left-color: var(--red); background: color-mix(in srgb, var(--red) 7%, var(--paper-2)); }
+  .weak-chip.q { background: var(--amber-soft); color: var(--amber); border-color: color-mix(in srgb, var(--amber) 28%, transparent); }
+
+  /* Mirror table (hyper|hypo etc.) */
+  .mirror-scroll { overflow-x: auto; margin: 12px 0 2px; }
+  table.mirror { border-collapse: collapse; width: 100%; font-size: .87rem; min-width: 340px; }
+  table.mirror th {
+    text-align: left; font-family: var(--mono); font-size: .68rem; letter-spacing: .04em; text-transform: uppercase;
+    padding: 7px 11px; background: var(--paper-2); color: var(--ink); border-bottom: 1px solid var(--line);
+  }
+  table.mirror th.up { color: var(--red); }
+  table.mirror th.down { color: var(--blue); }
+  table.mirror td { padding: 7px 11px; border-bottom: 1px solid var(--line); color: var(--ink-soft); vertical-align: top; width: 50%; }
+  table.mirror td.up { border-left: 2px solid var(--red-soft); }
+  table.mirror td.down { border-left: 2px solid var(--blue-soft); }
+  table.mirror tr:last-child td { border-bottom: none; }
+
+  /* Discriminator table (classic-confusion comparison) */
+  .disc-block { margin-top: 20px; }
+  .disc-title { font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 8px; }
+  table.disc { border-collapse: collapse; width: 100%; font-size: .85rem; min-width: 420px; }
+  table.disc th, table.disc td { padding: 7px 11px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; color: var(--ink-soft); }
+  table.disc th { font-family: var(--mono); font-size: .66rem; letter-spacing: .04em; text-transform: uppercase; color: var(--ink); background: var(--paper-2); }
+  table.disc .rowhead { font-weight: 600; color: var(--ink); }
+  table.disc tr:last-child td { border-bottom: none; }
+
+  /* Drill */
+  .drill-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); padding: 22px; margin-top: 6px;
+  }
+  .drill-sys { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .drill-sys .sc-dot { width: 12px; height: 12px; border-radius: 4px; }
+  .drill-sys h3 { font-family: var(--serif); font-size: 1.4rem; margin: 0; font-weight: 600; }
+  .drill-prompt { color: var(--ink-soft); margin: 14px 0 18px; }
+  .hint-tier { margin: 16px 0; }
+  .hint-tier .lbl { font-family: var(--mono); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px; }
+  .reveal-list { display: flex; flex-direction: column; gap: 8px; margin: 8px 0 0; padding: 0; list-style: none; }
+  .reveal-list li {
+    display: flex; flex-direction: column; gap: 3px;
+    padding: 9px 13px; background: var(--paper-2); border-radius: 8px; font-size: .93rem;
+    border-left: 3px solid var(--accent); animation: fade .35s ease;
+  }
+  .reveal-list .rl-name { font-weight: 600; }
+  .reveal-list .rl-ask { font-family: var(--serif); font-style: italic; font-size: .85rem; color: var(--ink-soft); line-height: 1.45; }
+  @keyframes fade { from{opacity:0; transform: translateY(4px);} to{opacity:1; transform:none;} }
+  @media (prefers-reduced-motion: reduce){ .reveal-list li{animation:none;} }
+  .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+  button.act {
+    appearance: none; cursor: pointer; font-family: var(--sans); font-weight: 600; font-size: .92rem;
+    padding: 11px 18px; border-radius: 9px; border: 1px solid var(--accent); background: var(--accent); color: #fff;
+    transition: filter .12s;
+  }
+  @media (prefers-color-scheme: dark){ button.act{ color:#08201e; } }
+  :root[data-theme="dark"] button.act { color:#08201e; }
+  :root[data-theme="light"] button.act { color:#fff; }
+  button.act:hover { filter: brightness(1.07); }
+  button.act.ghost { background: var(--card); color: var(--ink-soft); border-color: var(--line); }
+  button.act.ghost:hover { border-color: var(--accent); color: var(--accent-ink); }
+  .scaffold-hint { font-family: var(--mono); font-weight: 600; color: var(--accent-ink); font-size: .92rem; background: var(--accent-soft); padding: 10px 13px; border-radius: 8px; line-height: 1.6; }
+
+  /* Checklist mode */
+  .cl-intro-note {
+    font-size: .82rem; color: var(--ink-faint); font-style: italic; margin: -8px 0 16px;
+  }
+  details.cl {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); overflow: hidden; margin-bottom: 9px;
+  }
+  details.cl > summary {
+    list-style: none; cursor: pointer; padding: 13px 15px; display: flex; align-items: center; gap: 9px;
+  }
+  details.cl > summary::-webkit-details-marker { display: none; }
+  details.cl > summary .cl-dot { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+  details.cl > summary .cl-name { font-weight: 600; font-size: 1rem; }
+  details.cl > summary .cl-scaffold { font-family: var(--mono); font-size: .64rem; color: var(--ink-faint); margin-left: auto; text-align: right; display: none; }
+  @media (min-width: 620px){ details.cl > summary .cl-scaffold { display: block; } }
+  details.cl[open] > summary { border-bottom: 1px solid var(--line); }
+  .cl-body { padding: 12px 16px 16px; }
+  .cl-group { margin-bottom: 12px; }
+  .cl-group:last-child { margin-bottom: 0; }
+  .cl-group-lbl { font-family: var(--mono); font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-ink); margin-bottom: 5px; }
+  .cl-items { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 3px; }
+  .cl-items li { font-size: .9rem; color: var(--ink-soft); padding-left: 16px; position: relative; }
+  .cl-items li::before { content: ""; position: absolute; left: 3px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: .55; }
+  .cl-note { font-size: .8rem; color: var(--ink-faint); font-style: italic; margin-top: 10px; padding-top: 9px; border-top: 1px dashed var(--line); }
+  .cl-section { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+  .cl-section:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .cl-section-h { font-family: var(--serif); font-weight: 600; font-size: 1.02rem; margin-bottom: 8px; color: var(--ink); }
+
+  /* Cases */
+  .case-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); padding: 20px 20px 22px; margin-top: 6px;
+  }
+  .vignette { display: flex; gap: 12px; align-items: flex-start; }
+  .vignette .stem-badge { font-family: var(--mono); font-size: .64rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); padding: 4px 9px; border-radius: 6px; flex: none; margin-top: 3px; }
+  .stem { font-family: var(--serif); font-size: 1.22rem; line-height: 1.4; margin: 0; text-wrap: balance; }
+  .case-instr { color: var(--ink-soft); font-size: .9rem; margin: 14px 0 12px; }
+  .opts { display: flex; flex-direction: column; gap: 8px; }
+  .opt {
+    display: flex; align-items: flex-start; gap: 11px; padding: 11px 13px; border: 1px solid var(--line);
+    border-radius: 9px; cursor: pointer; background: var(--card); transition: border-color .12s, background .12s;
+    user-select: none;
+  }
+  .opt:hover { border-color: var(--accent); }
+  .opt input { margin: 3px 0 0; accent-color: var(--accent); width: 16px; height: 16px; flex: none; }
+  .opt .opt-q { font-size: .93rem; }
+  .opt.sel { background: var(--accent-soft); border-color: var(--accent); }
+  .opt.locked { cursor: default; }
+  .opt.locked:hover { border-color: var(--line); }
+  .opt.v-key { border-color: var(--green); background: var(--green-soft); }
+  .opt.v-red { border-color: var(--red); background: var(--red-soft); }
+  .opt.v-useful { border-color: var(--blue); background: var(--blue-soft); }
+  .opt.v-low { opacity: .72; }
+  .verdict-tag { font-family: var(--mono); font-size: .58rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; padding: 2px 6px; border-radius: 5px; margin-left: auto; flex: none; white-space: nowrap; }
+  .vt-key { background: var(--green); color: #fff; }
+  .vt-red { background: var(--red); color: #fff; }
+  .vt-useful { background: var(--blue); color: #fff; }
+  .vt-low { background: var(--line); color: var(--ink-faint); }
+  .opt-why { font-size: .84rem; color: var(--ink-soft); margin-top: 6px; font-family: var(--serif); line-height: 1.5; grid-column: 1/-1; width: 100%; }
+  .opt-wrap { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+  .opt-top { display: flex; align-items: flex-start; gap: 10px; }
+  .feedback-summary {
+    margin-top: 16px; padding: 14px 16px; border-radius: 10px; background: var(--paper-2);
+    border: 1px solid var(--line); font-size: .92rem;
+  }
+  .feedback-summary .score { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; margin-bottom: 4px; }
+  .miss-note { color: var(--red); font-weight: 600; }
+  .case-progress { font-family: var(--mono); font-size: .72rem; color: var(--ink-faint); letter-spacing: .04em; }
+  .disclaimer { margin-top: 34px; padding: 14px 16px; border: 1px dashed var(--line); border-radius: 10px; color: var(--ink-faint); font-size: .8rem; line-height: 1.55; }
+</style>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <span class="pulse" aria-hidden="true"></span>
+      <h1>Systems Review Console</h1>
+      <span class="sub">history-taking · differentials · recall</span>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle colour theme">◐ theme</button>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Study modes">
+      <button class="tab" role="tab" data-mode="reference" aria-selected="true">Reference</button>
+      <button class="tab" role="tab" data-mode="checklist" aria-selected="false">Checklist</button>
+      <button class="tab" role="tab" data-mode="drill" aria-selected="false">Drill</button>
+      <button class="tab" role="tab" data-mode="cases" aria-selected="false">Cases</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="app"></main>
+
+<script>
+/* ============================ DATA ============================ */
+__CONTENT_DATA__
+
+/* ============================ APP ============================ */
+const app = document.getElementById('app');
+let mode = 'reference';
+let currentSystem = null;
+
+/* ---------- persistence (localStorage) ---------- */
+const STORE_KEY = 'srr-console-v1';
+const DAY = 86400000;
+const BOX_DAYS = [0, 1, 3, 7, 16];   // Leitner intervals for box 1..5
+function loadStore(){ try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch(e){ return {}; } }
+function saveStore(){ try { localStorage.setItem(STORE_KEY, JSON.stringify(store)); } catch(e){} }
+let store = loadStore();
+store.srs = store.srs || {};        // { [sysId]: {box, due, reps, lapses} }
+store.cases = store.cases || { idx:0, streak:0, best:0 };
+store.qstats = store.qstats || {};  // { [qId]: {remembered, forgot, lastAt, sysId, sysName, label} }
+
+/* ---------- spaced repetition ---------- */
+function srsOf(id){ return store.srs[id] || { box:0, due:0, reps:0, lapses:0 }; }
+function isDue(id){ const r = store.srs[id]; return !r || r.due <= Date.now(); }   // never-seen counts as due
+function isWeak(id){ const r = store.srs[id]; return r && r.box>0 && r.box<=2; }
+// system-level red/orange/green: box 1-2 weak, box 3 mixed, box 4-5 strong, never-graded => null
+function systemHealth(id){
+  const r = store.srs[id];
+  if(!r || !r.box) return null;
+  if(r.box<=2) return 'weak';
+  if(r.box===3) return 'mixed';
+  return 'strong';
+}
+const HEALTH_DOT = { weak:'🔴', mixed:'🟠', strong:'🟢' };
+function gradeSystem(id, grade){
+  const r = srsOf(id);
+  let box = r.box || 1;
+  if(grade==='again'){ box = 1; r.lapses = (r.lapses||0)+1; }
+  else if(grade==='hard'){ box = Math.max(1, box); }
+  else { box = Math.min(5, box+1); }              // 'good'
+  store.srs[id] = { box, due: Date.now() + BOX_DAYS[box-1]*DAY, reps: (r.reps||0)+1, lapses: r.lapses||0 };
+  saveStore();
+}
+// systems eligible for scheduling/recall (excludes nothing here; Exam pool is filtered separately in wave 2)
+function dueSystems(){ return SYSTEMS.filter(s=>isDue(s.id)); }
+function nextDueId(afterId){
+  const order = SYSTEMS.slice();
+  // rotate so search starts after the current one
+  if(afterId){ const i = order.findIndex(s=>s.id===afterId); if(i>=0) order.push(...order.splice(0,i+1)); }
+  const due = order.find(s=>isDue(s.id));
+  if(due) return due.id;
+  // none due: pick the soonest-due
+  return SYSTEMS.slice().sort((a,b)=>srsOf(a.id).due - srsOf(b.id).due)[0].id;
+}
+
+/* ---------- per-question recall tracking ---------- */
+const HIST_MIN_ATTEMPTS = 2;   // need at least this many drills before showing any hint
+const HIST_WEAK_RATE = 2/3;    // forgot-rate at/above this → "commonly forgotten" (red)
+const HIST_STRONG_RATE = 1/3;  // forgot-rate at/below this → "commonly remembered" (green)
+// between the two cutoffs: a genuine 50/50 split isn't "frequent" either way, so it stays uncoloured
+function qId(sysId, sectionName, qName){ return sysId + '::' + (sectionName ? sectionName+'::' : '') + qName; }
+function allQuestionsOf(s){
+  if(s.sections) return s.sections.flatMap(sec=>sec.questions.map(q=>({ sectionName:sec.name, q })));
+  return s.questions.map(q=>({ sectionName:null, q }));
+}
+// scored once per question when a drill round finishes: 'remembered' if checked, else 'forgot'
+function recordQuestionResult(id, result, meta){
+  if(!store.qstats[id]) store.qstats[id] = { remembered:0, forgot:0, lastAt:0 };
+  const st = store.qstats[id];
+  Object.assign(st, meta);
+  st[result]++;
+  st.lastAt = Date.now();
+  saveStore();
+}
+function weakQuestions(limit){
+  return Object.entries(store.qstats)
+    .map(([id,st])=>{ const total = st.remembered+st.forgot; return { id, ...st, total, rate: total ? st.forgot/total : 0 }; })
+    .filter(x=>x.total>=HIST_MIN_ATTEMPTS && x.rate>=HIST_WEAK_RATE)
+    .sort((a,b)=> b.rate-a.rate || b.forgot-a.forgot)
+    .slice(0, limit||6);
+}
+
+/* ---------- theme (persisted) ---------- */
+function applyTheme(t){ if(t) document.documentElement.setAttribute('data-theme', t); }
+applyTheme(store.theme);
+const themeBtn = document.getElementById('themeBtn');
+themeBtn.addEventListener('click', ()=>{
+  const cur = document.documentElement.getAttribute('data-theme');
+  const isDark = cur ? cur === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const next = isDark ? 'light' : 'dark';
+  applyTheme(next); store.theme = next; saveStore();
+});
+
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    mode = t.dataset.mode;
+    document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected', x===t));
+    currentSystem = null;
+    render();
+    window.scrollTo(0,0);
+  });
+});
+
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+/* ---------- REFERENCE ---------- */
+function renderReference(){
+  if(currentSystem){ return renderSystemDetail(currentSystem); }
+  const grid = SYSTEMS.map(s=>`
+    <button class="sys-card" data-sys="${s.id}">
+      <div class="sc-name"><span class="sc-dot" style="background:${s.color}"></span>${esc(s.name)}</div>
+      <div class="sc-scaffold">${esc(s.scaffold)}</div>
+    </button>`).join('');
+  app.innerHTML = `
+    <h2 class="mode-h">Reference</h2>
+    <p class="mode-lede">Every system's screening questions, each with why you ask it and what it rules in or out. Tap a system, then tap a question to expand the reasoning.</p>
+    <div class="sys-grid">${grid}</div>
+    ${disclaimer()}`;
+  app.querySelectorAll('.sys-card').forEach(c=>c.addEventListener('click',()=>{ currentSystem=c.dataset.sys; render(); window.scrollTo(0,0); }));
+}
+
+/* -- reusable block renderers (a flat system OR one section share this shape) -- */
+function scaffoldBandHTML(b){
+  const chunks = b.chunks.map(c=>`<div class="chunk"><span class="ck">${esc(c[0])}</span><span class="cv">${esc(c[1])}</span></div>`).join('');
+  const seeAlso = b.seeAlso ? `<div class="see-also"><span class="sa-lbl">see also</span><span>${esc(b.seeAlso)}</span></div>` : '';
+  return `<div class="scaffold-band">
+      <div class="lbl">The scaffold — say this to rebuild the list</div>
+      <div class="scaffold-flow">${esc(b.scaffold)}</div>
+      <div class="chunks">${chunks}</div>
+    </div>${seeAlso}`;
+}
+function questionsHTML(questions){
+  return questions.map((q,i)=>{
+    const pts = q.points && q.points.length ? `<ul class="points">${q.points.map(p=>`<li><span class="chip ${p[0]}">${p[0]==='in'?'rules in':'rules out'}</span><span class="cue">${esc(p[1])}</span></li>`).join('')}</ul>` : '';
+    let mir = '';
+    if(q.mirror){
+      const rows = q.mirror.rows.map(r=>`<tr><td class="up">${esc(r[0])}</td><td class="down">${esc(r[1])}</td></tr>`).join('');
+      mir = `<div class="mirror-scroll"><table class="mirror"><thead><tr><th class="up">⬆ ${esc(q.mirror.left)}</th><th class="down">⬇ ${esc(q.mirror.right)}</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+    }
+    const red = q.red ? `<div class="red-flag"><span class="rf-lbl">red flag</span><span>${esc(q.red)}</span></div>` : '';
+    return `<details class="q">
+      <summary><span class="qnum">${String(i+1).padStart(2,'0')}</span><span>${esc(q.n)}</span><span class="chev">›</span></summary>
+      <div class="q-body">
+        <div class="ask">${esc(q.ask)}</div>
+        <div class="why">${esc(q.why)}</div>
+        ${mir}${pts}${red}
+      </div>
+    </details>`;
+  }).join('');
+}
+function discriminatorHTML(d){
+  if(!d) return '';
+  const head = d.headers.map((h,i)=>`<th${i===0?' class="rowhead"':''}>${esc(h)}</th>`).join('');
+  const body = d.rows.map(r=>`<tr>${r.map((c,i)=>`<td${i===0?' class="rowhead"':''}>${esc(c)}</td>`).join('')}</tr>`).join('');
+  return `<div class="disc-block"><div class="disc-title">Discriminator — ${esc(d.title)}</div><div class="mirror-scroll"><table class="disc"><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div></div>`;
+}
+function blockDetailHTML(b){
+  return `${scaffoldBandHTML(b)}<div class="q-list">${questionsHTML(b.questions)}</div>${discriminatorHTML(b.discriminator)}`;
+}
+
+function renderSystemDetail(id){
+  const s = SYSTEMS.find(x=>x.id===id);
+  let bodyHTML;
+  if(s.sections){
+    const intro = s.intro ? `<p class="mode-lede" style="margin-top:0">${esc(s.intro)}</p>` : '';
+    const secs = s.sections.map((sec,i)=>`
+      <section class="fnd-section">
+        <h3 class="fnd-sec-h"><span class="fnd-sec-n">${i+1}</span>${esc(sec.name)}</h3>
+        ${blockDetailHTML(sec)}
+      </section>`).join('');
+    bodyHTML = intro + secs;
+  } else {
+    bodyHTML = blockDetailHTML(s);
+  }
+  app.innerHTML = `
+    <div class="detail-head"><button class="back" id="backBtn">‹ All systems</button></div>
+    <h2 class="mode-h" style="display:flex;align-items:center;gap:11px"><span class="sc-dot" style="width:13px;height:13px;border-radius:4px;background:${s.color}"></span>${esc(s.name)}</h2>
+    ${bodyHTML}
+    ${disclaimer()}`;
+  document.getElementById('backBtn').addEventListener('click',()=>{ currentSystem=null; render(); window.scrollTo(0,0); });
+}
+
+/* ---------- CHECKLIST ---------- */
+function renderChecklistItems(list){
+  return list.map(entry=>{
+    if(typeof entry === 'string'){
+      return `<div class="cl-group"><ul class="cl-items"><li>${esc(entry)}</li></ul></div>`;
+    }
+    const items = entry.items.map(it=>`<li>${esc(it)}</li>`).join('');
+    return `<div class="cl-group"><div class="cl-group-lbl">${esc(entry.g)}</div><ul class="cl-items">${items}</ul></div>`;
+  }).join('');
+}
+function renderChecklist(){
+  const blocks = SYSTEMS.map(s=>{
+    let body;
+    if(s.sections){
+      body = s.sections.map(sec=>{
+        const note = sec.clnote ? `<div class="cl-note">${esc(sec.clnote)}</div>` : '';
+        return `<div class="cl-section"><div class="cl-section-h">${esc(sec.name)}</div>${renderChecklistItems(sec.checklist)}${note}</div>`;
+      }).join('');
+    } else {
+      const note = s.clnote ? `<div class="cl-note">${esc(s.clnote)}</div>` : '';
+      body = `${renderChecklistItems(s.checklist)}${note}`;
+    }
+    return `<details class="cl">
+      <summary>
+        <span class="cl-dot" style="background:${s.color}"></span>
+        <span class="cl-name">${esc(s.name)}</span>
+        <span class="cl-scaffold">${esc(s.scaffold)}</span>
+      </summary>
+      <div class="cl-body">${body}</div>
+    </details>`;
+  }).join('');
+  app.innerHTML = `
+    <h2 class="mode-h">Checklist</h2>
+    <p class="mode-lede">The fast recall skeleton — every system as a flat, scannable list of screening prompts, no reasoning. This is the between-patients quick reference; use Reference for the "why".</p>
+    <p class="cl-intro-note">Built from your own second-year list, grouped by each system's scaffold. Tap a system to expand.</p>
+    ${blocks}
+    ${disclaimer()}`;
+}
+
+/* ---------- DRILL ---------- */
+let drillState = { sys:null, revealed:false, checked:new Set() };
+function setDrillSystem(id){
+  drillState.sys = id; drillState.revealed = false; drillState.checked = new Set();
+  store.drillSys = id; saveStore();
+}
+function drillScaffoldTier(s){
+  if(s.sections){
+    const rows = s.sections.map(sec=>`<div class="drill-sec-scaffold"><div class="dss-name">${esc(sec.name)}</div><div class="scaffold-hint">${esc(sec.scaffold)}</div></div>`).join('');
+    return `<div class="hint-tier"><div class="lbl">The scaffold${s.sections?'s':''}</div>${rows}</div>`;
+  }
+  return `<div class="hint-tier"><div class="lbl">The scaffold (chunks)</div><div class="scaffold-hint">${esc(s.scaffold)}</div></div>`;
+}
+function questionRow(sysId, sectionName, q){
+  const id = qId(sysId, sectionName, q.n);
+  const label = sectionName ? `${sectionName} — ${q.n}` : q.n;
+  const checked = drillState.checked.has(id);
+  const hist = store.qstats[id];
+  const histTotal = hist ? hist.remembered+hist.forgot : 0;
+  let cls, histAttr = '';
+  if(checked) cls = ' is-r';
+  else if(histTotal>=HIST_MIN_ATTEMPTS){
+    const forgotRate = hist.forgot/histTotal;
+    cls = forgotRate>=HIST_WEAK_RATE ? ' hist-weak' : forgotRate<=HIST_STRONG_RATE ? ' hist-strong' : ' hist-mixed';
+  }
+  else cls = '';
+  if(histTotal>0) histAttr = ` title="Track record: ${hist.remembered} remembered, ${hist.forgot} forgot"`;
+  return `<li class="qrow${cls}" data-qid="${esc(id)}"${histAttr}>
+    <div class="qrow-txt"><span class="rl-name">${esc(q.n)}</span><span class="rl-ask">${esc(q.ask)}</span></div>
+    <div class="qrow-marks">
+      <button class="markbtn r${checked?' active':''}" data-qid="${esc(id)}" data-label="${esc(label)}" title="I remembered this">✓</button>
+    </div>
+  </li>`;
+}
+function drillListTier(s){
+  const listOf = (sectionName, qs) => `<ul class="reveal-list">${qs.map(q=>questionRow(s.id, sectionName, q)).join('')}</ul>`;
+  if(s.sections){
+    const groups = s.sections.map(sec=>`<div class="drill-sec-scaffold"><div class="dss-name">${esc(sec.name)}</div>${listOf(sec.name, sec.questions)}</div>`).join('');
+    return `<div class="hint-tier"><div class="lbl">The questions — tap ✓ for each one you remembered</div>${groups}</div>`;
+  }
+  return `<div class="hint-tier"><div class="lbl">The questions — tap ✓ for each one you remembered</div>${listOf(null, s.questions)}</div>`;
+}
+function srsStripHTML(){
+  const dueN = dueSystems().length;
+  const weakSys = SYSTEMS.filter(s=>isWeak(s.id));
+  const sysChips = weakSys.length
+    ? `<span class="srs-count">weak systems</span><span class="weak-chips">${weakSys.map(s=>`<span class="weak-chip" data-weak="${s.id}">${esc(s.name)}</span>`).join('')}</span>`
+    : `<span class="srs-count">weak systems</span><span style="color:var(--ink-faint)">none flagged yet</span>`;
+  const weakQ = weakQuestions(6);
+  const qChips = weakQ.length
+    ? `<span style="width:1px;height:16px;background:var(--line)"></span><span class="srs-count">often missed</span><span class="weak-chips">${weakQ.map(q=>`<span class="weak-chip q" data-weakq="${esc(q.sysId)}" title="${esc(q.sysName)} — forgot ${q.forgot}/${q.total}">${esc(q.label)}</span>`).join('')}</span>`
+    : '';
+  return `<div class="srs-strip">
+    <span class="srs-count">due</span><span class="srs-due-n">${dueN}</span><span style="color:var(--ink-faint)">/ ${SYSTEMS.length} systems</span>
+    <span style="width:1px;height:16px;background:var(--line)"></span>
+    ${sysChips}
+    ${qChips}
+  </div>`;
+}
+function renderDrill(){
+  if(!drillState.sys){ setDrillSystem((store.drillSys && SYSTEMS.some(s=>s.id===store.drillSys)) ? store.drillSys : nextDueId()); }
+  const s = SYSTEMS.find(x=>x.id===drillState.sys) || SYSTEMS[0];
+  drillState.sys = s.id; store.drillSys = s.id; saveStore();
+  const options = SYSTEMS.map(x=>{
+    const dot = HEALTH_DOT[systemHealth(x.id)] || '⚪';
+    return `<option value="${x.id}" ${x.id===s.id?'selected':''}>${dot} ${esc(x.name)}${isDue(x.id)?' • due':''}</option>`;
+  }).join('');
+  const r = srsOf(s.id);
+  const badge = isDue(s.id)
+    ? `<span class="srs-badge due">due now</span>`
+    : `<span class="srs-badge box">box ${r.box} · next in ${Math.max(0,Math.round((r.due-Date.now())/DAY))}d</span>`;
+  const health = systemHealth(s.id);
+  const healthBadge = health
+    ? `<span class="srs-badge health-${health}">${health==='weak'?'needs work':health==='mixed'?'developing':'mastered'}</span>`
+    : `<span class="srs-badge box">not drilled yet</span>`;
+  let reveal = '';
+  let rateRow = '';
+  if(drillState.revealed){
+    reveal = drillScaffoldTier(s) + drillListTier(s);
+    const totalQ = allQuestionsOf(s).length;
+    const checkedN = drillState.checked.size;
+    rateRow = `
+      <div class="rate-row">
+        <div class="rate-lbl">Tap ✓ next to each question you remembered — anything left unchecked counts as forgotten when you finish</div>
+        <div class="mark-summary">Checked <span style="color:var(--green)">${checkedN}</span> / ${totalQ} remembered</div>
+        <div class="btn-row" style="margin-top:0">
+          <button class="act" id="finishBtn">Finish → schedule &amp; next due</button>
+        </div>
+      </div>`;
+  }
+  const btnLabel = drillState.revealed ? 'Hide answers' : 'Reveal';
+  app.innerHTML = `
+    <h2 class="mode-h">Drill</h2>
+    <p class="mode-lede">Active recall. Pick a system, recite it aloud from memory, then reveal and tap ✓ next to every question you got right — anything left unchecked counts as forgotten. The app schedules the system's next review and tracks which questions you commonly forget.</p>
+    ${srsStripHTML()}
+    <label style="font-size:.82rem;color:var(--ink-faint);font-family:var(--mono);letter-spacing:.05em;text-transform:uppercase">System</label>
+    <select id="drillSel" style="display:block;margin:6px 0 16px;padding:10px 12px;border-radius:9px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-family:var(--sans);font-size:.95rem;width:100%;max-width:360px">${options}</select>
+    <div class="drill-card">
+      <div class="drill-sys"><span class="sc-dot" style="background:${s.color}"></span><h3>${esc(s.name)}</h3>${healthBadge}${badge}</div>
+      <p class="drill-prompt">Before revealing: name the scaffold${s.sections?'s':' chunks'}, then every screening question. Say them aloud.</p>
+      ${reveal}
+      ${rateRow}
+      <div class="btn-row">
+        <button class="act" id="revealBtn">${btnLabel}</button>
+        <button class="act ghost" id="nextBtn">Skip to next due ↻</button>
+      </div>
+    </div>
+    ${disclaimer()}`;
+  document.getElementById('drillSel').addEventListener('change',e=>{ setDrillSystem(e.target.value); renderDrill(); });
+  document.getElementById('revealBtn').addEventListener('click',()=>{
+    drillState.revealed = !drillState.revealed;
+    if(!drillState.revealed) drillState.checked = new Set();
+    renderDrill();
+  });
+  document.getElementById('nextBtn').addEventListener('click',()=>{ setDrillSystem(nextDueId(drillState.sys)); renderDrill(); window.scrollTo(0,0); });
+  app.querySelectorAll('.weak-chip[data-weak]').forEach(c=>c.addEventListener('click',()=>{ setDrillSystem(c.dataset.weak); renderDrill(); window.scrollTo(0,0); }));
+  app.querySelectorAll('.weak-chip[data-weakq]').forEach(c=>c.addEventListener('click',()=>{ setDrillSystem(c.dataset.weakq); renderDrill(); window.scrollTo(0,0); }));
+  app.querySelectorAll('.markbtn').forEach(b=>b.addEventListener('click',()=>{
+    const scrollY = window.scrollY;
+    const id = b.dataset.qid;
+    if(drillState.checked.has(id)) drillState.checked.delete(id); else drillState.checked.add(id);
+    renderDrill();
+    window.scrollTo(0, scrollY);
+  }));
+  const fb = document.getElementById('finishBtn');
+  if(fb) fb.addEventListener('click',()=>{
+    const entries = allQuestionsOf(s);
+    let remembered = 0;
+    entries.forEach(({sectionName,q})=>{
+      const id = qId(s.id, sectionName, q.n);
+      const label = sectionName ? `${sectionName} — ${q.n}` : q.n;
+      const result = drillState.checked.has(id) ? 'remembered' : 'forgot';
+      if(result==='remembered') remembered++;
+      recordQuestionResult(id, result, { sysId:s.id, sysName:s.name, label });
+    });
+    const ratio = entries.length ? remembered/entries.length : 0;
+    const grade = ratio>=0.85 ? 'good' : ratio>0.4 ? 'hard' : 'again';
+    gradeSystem(drillState.sys, grade);
+    setDrillSystem(nextDueId(drillState.sys));
+    renderDrill(); window.scrollTo(0,0);
+  });
+}
+
+/* ---------- CASES ---------- */
+let caseState = { idx: Math.min(store.cases.idx||0, CASES.length-1), selected:new Set(), submitted:false };
+function renderCases(){
+  const c = CASES[caseState.idx];
+  const opts = c.options.map((o,i)=>{
+    const sel = caseState.selected.has(i);
+    let cls = 'opt' + (sel?' sel':'');
+    let tag = '', why='';
+    if(caseState.submitted){
+      cls = 'opt locked v-'+o.v + (sel?' sel':'');
+      const label = {key:'high-yield', red:'red flag', useful:'useful', low:'low-yield'}[o.v];
+      tag = `<span class="verdict-tag vt-${o.v}">${label}</span>`;
+      why = `<div class="opt-why">${esc(o.why)}</div>`;
+    }
+    return `<label class="${cls}" data-i="${i}">
+      <div class="opt-top">
+        <input type="checkbox" ${sel?'checked':''} ${caseState.submitted?'disabled':''} data-i="${i}">
+        <div class="opt-wrap"><span class="opt-q">${esc(o.q)}</span>${why}</div>
+        ${tag}
+      </div>
+    </label>`;
+  }).join('');
+
+  let feedback = '';
+  if(caseState.submitted){
+    const missedRed = c.options.filter((o,i)=>o.v==='red' && !caseState.selected.has(i));
+    const gotKey = c.options.filter((o,i)=>(o.v==='key'||o.v==='red') && caseState.selected.has(i)).length;
+    const totalKey = c.options.filter(o=>o.v==='key'||o.v==='red').length;
+    const pickedLow = c.options.filter((o,i)=>o.v==='low' && caseState.selected.has(i)).length;
+    let msg = `You caught <b>${gotKey} of ${totalKey}</b> high-yield / red-flag questions for this presentation.`;
+    if(pickedLow) msg += ` You also picked ${pickedLow} low-yield question${pickedLow>1?'s':''} — in a focused history, time spent there is time not spent honing the differential.`;
+    const missNote = missedRed.length ? `<div class="miss-note" style="margin-top:8px">⚠ You missed a red-flag question: "${esc(missedRed[0].q)}". These are the must-not-miss screens.</div>` : `<div style="margin-top:8px;color:var(--green);font-weight:600">✓ No red-flag questions missed.</div>`;
+    const passed = missedRed.length===0 && gotKey===totalKey && pickedLow===0;
+    const streakNote = `<div style="margin-top:8px;font-size:.86rem;color:var(--ink-soft)">${passed?'✓ Clean sweep':'Streak reset'} — current streak <b>${store.cases.streak}</b> · best <b>${store.cases.best}</b></div>`;
+    feedback = `<div class="feedback-summary"><div class="score">Feedback</div><div>${msg}</div>${missNote}${streakNote}</div>`;
+  }
+
+  const btn = caseState.submitted
+    ? `<button class="act" id="nextCase">Next case →</button><button class="act ghost" id="retryCase">Try again</button>`
+    : `<button class="act" id="submitCase">Check my selection</button>`;
+
+  app.innerHTML = `
+    <h2 class="mode-h">Cases</h2>
+    <p class="mode-lede">The real skill: given a presentation, choose which screening questions actually discriminate between your differentials — and never miss a red flag. Select the questions you'd ask, then check.</p>
+    <div class="case-card">
+      <div class="case-progress">Case ${caseState.idx+1} of ${CASES.length} · presenting complaint: ${esc(c.complaint)} · streak ${store.cases.streak||0}${(store.cases.best||0)>0?` (best ${store.cases.best})`:''}</div>
+      <div class="vignette" style="margin-top:10px">
+        <span class="stem-badge">Vignette</span>
+        <p class="stem">${esc(c.stem)}</p>
+      </div>
+      <p class="case-instr">Which of these would you ask to hone your differential? Tick all that apply.</p>
+      <div class="opts">${opts}</div>
+      <div class="btn-row">${btn}</div>
+      ${feedback}
+    </div>
+    ${disclaimer()}`;
+
+  if(!caseState.submitted){
+    app.querySelectorAll('.opt input').forEach(inp=>{
+      inp.addEventListener('change',e=>{
+        const i = +e.target.dataset.i;
+        if(e.target.checked) caseState.selected.add(i); else caseState.selected.delete(i);
+        app.querySelector(`.opt[data-i="${i}"]`).classList.toggle('sel', e.target.checked);
+      });
+    });
+    const sb = document.getElementById('submitCase');
+    if(sb) sb.addEventListener('click',()=>{
+      const missedRed = c.options.some((o,i)=>o.v==='red' && !caseState.selected.has(i));
+      const gotAllKey = c.options.filter(o=>o.v==='key'||o.v==='red').every((o)=>caseState.selected.has(c.options.indexOf(o)));
+      const pickedLow = c.options.some((o,i)=>o.v==='low' && caseState.selected.has(i));
+      const passed = !missedRed && gotAllKey && !pickedLow;
+      store.cases.streak = passed ? (store.cases.streak||0)+1 : 0;
+      store.cases.best = Math.max(store.cases.best||0, store.cases.streak);
+      saveStore();
+      caseState.submitted=true; renderCases();
+    });
+  } else {
+    document.getElementById('nextCase').addEventListener('click',()=>{
+      const nextIdx = (caseState.idx+1)%CASES.length;
+      store.cases.idx = nextIdx; saveStore();
+      caseState = { idx:nextIdx, selected:new Set(), submitted:false }; renderCases(); window.scrollTo(0,0);
+    });
+    document.getElementById('retryCase').addEventListener('click',()=>{
+      caseState.selected=new Set(); caseState.submitted=false; renderCases();
+    });
+  }
+}
+
+function disclaimer(){
+  return `<div class="disclaimer"><b>Study aid, not a clinical reference.</b> Content follows a Talley &amp; O'Connor–style framework, merged with your own second-year list. Always defer to your clinical school's teaching, your OSCE marking rubrics, and current local guidelines — and to a supervising clinician in real patient care.</div>`;
+}
+
+function render(){
+  if(mode==='reference') renderReference();
+  else if(mode==='checklist') renderChecklist();
+  else if(mode==='drill') renderDrill();
+  else renderCases();
+}
+render();
+
+if('serviceWorker' in navigator){
+  window.addEventListener('load', ()=>{ navigator.serviceWorker.register('sw.js').catch(()=>{}); });
+}
+</script>
