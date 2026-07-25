@@ -35,35 +35,7 @@ The master discriminator is **inflammatory vs mechanical**, and one question doe
 
 ---
 
-### 2. Stiffness — *"Are your joints stiff in the morning? How long before they loosen?"*
-
-**Why we ask:** The best single discriminator of inflammatory vs mechanical disease.
-
-**Rules in / rules out:**
-- **Prolonged morning stiffness — ≥1 hour for classic RA (≥30 min in axial spondyloarthritis), easing with activity** → inflammatory (RA, spondyloarthritis). Note morning stiffness is a supportive clue, not a scored ACR/EULAR criterion
-- **Brief stiffness (<30 min) or stiffness after rest/activity, worse through the day** → mechanical/OA
-- **Proximal (shoulder/hip girdle) stiffness in someone >50 + raised inflammatory markers** → polymyalgia rheumatica (ask about GCA symptoms)
-
----
-
-### 3. Swelling — *"Are the joints swollen? Warm or red?"*
-
-**Why we ask:** Confirms synovitis (soft, boggy swelling) vs bony enlargement (OA) vs effusion, and warmth/redness raises infection/crystal disease.
-
-**Rules in / rules out:**
-- **Soft symmetrical swelling of small joints** → inflammatory synovitis (RA)
-- **Hard, bony swellings at DIPs (Heberden's)** → OA
-- **Single hot red swollen joint** → gout/pseudogout/sepsis
-
----
-
-### 4. Function / impact — *"What can't you do now that you could before — dressing, gripping, stairs? Any deformity or joints giving way?"*
-
-**Why we ask:** Rheumatology is a functional specialty; disability drives management and reveals severity better than pain scores.
-
----
-
-### 5. Back pain — *"Any back pain? Anything make it worse? Does it go down your legs?"*
+### 2. Back pain — *"Any back pain? Anything make it worse? Does it go down your legs?"*
 
 **Why we ask:** Mostly mechanical, but hosts several red-flag conditions; the pattern and associated features triage it.
 
@@ -76,16 +48,58 @@ The master discriminator is **inflammatory vs mechanical**, and one question doe
 
 ---
 
-### 6. Systemic / CTD screen — *"Any skin rashes, dry or red eyes, mouth ulcers, hair loss, or fingers changing colour in the cold?"*
+### 3. Stiffness — *"Are your joints stiff in the morning? How long before they loosen?"*
 
-**Why we ask:** Rheumatological disease is systemic — these extra-articular clues point to a specific connective tissue disease and separate it from isolated joint disease.
+**Why we ask:** The best single discriminator of inflammatory vs mechanical disease.
 
 **Rules in / rules out:**
-- **Raynaud's (white** →blue→red fingers in cold) + rash/arthralgia → SLE, systemic sclerosis, mixed CTD
-- **Photosensitive malar rash + mouth ulcers + hair loss + arthralgia** → SLE
+- **Prolonged morning stiffness — ≥1 hour for classic RA (≥30 min in axial spondyloarthritis), easing with activity** → inflammatory (RA, spondyloarthritis). Note morning stiffness is a supportive clue, not a scored ACR/EULAR criterion
+- **Brief stiffness (<30 min) or stiffness after rest/activity, worse through the day** → mechanical/OA
+- **Proximal (shoulder/hip girdle) stiffness in someone >50 + raised inflammatory markers** → polymyalgia rheumatica (ask about GCA symptoms)
+
+---
+
+### 4. Swelling — *"Are the joints swollen? Warm or red?"*
+
+**Why we ask:** Confirms synovitis (soft, boggy swelling) vs bony enlargement (OA) vs effusion, and warmth/redness raises infection/crystal disease.
+
+**Rules in / rules out:**
+- **Soft symmetrical swelling of small joints** → inflammatory synovitis (RA)
+- **Hard, bony swellings at DIPs (Heberden's)** → OA
+- **Single hot red swollen joint** → gout/pseudogout/sepsis
+
+---
+
+### 5. Functional impact (ADLs) — *"What can't you do now that you could before — dressing, gripping, stairs?"*
+
+**Why we ask:** Rheumatology is a functional specialty; disability drives management and reveals severity better than pain scores.
+
+---
+
+### 6. Deformity / instability — *"Any visible deformity, or joints giving way / feeling unstable?"*
+
+**Why we ask:** Deformity and instability signal structural joint damage — chronic erosive disease or ligamentous injury — rather than active inflammation alone.
+
+---
+
+### 7. Skin, mucosal & eye screen — *"Any skin rashes, mouth ulcers, or dry/red eyes?"*
+
+**Why we ask:** Extra-articular skin and mucosal clues point to a specific connective tissue disease and separate it from isolated joint disease.
+
+**Rules in / rules out:**
+- **Photosensitive malar rash + mouth ulcers + arthralgia** → SLE
 - **Psoriasis (skin/nails) + arthritis** → psoriatic arthritis
 - **Dry eyes + dry mouth** → Sjögren's
 - **Arthritis + diarrhoea/bloody stool or eye inflammation** → enteropathic/reactive (the seronegative spectrum)
+
+---
+
+### 8. Raynaud's, hair loss & fatigue — *"Do your fingers change colour in the cold? Any hair loss or persistent fatigue?"*
+
+**Why we ask:** Raynaud's (white→blue→red) with rash/arthralgia points to SLE, systemic sclerosis or mixed CTD; hair loss and fatigue are non-specific but common accompaniments of active CTD.
+
+**Rules in / rules out:**
+- **Raynaud's (white** →blue→red fingers in cold) + rash/arthralgia → SLE, systemic sclerosis, mixed CTD
 
 ---
 

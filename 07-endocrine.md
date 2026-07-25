@@ -109,19 +109,34 @@ The unifying trick: most endocrine disease is a **too-much / too-little pair** w
 
 ---
 
-### 7. Pituitary — *"Headaches or change in peripheral vision? Have your hands, feet or features changed? Any milk discharge from the breasts?"*
+### 7. Headache & visual fields — *"Any headaches, or a change in your side (peripheral) vision?"*
 
-**Why we ask:** A pituitary mass causes symptoms two ways — local pressure (bitemporal visual field loss, headache) and hormone excess/deficiency.
+**Why we ask:** A pituitary mass presses upward on the optic chiasm, classically producing bitemporal hemianopia — a mass effect independent of which hormone is over- or under-produced.
 
 **Rules in / rules out:**
 - **Bitemporal hemianopia + headache** → chiasmal compression
-- **Enlarging hands/feet (ring/shoe size), coarse features, sweating** → acromegaly
-- **Galactorrhoea + amenorrhoea / low libido** → prolactinoma
-- **Symptoms of several hormone deficiencies** → hypopituitarism
 
 ---
 
-### 8. Calcium — hyper | hypo mirror — *"Any kidney stones, bone pain, tummy pains, constipation, low mood — or tingling and muscle cramps?"*
+### 8. Acral growth (acromegaly) — *"Have your hands, feet or facial features changed — bigger rings, shoe size, jaw?"*
+
+**Why we ask:** Excess growth hormone after epiphyseal closure thickens soft tissue and bone rather than causing height growth — the change is usually gradual enough that old photos are more revealing than the patient's own recollection.
+
+**Rules in / rules out:**
+- **Enlarging hands/feet (ring/shoe size), coarse features, sweating** → acromegaly
+
+---
+
+### 9. Galactorrhoea — *"Any milk discharge from the breasts?"*
+
+**Why we ask:** Prolactin excess suppresses the gonadal axis, so galactorrhoea usually travels with amenorrhoea or low libido rather than appearing alone.
+
+**Rules in / rules out:**
+- **Galactorrhoea + amenorrhoea / low libido** → prolactinoma
+
+---
+
+### 10. Calcium — hyper | hypo mirror — *"Any kidney stones, bone pain, tummy pains, constipation, low mood — or tingling and muscle cramps?"*
 
 **Why we ask:** Hypercalcaemia has a neat mnemonic — "stones, bones, abdominal groans, psychiatric moans" — and hypocalcaemia is the neuromuscular mirror.
 
@@ -138,7 +153,7 @@ The unifying trick: most endocrine disease is a **too-much / too-little pair** w
 
 ---
 
-### 9. Gonadal / reproductive — *"Change in libido, sexual function or periods? Hot flushes? Change in body or facial hair?"*
+### 11. Gonadal / reproductive — *"Change in libido, sexual function or periods? Hot flushes? Change in body or facial hair?"*
 
 **Why we ask:** Sex-steroid axes overlap with thyroid, pituitary and adrenal disease; changes here often surface an endocrine cause. (For the full reproductive and sexual history, see the Reproductive system file.)
 

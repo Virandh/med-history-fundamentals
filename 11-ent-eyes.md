@@ -33,44 +33,133 @@ The red-flag threads: **sudden loss** (sudden hearing loss, sudden visual loss =
 
 ---
 
-### 2. Tinnitus, discharge, vertigo — *"Any ringing, discharge, pain or spinning sensation?"*
+### 2. Tinnitus — *"Any ringing or buzzing in the ears? One side or both — constant, or pulsing with your heartbeat?"*
 
-**Why we ask:** Localises within the ear and flags the vascular/tumour and infective causes.
+**Why we ask:** Pulsatile or strictly unilateral tinnitus needs vascular/tumour work-up; most tinnitus tracks with hearing loss or an ototoxic drug (aminoglycosides, loop diuretics, aspirin/NSAIDs, quinine, some chemotherapy agents).
 
 **Rules in / rules out:**
-- **Pulsatile/unilateral tinnitus** → needs investigation (vascular, tumour)
-- **Discharge + pain + fever** → otitis externa/media; foul discharge + hearing loss → cholesteatoma
-- **Vertigo + hearing loss + tinnitus** → Ménière's; vertigo alone → cross-reference the neuro vertigo entry
+- **Pulsatile or strictly unilateral** → needs investigation (vascular anomaly, acoustic neuroma)
+- **Tinnitus + hearing loss + vertigo** → Ménière's
+- **Bilateral, non-pulsatile, with noise exposure or an ototoxic drug on the list** → benign/drug-related
 
 ---
 
-### 3. Nasal symptoms — *"Any blockage, discharge, nosebleeds or loss of smell? Facial pain or pressure?"*
+### 3. Ear discharge & earache — *"Any discharge or pain from the ear?"*
 
-**Why we ask:** Separates benign allergic/infective disease from the sinister unilateral tumour.
+**Why we ask:** Localises within the outer, middle or inner ear and separates simple infection from the sinister chronic discharge of cholesteatoma.
+
+**Rules in / rules out:**
+- **Discharge + pain + fever** → otitis externa/media
+- **Foul, chronic discharge + hearing loss** → cholesteatoma — needs ENT referral
+
+---
+
+### 4. Vertigo — *"Do you get spells where the room feels like it's spinning?"*
+
+**Why we ask:** True rotational vertigo localises to the vestibular system or its central connections — cross-reference the Neurological Dizziness/vertigo entry for the full vertigo-vs-presyncope work-up.
+
+**Rules in / rules out:**
+- **Vertigo + hearing loss + tinnitus** → Ménière's
+- **Brief, positional, vertigo alone** → BPPV
+
+---
+
+### 5. Nasal blockage & discharge — *"Is your nose blocked or running? One side or both?"*
+
+**Why we ask:** Bilateral symptoms are usually allergic or infective; persistent unilateral symptoms need a tumour excluded.
 
 **Rules in / rules out:**
 - **Bilateral blockage + sneezing + itch + clear discharge, seasonal** → allergic rhinitis
-- **Unilateral blockage/bloody discharge, persistent** → exclude nasal/sinus tumour (red flag)
-- **Facial pain/pressure + purulent discharge + post-URTI** → sinusitis
-- **Recurrent epistaxis** → local (dry/trauma) usually; consider antiplatelets/anticoagulants and (bilateral/severe) bleeding disorders. (Hypertension is commonly cited but the causal link is contested — treat it as a soft association, not an established cause.)
+- **Unilateral blockage or discharge, persistent** → exclude nasal/sinus tumour
+- **Foreign body (children) or deviated septum** → structural, usually unilateral and longstanding
 
-**Red flag:** Persistent unilateral nasal obstruction or bloody discharge → tumour until excluded.
+**Red flag:** Persistent unilateral nasal obstruction or discharge → tumour until excluded.
 
 ---
 
-### 4. Throat / neck — *"Any sore throat, difficulty or pain swallowing, voice change, or lumps in the neck?"*
+### 6. Epistaxis — *"Have you ever had nosebleeds? How often, how much, and do they stop easily?"*
 
-**Why we ask:** Hosts the deep-space emergency and the head-and-neck cancers.
+**Why we ask:** Most epistaxis is local (trauma, nose-picking, dry mucosa), but recurrent, severe or bilateral bleeding raises anticoagulant/antiplatelet use, bleeding disorders and, rarely, a nasal tumour.
 
 **Rules in / rules out:**
-- **Acute sore throat + fever + exudate** → tonsillitis/pharyngitis; unilateral severe with trismus/drooling → quinsy/deep space (red flag)
-- **Persistent hoarseness >3 weeks in a smoker** → laryngeal/lung cancer (recurrent laryngeal nerve) — cross-reference resp
-- **Progressive dysphagia + weight loss** → oesophageal/pharyngeal malignancy
-- **Persistent unilateral neck lump in an adult** → assume malignancy (nodal/thyroid/salivary) until excluded
+- **Recurrent, minor, with dry air/nose-picking** → local trauma, the commonest cause
+- **On antiplatelets/anticoagulants, or bruising elsewhere** → medication effect or a bleeding disorder (haematological malignancy, haemophilia)
+- **Severe enough to need transfusion, or unilateral and persistent in an older adult** → exclude nasal tumour
+- Hypertension is commonly cited as a cause but the causal link is contested — treat it as a soft association, not an established one
 
 ---
 
-### 5. Visual loss — *"Any loss or blurring of vision — one eye or both, sudden or gradual? Any curtain or shadow?"*
+### 7. Loss of smell — *"Any change in your sense of smell — or taste, since the two often go together?"*
+
+**Why we ask:** Anosmia localises to mechanical obstruction (polyps), infection (including post-viral/COVID), or trauma if complete; isolated anosmia in an older adult can be an early non-motor feature of neurodegenerative disease.
+
+**Rules in / rules out:**
+- **With nasal obstruction or known polyps** → local/mechanical
+- **Post-viral (including post-COVID)** → common, usually recovers over weeks to months
+- **Isolated, no nasal symptoms, older adult** → consider a neurodegenerative cause
+
+---
+
+### 8. Facial pain / pressure — *"Any pain or pressure over your face or sinuses — worse bending forward?"*
+
+**Why we ask:** Localises inflammation to the paranasal sinuses; pain above the eye points to frontal sinusitis, periorbital pain to ethmoid sinusitis.
+
+**Rules in / rules out:**
+- **Facial pain/pressure + purulent nasal discharge + maxillary toothache, worse bending forward, post-URTI** → sinusitis
+- **Itchy eyes + sneezing, no purulent discharge** → favours allergic rhinitis over sinusitis
+
+**Red flag:** Periorbital swelling, visual change or severe headache with sinusitis → orbital or intracranial spread — emergency.
+
+---
+
+### 9. Sore throat — *"Any sore throat? Fever, or trouble opening your mouth?"*
+
+**Why we ask:** Most sore throat is viral pharyngitis; the job is to catch the bacterial minority and the rare deep-space emergency.
+
+**Rules in / rules out:**
+- **Acute sore throat + fever + tonsillar exudate** → bacterial pharyngitis/tonsillitis (group A strep), or in adolescents, EBV
+- **Unilateral severe pain + trismus + drooling** → quinsy (peritonsillar abscess) — red flag
+- **Sore throat + odynophagia + fever ± stridor** → epiglottitis — red flag, do not examine the throat
+
+**Red flag:** Trismus/drooling (quinsy) or stridor with sore throat (epiglottitis) are emergencies.
+
+---
+
+### 10. Dysphagia / odynophagia — *"Any difficulty or pain swallowing?"*
+
+**Why we ask:** Progressive dysphagia with weight loss is oesophageal/pharyngeal cancer until excluded — cross-reference the GI dysphagia entry for the solid-vs-liquid localisation.
+
+**Rules in / rules out:**
+- **Progressive dysphagia + weight loss** → oesophageal/pharyngeal malignancy
+- **Painful swallowing (odynophagia)** → pharyngitis, tonsillitis, or rarely epiglottitis
+
+---
+
+### 11. Hoarseness — *"Has your voice changed or become hoarse?"*
+
+**Why we ask:** Persistent hoarseness >3 weeks needs laryngoscopy — in a smoker it can be the first sign of laryngeal or lung cancer via recurrent laryngeal nerve involvement (cross-reference the Respiratory hoarseness entry).
+
+**Rules in / rules out:**
+- **Persistent hoarseness >3 weeks in a smoker** → laryngeal or lung cancer until excluded
+- **Hoarseness after a URTI, resolving within days–weeks** → laryngitis — benign
+
+**Red flag:** Persistent hoarseness >3 weeks needs laryngoscopy.
+
+---
+
+### 12. Neck lump — *"Any lumps or swelling in the neck?"*
+
+**Why we ask:** A persistent unilateral neck lump in an adult is malignancy until excluded — nodal, thyroid or salivary.
+
+**Rules in / rules out:**
+- **Persistent, unilateral, firm, in an adult** → assume malignancy until excluded
+- **Tender, bilateral, in a child or with a recent URTI** → reactive lymphadenopathy
+
+**Red flag:** Persistent unilateral neck lump in an adult → assume malignancy until excluded.
+
+---
+
+### 13. Visual loss — *"Any loss or blurring of vision — one eye or both, sudden or gradual? Any curtain or shadow?"*
 
 **Why we ask:** The tempo and pain split it into emergencies versus chronic causes.
 
@@ -83,17 +172,34 @@ The red-flag threads: **sudden loss** (sudden hearing loss, sudden visual loss =
 
 ---
 
-### 6. Red / painful eye, diplopia — *"Any red, painful eye? Any double vision or discharge?"*
+### 14. Red / painful eye — *"Any redness or pain in the eye?"*
 
-**Why we ask:** The painful red eye is sight-threatening; diplopia can localise a cranial-nerve lesion or raised ICP.
+**Why we ask:** The painful red eye is sight-threatening until proven otherwise; the benign mimic (conjunctivitis) is gritty and painless with normal vision.
 
 **Rules in / rules out:**
-- **Painful red eye + photophobia/reduced vision** → sight-threatening: acute glaucoma, uveitis, keratitis, scleritis — red flag, needs same-day ophthalmology
-- **Red eye, gritty, discharge, vision normal, no pain** → conjunctivitis (benign)
-- **Diplopia** → cranial nerve palsy (III/IV/VI) — think microvascular, compressive (aneurysm — painful III with fixed pupil is an emergency), or raised ICP; cross-reference neuro
-- **Painful loss of vision on eye movement + colour desaturation** → optic neuritis
+- **Painful red eye + photophobia/reduced vision** → sight-threatening: acute angle-closure glaucoma, uveitis, keratitis, scleritis
+- **Red, gritty, discharge, vision normal, no pain** → conjunctivitis — benign
 
-**Red flag:** A painful red eye with reduced vision needs same-day ophthalmology.
+**Red flag:** Painful red eye with reduced vision needs same-day ophthalmology.
+
+---
+
+### 15. Diplopia — *"Any double vision?"*
+
+**Why we ask:** Diplopia localises a cranial-nerve lesion (III, IV, VI) or raised ICP — cross-reference the Neurological special-senses entry.
+
+**Rules in / rules out:**
+- **** → cranial nerve palsy: think microvascular, compressive (aneurysm — painful III with a fixed pupil is an emergency), or raised ICP
+
+---
+
+### 16. Eye discharge — *"Any discharge from the eye?"*
+
+**Why we ask:** The character of the discharge separates the infective causes and flags when it's actually part of a sight-threatening picture rather than simple conjunctivitis.
+
+**Rules in / rules out:**
+- **Watery/mucopurulent, gritty, vision normal** → conjunctivitis (viral or bacterial) — benign
+- **Purulent discharge + pain + reduced vision** → part of a sight-threatening picture, not simple conjunctivitis
 
 ---
 

@@ -48,21 +48,29 @@ Move top-to-bottom and you cannot forget a segment. Two red-flag threads run the
 
 ---
 
-### 3. Nausea and vomiting — *"Any nausea or vomiting? What does the vomit look like — any blood or coffee-grounds?"*
+### 3. Nausea and vomiting — *"Any nausea or vomiting? How often, and what seems to trigger it?"*
 
-**Why we ask:** Timing and content localise the cause; the appearance screens for upper GI bleeding.
+**Why we ask:** Timing and content localise the cause — early-morning vomiting points away from the gut itself.
 
 **Rules in / rules out:**
-- **Haematemesis / coffee-ground vomit** → upper GI bleed (ulcer, varices, Mallory–Weiss) — a red flag; ask about NSAIDs, alcohol, known liver disease
 - **Vomiting + colicky pain + distension + absolute constipation** → bowel obstruction
 - **Faeculent vomiting** → distal/large bowel obstruction or fistula
 - **Early morning vomiting** → raised ICP, pregnancy, alcohol
+
+---
+
+### 4. Haematemesis — *"What does the vomit look like — any blood or coffee-grounds?"*
+
+**Why we ask:** Haematemesis is a red flag on its own — it always needs an upper GI source excluded, and the character (fresh blood vs coffee-grounds) hints at the rate of bleeding.
+
+**Rules in / rules out:**
+- **Haematemesis / coffee-ground vomit** → upper GI bleed (ulcer, varices, Mallory–Weiss); ask about NSAIDs, alcohol, known liver disease
 
 **Red flag:** Haematemesis — ask about NSAIDs, alcohol, known liver disease.
 
 ---
 
-### 4. Abdominal pain — *"Any tummy pain? Where exactly? Any bloating or fullness after meals?"*
+### 5. Abdominal pain — *"Any tummy pain? Where exactly? Any bloating or fullness after meals?"*
 
 **Why we ask:** Site and character map onto the organ and process — characterise fully with SOCRATES. Bloating/postprandial fullness point to functional or gastric causes.
 
@@ -78,7 +86,13 @@ Move top-to-bottom and you cannot forget a segment. Two red-flag threads run the
 
 ---
 
-### 5. Change in bowel habit — *"Have your bowels changed — more or less often, looser or harder than normal for you?"*
+### 6. Appetite and weight — *"How is your appetite? Any weight loss?"*
+
+**Why we ask:** Ties GI complaints to the constitutional malignancy screen; weight loss escalates the urgency of every symptom above.
+
+---
+
+### 7. Change in bowel habit — *"Have your bowels changed — more or less often, looser or harder than normal for you?"*
 
 **Why we ask:** "Normal" is individual, so anchor to the patient's baseline. A persistent change is a cancer screen.
 
@@ -90,33 +104,60 @@ Move top-to-bottom and you cannot forget a segment. Two red-flag threads run the
 
 ---
 
-### 6. Rectal bleeding / melaena — *"Any blood when you go to the toilet — bright red, or black and tarry? Is the stool pale, greasy or hard to flush?"*
+### 8. Rectal bleeding / melaena — *"Any blood when you go to the toilet — bright red, or black and tarry?"*
 
-**Why we ask:** Colour tells you the level of the bleed; pale, greasy, floating stool (steatorrhoea) points to fat malabsorption.
+**Why we ask:** Colour tells you the level of the bleed.
 
 **Rules in / rules out:**
-- **Melaena (black, tarry, offensive)** → upper GI bleed — pair with haematemesis question
+- **Melaena (black, tarry, offensive)** → upper GI bleed — pair with the haematemesis question
 - **Bright red coating the stool / on the paper** → anorectal (haemorrhoids, fissure)
 - **Blood mixed through the stool + change in habit + weight loss** → colorectal cancer
-- **Bloody diarrhoea with mucus** → colitis (IBD or infective)
-- **Pale, greasy, floating, hard-to-flush stool (steatorrhoea)** → fat malabsorption (pancreatic insufficiency, biliary obstruction, coeliac)
 
 ---
 
-### 7. Jaundice + urine/stool/itch — *"Any yellowing of eyes or skin? Dark urine or pale stool? Any itching?"*
+### 9. Mucus — *"Any mucus or slime with your stool?"*
 
-**Why we ask:** The urine/stool/itch triad separates the types of jaundice at the bedside before any test.
+**Why we ask:** Mucus with blood and diarrhoea points to mucosal inflammation rather than a purely mechanical or bleeding cause.
 
 **Rules in / rules out:**
-- **Dark urine + pale stools + itch** → obstructive (post-hepatic) jaundice: gallstones or, if painless with weight loss, pancreatic head cancer (Courvoisier)
-- **Normal urine/stool, ± anaemia** → pre-hepatic (haemolysis)
-- **Jaundice + risk factors (alcohol, viral hepatitis, paracetamol, travel) + systemic upset** → hepatic
+- **Bloody diarrhoea with mucus** → colitis (IBD or infective)
 
 ---
 
-### 8. Appetite and weight — *"How is your appetite? Any weight loss?"*
+### 10. Steatorrhoea — *"Is the stool pale, greasy, or hard to flush?"*
 
-**Why we ask:** Ties GI complaints to the constitutional malignancy screen; weight loss escalates the urgency of every symptom above.
+**Why we ask:** Pale, greasy, floating stool means fat isn't being absorbed — the fat itself is passing through undigested.
+
+**Rules in / rules out:**
+- **Pale, greasy, floating, hard-to-flush stool** → fat malabsorption (pancreatic insufficiency, biliary obstruction, coeliac disease)
+
+---
+
+### 11. Jaundice — *"Any yellowing of your eyes or skin?"*
+
+**Why we ask:** Jaundice is the headline sign of hepatobiliary disease — the accompanying urine/stool/itch pattern (asked next) tells you which type before any blood test.
+
+**Rules in / rules out:**
+- **Jaundice + risk factors (alcohol, viral hepatitis, paracetamol, travel) + systemic upset** → hepatic
+- **Jaundice ± anaemia, normal urine/stool** → pre-hepatic (haemolysis)
+
+---
+
+### 12. Dark urine / pale stool — *"Any change in the colour of your urine or stool — dark urine, pale or clay-coloured stool?"*
+
+**Why we ask:** Conjugated bilirubin being shunted into the urine instead of the gut is the signature of obstructive (post-hepatic) jaundice.
+
+**Rules in / rules out:**
+- **Dark urine + pale stools** → obstructive (post-hepatic) jaundice: gallstones, or if painless with weight loss, pancreatic head cancer (Courvoisier)
+
+---
+
+### 13. Itch (pruritus) — *"Any itching, especially generalised?"*
+
+**Why we ask:** Retained bile salts under the skin cause the itch of cholestasis — it tracks with the same obstructive picture as dark urine and pale stool.
+
+**Rules in / rules out:**
+- **Generalised itch with jaundice** → cholestasis (obstructive or hepatic)
 
 ---
 

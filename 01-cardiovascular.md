@@ -86,7 +86,13 @@ If you can say "pain, pump, rhythm, vessels, risk" you can rebuild all ~10 quest
 
 ---
 
-### 6. Palpitations — *"Are you ever aware of your heart racing, thumping or skipping? Can you tap out the rhythm?"*
+### 6. Fatigue — *"How is your energy? More tired than you used to be?"*
+
+**Why we ask:** Low cardiac output presents as fatigue before frank dyspnoea in some patients (especially the elderly). Non-specific alone — its value is in aggregate with the pump-failure cluster. Also a common symptom of beta-blocker therapy — review the medication list.
+
+---
+
+### 7. Palpitations — *"Are you ever aware of your heart racing, thumping or skipping? Can you tap out the rhythm?"*
 
 **Why we ask:** "Palpitations" means ten different things to ten patients. The tapped rhythm, mode of onset/offset, and company the symptom keeps let you separate benign ectopics from dangerous arrhythmias.
 
@@ -101,7 +107,7 @@ If you can say "pain, pump, rhythm, vessels, risk" you can rebuild all ~10 quest
 
 ---
 
-### 7. Syncope / presyncope — *"Have you ever blacked out or felt you were about to? What were you doing?"*
+### 8. Syncope / presyncope — *"Have you ever blacked out or felt you were about to? What were you doing?"*
 
 **Why we ask:** Cardiac syncope (arrhythmia, outflow obstruction) kills; vasovagal syncope doesn't. The circumstances are almost the whole diagnosis.
 
@@ -116,7 +122,7 @@ If you can say "pain, pump, rhythm, vessels, risk" you can rebuild all ~10 quest
 
 ---
 
-### 8. Intermittent claudication — *"Do you get cramping calf or buttock pain on walking that eases with rest?"*
+### 9. Intermittent claudication — *"Do you get cramping calf or buttock pain on walking that eases with rest?"*
 
 **Why we ask:** The peripheral arteries share the same atherosclerotic disease as the coronaries — claudication marks the patient as a vasculopath (their biggest killer is MI, not the leg). Claudication distance is the severity yardstick.
 
@@ -130,20 +136,30 @@ If you can say "pain, pump, rhythm, vessels, risk" you can rebuild all ~10 quest
 
 ---
 
-### 9. Fatigue — *"How is your energy? More tired than you used to be?"*
+### 10. Modifiable risk factors — *"High blood pressure, diabetes or cholesterol? Do you smoke? How's your weight and activity level?"*
 
-**Why we ask:** Low cardiac output presents as fatigue before frank dyspnoea in some patients (especially the elderly). Non-specific alone — its value is in aggregate with the pump-failure cluster. Also a common symptom of beta-blocker therapy — review the medication list.
+**Why we ask:** These set the pre-test probability for everything above and are the targets of secondary prevention.
+
+**Rules in / rules out:**
+- **Hypertension, diabetes, dyslipidaemia, smoking (quantify pack-years), obesity, physical inactivity** → each independently raises atherosclerotic risk
 
 ---
 
-### 10. Risk factor screen — *"High blood pressure, diabetes or cholesterol? Do you smoke? Heart disease in the family? Rheumatic fever as a child?"*
+### 11. Family history of premature IHD — *"Any heart disease in the family — particularly at a young age?"*
 
-**Why we ask:** Risk factors set the pre-test probability for everything above. Chest pain in a 55-year-old diabetic smoker with a father who died at 50 is a different question to the same pain in a 25-year-old with none of these.
+**Why we ask:** A first-degree relative with premature IHD (male <55, female <65) raises the patient's own risk independent of their other risk factors.
 
 **Rules in / rules out:**
-- Modifiable: hypertension, diabetes, dyslipidaemia, smoking (pack-years), obesity, physical inactivity
-- Non-modifiable: age, male sex, family history of premature IHD (first-degree relative, male <55 / female <65)
-- **Rheumatic fever in childhood** → valvular disease decades later (still relevant in older patients and Aboriginal and Torres Strait Islander communities)
+- **First-degree relative, male <55 / female <65, with IHD** → premature family history, a non-modifiable risk factor
+
+---
+
+### 12. Rheumatic fever — *"Did you have rheumatic fever as a child?"*
+
+**Why we ask:** Rheumatic fever causes valvular disease that only declares itself decades later — still relevant in older patients and in Aboriginal and Torres Strait Islander communities, where rates remain high.
+
+**Rules in / rules out:**
+- **Rheumatic fever in childhood** → valvular disease (esp. mitral) decades later
 
 ---
 

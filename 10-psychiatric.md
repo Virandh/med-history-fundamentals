@@ -45,19 +45,43 @@ The psychiatric screen samples mood, thought, perception and risk. Remember it a
 
 ---
 
-### 3. Anxiety — *"Do you worry a lot? Sudden attacks of intense fear with physical symptoms? Repetitive thoughts or rituals?"*
+### 3. Generalised worry — *"Do you worry a lot, more days than not?"*
 
-**Why we ask:** Anxiety disorders are common, treatable, and frequently somatised — patients present with palpitations, chest pain and breathlessness (cross-reference cardio/resp).
+**Why we ask:** Persistent, hard-to-control worry across multiple areas of life, with physical tension, is generalised anxiety disorder — common and frequently somatised.
 
 **Rules in / rules out:**
 - **Persistent excessive worry most days, with restlessness/tension/poor sleep** → generalised anxiety
-- **Discrete attacks of terror with palpitations, chest tightness, paraesthesiae, fear of dying** → panic disorder (but exclude hyperthyroidism, phaeochromocytoma, arrhythmia/MI and PE first)
+
+---
+
+### 4. Panic attacks — *"Do you get sudden attacks of intense fear with physical symptoms, out of the blue?"*
+
+**Why we ask:** Panic disorder is a real and common diagnosis, but it's also a diagnosis of exclusion in the moment — the physical symptoms overlap completely with cardiac, respiratory and endocrine emergencies.
+
+**Rules in / rules out:**
+- **Discrete attacks of terror with palpitations, chest tightness, paraesthesiae, fear of dying** → panic disorder — but exclude hyperthyroidism, phaeochromocytoma, arrhythmia/MI and PE first
+
+---
+
+### 5. Obsessions & compulsions — *"Any repetitive thoughts that keep intruding, or rituals you feel you have to do?"*
+
+**Why we ask:** OCD is defined by the pairing — intrusive thoughts causing distress, and compulsions performed to relieve that distress — not by either alone.
+
+**Rules in / rules out:**
 - **Intrusive thoughts + compulsive rituals to relieve them** → OCD
+
+---
+
+### 6. Trauma & PTSD — *"Has anything very frightening or traumatic happened to you? Do you get flashbacks or avoid things that remind you of it?"*
+
+**Why we ask:** PTSD requires a specific link to trauma exposure, distinguishing it from anxiety that arises without a triggering event.
+
+**Rules in / rules out:**
 - **Anxiety tied to a specific trauma with flashbacks/avoidance/hypervigilance** → PTSD
 
 ---
 
-### 4. Psychosis — *"Ever heard or seen things others couldn't? Held beliefs others found unusual, or felt your thoughts interfered with?"*
+### 7. Psychosis — *"Ever heard or seen things others couldn't? Held beliefs others found unusual, or felt your thoughts interfered with?"*
 
 **Why we ask:** Screens perception and thought. Ask matter-of-factly. First-rank-type symptoms and their tempo help separate primary psychosis, mood-congruent psychosis, and organic/drug-induced causes.
 
@@ -68,13 +92,13 @@ The psychiatric screen samples mood, thought, perception and risk. Remember it a
 
 ---
 
-### 5. Cognition — *"Any problems with memory or concentration?"*
+### 8. Cognition — *"Any problems with memory or concentration?"*
 
 **Why we ask:** Bridges to neurology; distinguishes depression ("pseudodementia"), delirium and dementia — which have very different urgencies. (See the neuro delirium/dementia entry.)
 
 ---
 
-### 6. Substances — *"How much alcohol in a typical week? Any recreational drugs?"*
+### 9. Substances — *"How much alcohol in a typical week? Any recreational drugs?"*
 
 **Why we ask:** Substance use causes, mimics and complicates every other psychiatric presentation, and withdrawal can be life-threatening. Quantify, and screen for dependence.
 
@@ -85,16 +109,25 @@ The psychiatric screen samples mood, thought, perception and risk. Remember it a
 
 ---
 
-### 7. Risk — *"Sometimes when people feel this low they have thoughts life isn't worth living, or of harming themselves. Have you had thoughts like that?"*
+### 10. Self-harm & suicide risk — *"Sometimes when people feel this low they have thoughts life isn't worth living, or of harming themselves. Have you had thoughts like that?"*
 
 **Why we ask:** The single most important part of the psychiatric review. Escalate gently through the stages; a plan, means, and intent mark high risk.
 
 **Rules in / rules out:**
 - **Active ideation + plan + means + intent + prior attempts** → high acute risk — needs urgent safety action, never send away
 - **Fleeting passive thoughts, no plan/intent, strong protective factors and support** → lower acute risk, but document and safety-net
-- Also screen risk to others and self-neglect / vulnerability
 
 **Red flag:** Never send away a patient with a plan, means and intent — act on safety.
+
+---
+
+### 11. Risk to others & self-neglect — *"Any thoughts of harming anyone else? How are you managing day to day — eating, washing, paying bills?"*
+
+**Why we ask:** Risk assessment isn't only about the patient's own safety — thoughts of harming others and an inability to care for oneself both change the urgency and the disposition.
+
+**Rules in / rules out:**
+- **Specific threats or plans toward a named person** → duty-to-warn considerations, urgent escalation
+- **Self-neglect (not eating, not managing medications/finances, unsafe living conditions)** → vulnerability requiring support, even without active risk
 
 ---
 

@@ -35,9 +35,18 @@ Haematology overlaps heavily with the **constitutional screen** (B symptoms) —
 
 ---
 
-### 2. Bleeding / bruising — *"Do you bruise easily or bleed more than expected — gums, nosebleeds, after cuts? Any mouth ulcers? Blood in urine or stool?"*
+### 2. Mouth ulcers — *"Any mouth ulcers?"*
 
-**Why we ask:** Screens platelet and coagulation function. The pattern of bleeding separates the two mechanisms.
+**Why we ask:** Recurrent or severe mouth ulcers can be a mucosal bleeding-tendency sign, or reflect the neutropenia of marrow failure — worth asking separately rather than folding into 'bruising'.
+
+**Rules in / rules out:**
+- **Isolated, recurrent, no other bleeding/infection signs** → usually benign aphthous ulcers
+
+---
+
+### 3. Bruising & bleeding — *"Do you bruise easily or bleed more than expected — gums, nosebleeds, after cuts? Blood in urine or stool?"*
+
+**Why we ask:** The pattern of bleeding separates platelet/vascular from coagulation-factor disease — see the discriminator table below.
 
 **Rules in / rules out:**
 - **Mucocutaneous bleeding — petechiae, purpura, gum/nose bleeding, menorrhagia** → platelet problem (thrombocytopenia, e.g. ITP; or dysfunction)
@@ -48,7 +57,7 @@ Haematology overlaps heavily with the **constitutional screen** (B symptoms) —
 
 ---
 
-### 3. Thrombosis — *"Ever had a clot in the leg or lung? Any leg swelling or pain? Recent flights, surgery or immobility?"*
+### 4. Thrombosis — *"Ever had a clot in the leg or lung? Any leg swelling or pain? Recent flights, surgery or immobility?"*
 
 **Why we ask:** The clotting system can also over-perform. Screens for VTE and thrombophilia, and connects to the constitutional/malignancy screen (cancer is prothrombotic).
 
@@ -59,7 +68,7 @@ Haematology overlaps heavily with the **constitutional screen** (B symptoms) —
 
 ---
 
-### 4. Infection susceptibility — *"Do you get frequent, severe or unusual infections that take a long time to clear?"*
+### 5. Infection susceptibility — *"Do you get frequent, severe or unusual infections that take a long time to clear?"*
 
 **Why we ask:** Screens white-cell number/function and immune competence. Recurrent severe infection can be the presentation of leukaemia, marrow failure, or immunodeficiency.
 
@@ -70,15 +79,41 @@ Haematology overlaps heavily with the **constitutional screen** (B symptoms) —
 
 ---
 
-### 5. Reticuloendothelial / systemic — *"Any lumps in the neck, armpits or groin? Fullness in the upper abdomen? Night sweats, weight loss, itching, bone pain?"*
+### 6. Lymphadenopathy — *"Any lumps in the neck, armpits or groin?"*
 
-**Why we ask:** Lymphadenopathy, splenomegaly and B symptoms are the hallmark of the lymphoproliferative and myeloproliferative diseases — this is where haematology and the constitutional screen fuse.
+**Why we ask:** Painless, rubbery, persistent nodes with B symptoms are the hallmark of lymphoma; tender nodes with a recent infection are usually reactive.
 
 **Rules in / rules out:**
 - **Painless rubbery persistent nodes + drenching night sweats + weight loss + itch** → lymphoma (the B-symptom cluster)
-- **Left-upper-quadrant fullness/early satiety** → splenomegaly (myeloproliferative, lymphoma, haemolysis)
-- **Bone pain + fatigue + recurrent infection + thirst/constipation (hypercalcaemia) in an older patient** → myeloma
+- **Tender, associated with a local infection** → reactive
+
+---
+
+### 7. Splenic fullness / early satiety — *"Any fullness or discomfort in the upper-left abdomen, or filling up quickly when you eat?"*
+
+**Why we ask:** The spleen enlarges quietly — early satiety from it pressing on the stomach is often the only clue before it's felt on examination.
+
+**Rules in / rules out:**
+- **Left-upper-quadrant fullness/early satiety** → splenomegaly (myeloproliferative disease, lymphoma, haemolysis)
+
+---
+
+### 8. Constitutional (B) symptoms — *"Any night sweats, weight loss, or generalised itching?"*
+
+**Why we ask:** This triad — the classic 'B symptoms' — marks lymphoproliferative and myeloproliferative disease as systemic, not just a nodal or marrow problem; itch after a hot shower with a ruddy complexion specifically suggests polycythaemia.
+
+**Rules in / rules out:**
+- **Drenching night sweats + weight loss + itch** → the B-symptom cluster (lymphoma)
 - **Generalised itch (esp. after a hot shower) + ruddy complexion** → polycythaemia
+
+---
+
+### 9. Bone pain — *"Any persistent bone pain?"*
+
+**Why we ask:** Marrow infiltration or expansion causes bone pain directly — in an older patient with fatigue and recurrent infection it raises myeloma.
+
+**Rules in / rules out:**
+- **Bone pain + fatigue + recurrent infection + thirst/constipation (hypercalcaemia) in an older patient** → myeloma
 
 ---
 

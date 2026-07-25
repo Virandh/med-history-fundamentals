@@ -257,6 +257,10 @@
   button.act:disabled:hover { filter: none; transform: none; }
   .drill-sec-scaffold { margin: 10px 0; }
   .drill-sec-scaffold .dss-name { font-weight: 600; font-size: .9rem; margin-bottom: 5px; }
+  .drill-other { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--line); }
+  .drill-other-lbl { font-family: var(--mono); font-size: .64rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px; }
+  .reveal-list.minor li { font-size: .87rem; opacity: .9; border-left-color: var(--ink-faint); }
+  .reveal-list.minor .rl-ask { font-size: .82rem; }
 
   /* per-question recall marking */
   .reveal-list li.qrow { flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 10px; }
@@ -680,12 +684,21 @@ function questionRow(sysId, sectionName, q){
   </li>`;
 }
 function drillListTier(s){
-  const listOf = (sectionName, qs) => `<ul class="reveal-list">${qs.map(q=>questionRow(s.id, sectionName, q)).join('')}</ul>`;
+  const listOf = (sectionName, qs, minorCls) => `<ul class="reveal-list${minorCls?' minor':''}">${qs.map(q=>questionRow(s.id, sectionName, q)).join('')}</ul>`;
+  const otherBlock = (sectionName, qs) => {
+    const minor = qs.filter(q=>q.minor);
+    if(!minor.length) return '';
+    return `<div class="drill-other"><div class="drill-other-lbl">Other — less central, still worth recalling</div>${listOf(sectionName, minor, true)}</div>`;
+  };
   if(s.sections){
-    const groups = s.sections.map(sec=>`<div class="drill-sec-scaffold"><div class="dss-name">${esc(sec.name)}</div>${listOf(sec.name, sec.questions)}</div>`).join('');
+    const groups = s.sections.map(sec=>{
+      const major = sec.questions.filter(q=>!q.minor);
+      return `<div class="drill-sec-scaffold"><div class="dss-name">${esc(sec.name)}</div>${listOf(sec.name, major)}${otherBlock(sec.name, sec.questions)}</div>`;
+    }).join('');
     return `<div class="hint-tier"><div class="lbl">The questions — tap ✓ for each one you remembered</div>${groups}</div>`;
   }
-  return `<div class="hint-tier"><div class="lbl">The questions — tap ✓ for each one you remembered</div>${listOf(null, s.questions)}</div>`;
+  const major = s.questions.filter(q=>!q.minor);
+  return `<div class="hint-tier"><div class="lbl">The questions — tap ✓ for each one you remembered</div>${listOf(null, major)}${otherBlock(null, s.questions)}</div>`;
 }
 function srsStripHTML(){
   const dueN = dueSystems().length;

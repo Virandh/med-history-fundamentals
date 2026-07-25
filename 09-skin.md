@@ -44,21 +44,29 @@ Two red-flag threads: the **changing/non-healing lesion** (skin cancer / melanom
 
 ---
 
-### 3. Changing / non-healing lesion — *"Have any moles or spots changed in size, shape or colour? Anything that won’t heal?"*
+### 3. Changing mole — *"Have any moles or spots changed in size, shape or colour?"*
 
-**Why we ask:** The skin-cancer screen. Melanoma is caught by change; keratinocyte cancers by non-healing.
+**Why we ask:** Melanoma is caught by change — the ABCDE rule structures what to ask about.
 
 **Rules in / rules out:**
 - **Changing mole — use ABCDE (Asymmetry, Border irregularity, Colour variation, Diameter >6 mm, Evolving)** → melanoma until excluded
+
+**Red flag:** A new or changing pigmented lesion — never file under reassurance without looking.
+
+---
+
+### 4. Non-healing lesion — *"Anything on your skin that won't heal?"*
+
+**Why we ask:** Keratinocyte cancers present as non-healing rather than as change — a lesion sitting there for months on sun-exposed skin is the tell.
+
+**Rules in / rules out:**
 - **Pearly nodule with telangiectasia / rolled edge, slowly growing, sun-exposed site** → basal cell carcinoma
 - **Scaly/crusted or ulcerated non-healing lesion on sun-exposed skin** → squamous cell carcinoma
 - **Any non-healing lesion >4–6 weeks** → needs examination
 
-**Red flag:** A new, changing, or non-healing pigmented lesion — never file under reassurance without looking.
-
 ---
 
-### 4. Systemic associations — *"Any fever, joint pains, mouth or genital ulcers, or feeling generally unwell with the rash?"*
+### 5. Systemic associations — *"Any fever, joint pains, mouth or genital ulcers, or feeling generally unwell with the rash?"*
 
 **Why we ask:** Skin is a window on internal disease; a rash with systemic upset changes the whole differential toward the dangerous.
 
@@ -72,7 +80,7 @@ Two red-flag threads: the **changing/non-healing lesion** (skin cancer / melanom
 
 ---
 
-### 5. Exposure / triggers — *"Started any new medications, creams or products? Any new contacts, sun, occupation or travel?"*
+### 6. Exposure / triggers — *"Started any new medications, creams or products? Any new contacts, sun, occupation or travel?"*
 
 **Why we ask:** So much of dermatology is external cause — drugs and contacts especially. A new drug within days–weeks of a rash is a drug eruption until proven otherwise.
 

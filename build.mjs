@@ -107,6 +107,7 @@ function blockToAppData(s) {
     const o = { n: q.n, ask: q.ask, why: q.why, points: q.points || [] };
     if (q.mirror) o.mirror = q.mirror;
     if (q.red) o.red = q.red;
+    if (q.minor) o.minor = true;
     return o;
   });
   return out;

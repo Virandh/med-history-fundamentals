@@ -1023,6 +1023,12 @@
           ]
         },
         {
+          "n": "Fatigue",
+          "ask": "How is your energy? More tired than you used to be?",
+          "why": "Low cardiac output presents as fatigue before frank dyspnoea in some patients (especially the elderly). Non-specific alone — its value is in aggregate with the pump-failure cluster. Also a common symptom of beta-blocker therapy — review the medication list.",
+          "points": []
+        },
+        {
           "n": "Palpitations",
           "ask": "Are you ever aware of your heart racing, thumping or skipping? Can you tap out the rhythm?",
           "why": "\"Palpitations\" means ten different things to ten patients. The tapped rhythm, mode of onset/offset, and company the symptom keeps let you separate benign ectopics from dangerous arrhythmias.",
@@ -1103,29 +1109,40 @@
           "red": "Rest pain / critical limb ischaemia needs urgent vascular review."
         },
         {
-          "n": "Fatigue",
-          "ask": "How is your energy? More tired than you used to be?",
-          "why": "Low cardiac output presents as fatigue before frank dyspnoea in some patients (especially the elderly). Non-specific alone — its value is in aggregate with the pump-failure cluster. Also a common symptom of beta-blocker therapy — review the medication list.",
-          "points": []
-        },
-        {
-          "n": "Risk factor screen",
-          "ask": "High blood pressure, diabetes or cholesterol? Do you smoke? Heart disease in the family? Rheumatic fever as a child?",
-          "why": "Risk factors set the pre-test probability for everything above. Chest pain in a 55-year-old diabetic smoker with a father who died at 50 is a different question to the same pain in a 25-year-old with none of these.",
+          "n": "Modifiable risk factors",
+          "ask": "High blood pressure, diabetes or cholesterol? Do you smoke? How's your weight and activity level?",
+          "why": "These set the pre-test probability for everything above and are the targets of secondary prevention.",
           "points": [
             [
               "in",
-              "Modifiable: hypertension, diabetes, dyslipidaemia, smoking (pack-years), obesity, physical inactivity"
-            ],
-            [
-              "in",
-              "Non-modifiable: age, male sex, family history of premature IHD (first-degree relative, male <55 / female <65)"
-            ],
-            [
-              "in",
-              "Rheumatic fever in childhood → valvular disease decades later (still relevant in older patients and Aboriginal and Torres Strait Islander communities)"
+              "Hypertension, diabetes, dyslipidaemia, smoking (quantify pack-years), obesity, physical inactivity → each independently raises atherosclerotic risk"
             ]
-          ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Family history of premature IHD",
+          "ask": "Any heart disease in the family — particularly at a young age?",
+          "why": "A first-degree relative with premature IHD (male <55, female <65) raises the patient's own risk independent of their other risk factors.",
+          "points": [
+            [
+              "in",
+              "First-degree relative, male <55 / female <65, with IHD → premature family history, a non-modifiable risk factor"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Rheumatic fever",
+          "ask": "Did you have rheumatic fever as a child?",
+          "why": "Rheumatic fever causes valvular disease that only declares itself decades later — still relevant in older patients and in Aboriginal and Torres Strait Islander communities, where rates remain high.",
+          "points": [
+            [
+              "in",
+              "Rheumatic fever in childhood → valvular disease (esp. mitral) decades later"
+            ]
+          ],
+          "minor": true
         }
       ],
       "discriminator": {
@@ -1688,13 +1705,9 @@
         },
         {
           "n": "Nausea and vomiting",
-          "ask": "Any nausea or vomiting? What does the vomit look like — any blood or coffee-grounds?",
-          "why": "Timing and content localise the cause; the appearance screens for upper GI bleeding.",
+          "ask": "Any nausea or vomiting? How often, and what seems to trigger it?",
+          "why": "Timing and content localise the cause — early-morning vomiting points away from the gut itself.",
           "points": [
-            [
-              "in",
-              "Haematemesis / coffee-ground vomit → upper GI bleed (ulcer, varices, Mallory–Weiss) — a red flag; ask about NSAIDs, alcohol, known liver disease"
-            ],
             [
               "in",
               "Vomiting + colicky pain + distension + absolute constipation → bowel obstruction"
@@ -1707,8 +1720,20 @@
               "out",
               "Early morning vomiting → raised ICP, pregnancy, alcohol"
             ]
+          ]
+        },
+        {
+          "n": "Haematemesis",
+          "ask": "What does the vomit look like — any blood or coffee-grounds?",
+          "why": "Haematemesis is a red flag on its own — it always needs an upper GI source excluded, and the character (fresh blood vs coffee-grounds) hints at the rate of bleeding.",
+          "points": [
+            [
+              "in",
+              "Haematemesis / coffee-ground vomit → upper GI bleed (ulcer, varices, Mallory–Weiss); ask about NSAIDs, alcohol, known liver disease"
+            ]
           ],
-          "red": "Haematemesis — ask about NSAIDs, alcohol, known liver disease."
+          "red": "Haematemesis — ask about NSAIDs, alcohol, known liver disease.",
+          "minor": true
         },
         {
           "n": "Abdominal pain",
@@ -1743,6 +1768,12 @@
           "red": "Sudden \"worst ever\" + shock → perforation, ruptured AAA, mesenteric ischaemia, ruptured ectopic."
         },
         {
+          "n": "Appetite and weight",
+          "ask": "How is your appetite? Any weight loss?",
+          "why": "Ties GI complaints to the constitutional malignancy screen; weight loss escalates the urgency of every symptom above.",
+          "points": []
+        },
+        {
           "n": "Change in bowel habit",
           "ask": "Have your bowels changed — more or less often, looser or harder than normal for you?",
           "why": "\"Normal\" is individual, so anchor to the patient's baseline. A persistent change is a cancer screen.",
@@ -1767,12 +1798,12 @@
         },
         {
           "n": "Rectal bleeding / melaena",
-          "ask": "Any blood when you go to the toilet — bright red, or black and tarry? Is the stool pale, greasy or hard to flush?",
-          "why": "Colour tells you the level of the bleed; pale, greasy, floating stool (steatorrhoea) points to fat malabsorption.",
+          "ask": "Any blood when you go to the toilet — bright red, or black and tarry?",
+          "why": "Colour tells you the level of the bleed.",
           "points": [
             [
               "in",
-              "Melaena (black, tarry, offensive) → upper GI bleed — pair with haematemesis question"
+              "Melaena (black, tarry, offensive) → upper GI bleed — pair with the haematemesis question"
             ],
             [
               "out",
@@ -1781,41 +1812,71 @@
             [
               "in",
               "Blood mixed through the stool + change in habit + weight loss → colorectal cancer"
-            ],
-            [
-              "in",
-              "Bloody diarrhoea with mucus → colitis (IBD or infective)"
-            ],
-            [
-              "in",
-              "Pale, greasy, floating, hard-to-flush stool (steatorrhoea) → fat malabsorption (pancreatic insufficiency, biliary obstruction, coeliac)"
             ]
           ]
         },
         {
-          "n": "Jaundice + urine/stool/itch",
-          "ask": "Any yellowing of eyes or skin? Dark urine or pale stool? Any itching?",
-          "why": "The urine/stool/itch triad separates the types of jaundice at the bedside before any test.",
+          "n": "Mucus",
+          "ask": "Any mucus or slime with your stool?",
+          "why": "Mucus with blood and diarrhoea points to mucosal inflammation rather than a purely mechanical or bleeding cause.",
           "points": [
             [
               "in",
-              "Dark urine + pale stools + itch → obstructive (post-hepatic) jaundice: gallstones or, if painless with weight loss, pancreatic head cancer (Courvoisier)"
-            ],
+              "Bloody diarrhoea with mucus → colitis (IBD or infective)"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Steatorrhoea",
+          "ask": "Is the stool pale, greasy, or hard to flush?",
+          "why": "Pale, greasy, floating stool means fat isn't being absorbed — the fat itself is passing through undigested.",
+          "points": [
             [
-              "out",
-              "Normal urine/stool, ± anaemia → pre-hepatic (haemolysis)"
-            ],
+              "in",
+              "Pale, greasy, floating, hard-to-flush stool → fat malabsorption (pancreatic insufficiency, biliary obstruction, coeliac disease)"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Jaundice",
+          "ask": "Any yellowing of your eyes or skin?",
+          "why": "Jaundice is the headline sign of hepatobiliary disease — the accompanying urine/stool/itch pattern (asked next) tells you which type before any blood test.",
+          "points": [
             [
               "in",
               "Jaundice + risk factors (alcohol, viral hepatitis, paracetamol, travel) + systemic upset → hepatic"
+            ],
+            [
+              "out",
+              "Jaundice ± anaemia, normal urine/stool → pre-hepatic (haemolysis)"
             ]
           ]
         },
         {
-          "n": "Appetite and weight",
-          "ask": "How is your appetite? Any weight loss?",
-          "why": "Ties GI complaints to the constitutional malignancy screen; weight loss escalates the urgency of every symptom above.",
-          "points": []
+          "n": "Dark urine / pale stool",
+          "ask": "Any change in the colour of your urine or stool — dark urine, pale or clay-coloured stool?",
+          "why": "Conjugated bilirubin being shunted into the urine instead of the gut is the signature of obstructive (post-hepatic) jaundice.",
+          "points": [
+            [
+              "in",
+              "Dark urine + pale stools → obstructive (post-hepatic) jaundice: gallstones, or if painless with weight loss, pancreatic head cancer (Courvoisier)"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Itch (pruritus)",
+          "ask": "Any itching, especially generalised?",
+          "why": "Retained bile salts under the skin cause the itch of cholestasis — it tracks with the same obstructive picture as dark urine and pale stool.",
+          "points": [
+            [
+              "in",
+              "Generalised itch with jaundice → cholestasis (obstructive or hepatic)"
+            ]
+          ],
+          "minor": true
         }
       ],
       "checklist": [
@@ -1947,26 +2008,6 @@
           ]
         },
         {
-          "n": "Voiding / obstructive symptoms",
-          "ask": "Trouble starting? Weak stream? Dribble at the end, feel you haven’t emptied, or need to go again straight away?",
-          "why": "Hesitancy, poor stream, terminal dribbling, pis-en-deux (double voiding — passing urine, then needing to go again minutes later) and incomplete emptying are the classic outflow obstruction cluster — in older men that means the prostate.",
-          "points": [
-            [
-              "in",
-              "Voiding LUTS in an older man → BPH; with weight loss/bone pain/haematuria → exclude prostate cancer"
-            ],
-            [
-              "in",
-              "Complete inability to pass urine + painful distended bladder → acute urinary retention (emergency)"
-            ],
-            [
-              "out",
-              "Painless retention with overflow incontinence → chronic retention/neurogenic bladder"
-            ]
-          ],
-          "red": "Acute urinary retention is an emergency."
-        },
-        {
           "n": "Incontinence",
           "ask": "Do you ever leak urine? With coughing/laughing, or with a sudden urge you can’t defer?",
           "why": "The trigger separates two mechanisms with opposite treatments.",
@@ -1985,6 +2026,26 @@
             ]
           ],
           "red": "New incontinence + back pain + saddle anaesthesia + bilateral leg symptoms → cauda equina."
+        },
+        {
+          "n": "Voiding / obstructive symptoms",
+          "ask": "Trouble starting? Weak stream? Dribble at the end, feel you haven’t emptied, or need to go again straight away?",
+          "why": "Hesitancy, poor stream, terminal dribbling, pis-en-deux (double voiding — passing urine, then needing to go again minutes later) and incomplete emptying are the classic outflow obstruction cluster — in older men that means the prostate.",
+          "points": [
+            [
+              "in",
+              "Voiding LUTS in an older man → BPH; with weight loss/bone pain/haematuria → exclude prostate cancer"
+            ],
+            [
+              "in",
+              "Complete inability to pass urine + painful distended bladder → acute urinary retention (emergency)"
+            ],
+            [
+              "out",
+              "Painless retention with overflow incontinence → chronic retention/neurogenic bladder"
+            ]
+          ],
+          "red": "Acute urinary retention is an emergency."
         },
         {
           "n": "Dysuria",
@@ -2006,9 +2067,9 @@
           ]
         },
         {
-          "n": "Haematuria + urine appearance",
-          "ask": "Have you ever seen blood in your urine? Any change in colour, smell, or how frothy it is? How much are you passing?",
-          "why": "The GU red flag. Any visible haematuria needs an explanation — the differential includes urological cancers. Volume and appearance add renal clues.",
+          "n": "Haematuria",
+          "ask": "Have you ever seen blood in your urine?",
+          "why": "The GU red flag. Any visible haematuria needs an explanation — the differential includes urological cancers.",
           "points": [
             [
               "in",
@@ -2027,15 +2088,23 @@
               "Within a few days of a sore throat (synpharyngitic) → IgA nephropathy; ~1–2 weeks after a throat/skin infection, with hypertension/oedema → post-streptococcal glomerulonephritis"
             ],
             [
-              "in",
-              "Frothy urine → significant proteinuria (nephrotic range); offensive smell → infection"
-            ],
-            [
               "out",
               "Confirm it isn't menstrual, dietary (beetroot), or drug-related (rifampicin) discolouration"
             ]
           ],
           "red": "Painless visible haematuria is cancer until excluded."
+        },
+        {
+          "n": "Urine appearance",
+          "ask": "Any change in the colour, smell, or how frothy your urine is? How much are you passing?",
+          "why": "Frothiness and smell add renal clues beyond blood alone.",
+          "points": [
+            [
+              "in",
+              "Frothy urine → significant proteinuria (nephrotic range); offensive smell → infection"
+            ]
+          ],
+          "minor": true
         },
         {
           "n": "Loin pain",
@@ -2057,14 +2126,22 @@
           ]
         },
         {
-          "n": "Renal failure / uraemia screen",
-          "ask": "Any swelling, generalised itching, easy bruising, or persistent hiccups?",
-          "why": "As the kidneys fail, fluid and uraemic toxins accumulate, producing a quiet cluster that is easy to miss if you don't ask for it specifically.",
+          "n": "Oedema (renal)",
+          "ask": "Any swelling, especially around the eyes or ankles?",
+          "why": "Fluid retention from a failing kidney has a nephrotic (heavy proteinuria, periorbital) or nephritic (salt/water retention) pattern.",
           "points": [
             [
               "in",
               "Oedema + frothy urine → nephrotic/nephritic picture"
-            ],
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Uraemia screen",
+          "ask": "Any generalised itching, easy bruising, or persistent hiccups?",
+          "why": "As the kidneys fail, retained toxins produce a quiet cluster that's easy to miss unless you ask for it specifically.",
+          "points": [
             [
               "in",
               "Generalised itch (pruritus) + easy bruising + hiccups + nausea + fatigue → uraemia (advanced renal failure)"
@@ -2073,7 +2150,8 @@
               "out",
               "Reduced urine output (oliguria/anuria) → acute kidney injury — look for the cause (pre-renal, renal, post-renal)"
             ]
-          ]
+          ],
+          "minor": true
         }
       ],
       "checklist": [
@@ -2193,93 +2271,110 @@
       "scaffoldOutro": "The single most useful discriminator running through the whole system is the tempo of onset: sudden (seconds–minutes) → vascular (stroke, haemorrhage, SAH); subacute (days–weeks) → inflammatory/infective/compressive; chronic (months–years) → degenerative/neoplastic.",
       "questions": [
         {
-          "n": "Headache",
-          "ask": "Do you get headaches? Tell me about them.",
-          "why": "Overwhelmingly benign (tension, migraine) but hosts several neurological emergencies — the whole skill is pattern-matching the dangerous ones.",
+          "n": "Confusion / delirium",
+          "ask": "Has anyone noticed you seem more confused than usual — coming and going, or constant?",
+          "why": "Fluctuating confusion over hours–days is delirium until an underlying systemic cause is found; a gradual, non-fluctuating decline points instead to dementia.",
           "points": [
             [
-              "in",
-              "Thunderclap — instant, worst-ever, \"hit on the head\" → subarachnoid haemorrhage until excluded"
-            ],
-            [
-              "in",
-              "Headache + fever + neck stiffness + photophobia ± rash → meningitis"
-            ],
-            [
-              "in",
-              "Worse in the morning / on coughing/bending, with vomiting → raised intracranial pressure (mass)"
-            ],
-            [
-              "in",
-              "New headache >50 with scalp tenderness, jaw claudication, visual loss → giant cell arteritis"
-            ],
-            [
-              "in",
-              "Unilateral, throbbing, with aura/nausea/photophobia, recurrent → migraine"
-            ],
-            [
-              "in",
-              "Band-like, bilateral, stress-related → tension-type"
+              "out",
+              "Acute confusion over hours–days, fluctuating, ± reversed sleep–wake → delirium — look for the systemic cause (infection, drugs, metabolic)"
             ]
           ],
-          "red": "SNOOP: Systemic (fever, weight loss), Neuro deficit, Onset sudden, Older (>50 new), Papilloedema/positional/pattern change."
+          "minor": true
         },
         {
-          "n": "Blackouts",
-          "ask": "Have you had any episodes of losing consciousness?",
-          "why": "The overlap of syncope (cardiovascular) and seizure (neurological) — the history distinguishes them (cross-reference the cardio syncope entry).",
+          "n": "Memory",
+          "ask": "Any problems with your memory?",
+          "why": "Progressive memory loss with functional decline in an older adult raises dementia; get a collateral history, since patients often underreport it.",
           "points": [
             [
               "in",
-              "Aura, lateral tongue-bite, post-ictal confusion/drowsiness → seizure (jerk duration doesn't discriminate: brief clonic jerks occur in convulsive syncope, and prolonged jerking suggests non-epileptic seizures; incontinence and tongue-biting alone are of limited value)"
+              "Progressive memory loss + functional decline in the elderly → dementia (get collateral history)"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Speech",
+          "ask": "Any trouble finding words, or getting words out clearly?",
+          "why": "Dysphasia (word-finding/language) localises to the dominant hemisphere; dysarthria (slurred articulation) localises to the cerebellum, bulbar muscles or their nerve supply — the distinction matters for localisation.",
+          "points": [
+            [
+              "in",
+              "Sudden word-finding difficulty or slurred speech → stroke/TIA until excluded"
             ],
             [
               "out",
-              "Prodromal nausea/greying vision, triggered by standing/pain, rapid clear recovery → vasovagal syncope"
-            ],
-            [
-              "in",
-              "Exertional, no warning → cardiac (see cardio file) — the dangerous one"
-            ],
-            [
-              "in",
-              "Always seek a collateral history from a witness — the patient by definition didn't see it"
+              "Gradual word-finding difficulty in an older adult → consider primary progressive aphasia / early dementia"
             ]
-          ]
+          ],
+          "minor": true
         },
         {
-          "n": "Seizures",
-          "ask": "Have you ever had a fit or convulsion?",
-          "why": "Distinguishes provoked from unprovoked and localises. Ask about aura (focal onset), and precipitants (alcohol withdrawal, sleep deprivation, flashing lights, missed medication).",
+          "n": "Vision (neuro screen)",
+          "ask": "Any change in your vision, or a curtain/shadow across it?",
+          "why": "Sudden painless monocular loss in the amaurosis fugax pattern is a TIA warning — cross-reference the ENT & Eyes visual-loss entry for the full differential.",
           "points": [
             [
               "in",
-              "Preceding aura → focal onset"
-            ],
-            [
-              "in",
-              "Precipitants: alcohol withdrawal, sleep deprivation, missed medication"
+              "Sudden painless monocular visual loss (\"curtain\") → amaurosis fugax / retinal artery occlusion — a TIA warning"
             ]
-          ]
+          ],
+          "minor": true
         },
         {
-          "n": "Dizziness / vertigo",
-          "ask": "When you say dizzy, do you mean the room spins, or more light-headed?",
-          "why": "\"Dizziness\" splits into two unrelated pathways — force the patient to define it.",
+          "n": "Hearing (neuro screen)",
+          "ask": "Any change in your hearing?",
+          "why": "New unilateral hearing loss with other cranial nerve signs raises a cerebellopontine angle lesion — cross-reference the ENT & Eyes hearing-loss entry.",
           "points": [
             [
               "in",
-              "Room spinning (vertigo) → vestibular: BPPV (brief, positional), vestibular neuritis (acute, sustained), Ménière's (with hearing loss/tinnitus); central causes (brainstem/cerebellar stroke) if with other neuro signs → red flag"
-            ],
+              "Unilateral hearing loss + facial numbness/weakness or ataxia → consider a cerebellopontine angle lesion (e.g. acoustic neuroma)"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Smell",
+          "ask": "Any change in your sense of smell?",
+          "why": "Isolated anosmia can be an early non-motor feature of Parkinson's disease, or reflect a frontal skull-base lesion pressing on the olfactory tract.",
+          "points": [
             [
               "out",
-              "Light-headed/faint → presyncope: cardiovascular/orthostatic (back to the cardio pathway)"
+              "Isolated anosmia, older adult, no nasal cause → consider a neurodegenerative cause"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Facial weakness",
+          "ask": "Any weakness or drooping of the face?",
+          "why": "Sparing of the forehead localises an upper motor neuron (central, e.g. stroke) lesion; forehead involvement means a lower motor neuron (peripheral) lesion — the single most useful localiser in facial weakness.",
+          "points": [
+            [
+              "in",
+              "Forehead spared, lower face only → UMN (stroke) — usually with other focal signs"
             ],
             [
               "in",
-              "Unsteady only when walking → gait/proprioceptive/cerebellar"
+              "Whole side of the face including the forehead → LMN (Bell's palsy; exclude Ramsay Hunt or a parotid tumour)"
             ]
-          ]
+          ],
+          "red": "Sudden facial weakness with other focal neuro signs → stroke until excluded.",
+          "minor": true
+        },
+        {
+          "n": "Diplopia (neuro screen)",
+          "ask": "Any double vision?",
+          "why": "Diplopia localises a cranial nerve palsy (III, IV, VI) — think microvascular, compressive (aneurysm), or raised ICP.",
+          "points": [
+            [
+              "in",
+              "→ cranial nerve palsy (III, IV, VI) — microvascular, compressive (aneurysm), or raised ICP"
+            ]
+          ],
+          "red": "Painful third nerve palsy with a fixed dilated pupil → compressive aneurysm, a neurosurgical emergency.",
+          "minor": true
         },
         {
           "n": "Weakness",
@@ -2372,27 +2467,93 @@
           "red": "Sphincter disturbance + saddle anaesthesia + bilateral leg weakness → cauda equina — urgent."
         },
         {
-          "n": "Special senses & higher function",
-          "ask": "Any change in vision, hearing, smell or memory? Trouble finding words or speaking?",
-          "why": "Cranial nerve and cortical screen. Visual field loss, diplopia, dysarthria/dysphasia and new cognitive change all localise significant pathology.",
+          "n": "Blackouts",
+          "ask": "Have you had any episodes of losing consciousness?",
+          "why": "The overlap of syncope (cardiovascular) and seizure (neurological) — the history distinguishes them (cross-reference the cardio syncope entry).",
           "points": [
             [
               "in",
-              "Sudden painless monocular visual loss (\"curtain\") → amaurosis fugax / retinal artery — a TIA warning"
-            ],
-            [
-              "in",
-              "Diplopia → cranial nerve palsy (III, IV, VI) — think microvascular, compressive (aneurysm), or raised ICP"
-            ],
-            [
-              "in",
-              "Progressive memory loss + functional decline in the elderly → dementia (get collateral history)"
+              "Aura, lateral tongue-bite, post-ictal confusion/drowsiness → seizure (jerk duration doesn't discriminate: brief clonic jerks occur in convulsive syncope, and prolonged jerking suggests non-epileptic seizures; incontinence and tongue-biting alone are of limited value)"
             ],
             [
               "out",
-              "Acute confusion over hours–days → delirium — look for the systemic cause (infection, drugs, metabolic)"
+              "Prodromal nausea/greying vision, triggered by standing/pain, rapid clear recovery → vasovagal syncope"
+            ],
+            [
+              "in",
+              "Exertional, no warning → cardiac (see cardio file) — the dangerous one"
+            ],
+            [
+              "in",
+              "Always seek a collateral history from a witness — the patient by definition didn't see it"
             ]
           ]
+        },
+        {
+          "n": "Seizures",
+          "ask": "Have you ever had a fit or convulsion?",
+          "why": "Distinguishes provoked from unprovoked and localises. Ask about aura (focal onset), and precipitants (alcohol withdrawal, sleep deprivation, flashing lights, missed medication).",
+          "points": [
+            [
+              "in",
+              "Preceding aura → focal onset"
+            ],
+            [
+              "in",
+              "Precipitants: alcohol withdrawal, sleep deprivation, missed medication"
+            ]
+          ]
+        },
+        {
+          "n": "Dizziness / vertigo",
+          "ask": "When you say dizzy, do you mean the room spins, or more light-headed?",
+          "why": "\"Dizziness\" splits into two unrelated pathways — force the patient to define it.",
+          "points": [
+            [
+              "in",
+              "Room spinning (vertigo) → vestibular: BPPV (brief, positional), vestibular neuritis (acute, sustained), Ménière's (with hearing loss/tinnitus); central causes (brainstem/cerebellar stroke) if with other neuro signs → red flag"
+            ],
+            [
+              "out",
+              "Light-headed/faint → presyncope: cardiovascular/orthostatic (back to the cardio pathway)"
+            ],
+            [
+              "in",
+              "Unsteady only when walking → gait/proprioceptive/cerebellar"
+            ]
+          ]
+        },
+        {
+          "n": "Headache",
+          "ask": "Do you get headaches? Tell me about them.",
+          "why": "Overwhelmingly benign (tension, migraine) but hosts several neurological emergencies — the whole skill is pattern-matching the dangerous ones.",
+          "points": [
+            [
+              "in",
+              "Thunderclap — instant, worst-ever, \"hit on the head\" → subarachnoid haemorrhage until excluded"
+            ],
+            [
+              "in",
+              "Headache + fever + neck stiffness + photophobia ± rash → meningitis"
+            ],
+            [
+              "in",
+              "Worse in the morning / on coughing/bending, with vomiting → raised intracranial pressure (mass)"
+            ],
+            [
+              "in",
+              "New headache >50 with scalp tenderness, jaw claudication, visual loss → giant cell arteritis"
+            ],
+            [
+              "in",
+              "Unilateral, throbbing, with aura/nausea/photophobia, recurrent → migraine"
+            ],
+            [
+              "in",
+              "Band-like, bilateral, stress-related → tension-type"
+            ]
+          ],
+          "red": "SNOOP: Systemic (fever, weight loss), Neuro deficit, Onset sudden, Older (>50 new), Papilloedema/positional/pattern change."
         }
       ],
       "checklist": [
@@ -2544,6 +2705,26 @@
           "red": "A single acutely hot, swollen, painful joint is septic arthritis until proven otherwise — needs aspiration, not reassurance."
         },
         {
+          "n": "Back pain",
+          "ask": "Any back pain? Anything make it worse? Does it go down your legs?",
+          "why": "Mostly mechanical, but hosts several red-flag conditions; the pattern and associated features triage it.",
+          "points": [
+            [
+              "out",
+              "Worse with activity, better with rest, no systemic features → mechanical"
+            ],
+            [
+              "in",
+              "Inflammatory back pain: young adult, insidious, worse in the morning/at rest, better with exercise, night pain → spondyloarthritis"
+            ],
+            [
+              "in",
+              "Radiating below the knee + dermatomal numbness/weakness → radiculopathy (disc)"
+            ]
+          ],
+          "red": "Bladder/bowel dysfunction + saddle anaesthesia (cauda equina), thoracic pain, fever/IVDU (discitis/abscess), weight loss/history of cancer (metastasis), age <20 or >55 new onset, trauma/osteoporosis (fracture)."
+        },
+        {
           "n": "Stiffness",
           "ask": "Are your joints stiff in the morning? How long before they loosen?",
           "why": "The best single discriminator of inflammatory vs mechanical disease.",
@@ -2582,43 +2763,27 @@
           ]
         },
         {
-          "n": "Function / impact",
-          "ask": "What can't you do now that you could before — dressing, gripping, stairs? Any deformity or joints giving way?",
+          "n": "Functional impact (ADLs)",
+          "ask": "What can't you do now that you could before — dressing, gripping, stairs?",
           "why": "Rheumatology is a functional specialty; disability drives management and reveals severity better than pain scores.",
-          "points": []
+          "points": [],
+          "minor": true
         },
         {
-          "n": "Back pain",
-          "ask": "Any back pain? Anything make it worse? Does it go down your legs?",
-          "why": "Mostly mechanical, but hosts several red-flag conditions; the pattern and associated features triage it.",
-          "points": [
-            [
-              "out",
-              "Worse with activity, better with rest, no systemic features → mechanical"
-            ],
-            [
-              "in",
-              "Inflammatory back pain: young adult, insidious, worse in the morning/at rest, better with exercise, night pain → spondyloarthritis"
-            ],
-            [
-              "in",
-              "Radiating below the knee + dermatomal numbness/weakness → radiculopathy (disc)"
-            ]
-          ],
-          "red": "Bladder/bowel dysfunction + saddle anaesthesia (cauda equina), thoracic pain, fever/IVDU (discitis/abscess), weight loss/history of cancer (metastasis), age <20 or >55 new onset, trauma/osteoporosis (fracture)."
+          "n": "Deformity / instability",
+          "ask": "Any visible deformity, or joints giving way / feeling unstable?",
+          "why": "Deformity and instability signal structural joint damage — chronic erosive disease or ligamentous injury — rather than active inflammation alone.",
+          "points": [],
+          "minor": true
         },
         {
-          "n": "Systemic / CTD screen",
-          "ask": "Any skin rashes, dry or red eyes, mouth ulcers, hair loss, or fingers changing colour in the cold?",
-          "why": "Rheumatological disease is systemic — these extra-articular clues point to a specific connective tissue disease and separate it from isolated joint disease.",
+          "n": "Skin, mucosal & eye screen",
+          "ask": "Any skin rashes, mouth ulcers, or dry/red eyes?",
+          "why": "Extra-articular skin and mucosal clues point to a specific connective tissue disease and separate it from isolated joint disease.",
           "points": [
             [
               "in",
-              "Raynaud's (white→blue→red fingers in cold) + rash/arthralgia → SLE, systemic sclerosis, mixed CTD"
-            ],
-            [
-              "in",
-              "Photosensitive malar rash + mouth ulcers + hair loss + arthralgia → SLE"
+              "Photosensitive malar rash + mouth ulcers + arthralgia → SLE"
             ],
             [
               "in",
@@ -2632,7 +2797,20 @@
               "in",
               "Arthritis + diarrhoea/bloody stool or eye inflammation → enteropathic/reactive (the seronegative spectrum)"
             ]
-          ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Raynaud's, hair loss & fatigue",
+          "ask": "Do your fingers change colour in the cold? Any hair loss or persistent fatigue?",
+          "why": "Raynaud's (white→blue→red) with rash/arthralgia points to SLE, systemic sclerosis or mixed CTD; hair loss and fatigue are non-specific but common accompaniments of active CTD.",
+          "points": [
+            [
+              "in",
+              "Raynaud's (white→blue→red fingers in cold) + rash/arthralgia → SLE, systemic sclerosis, mixed CTD"
+            ]
+          ],
+          "minor": true
         }
       ],
       "checklist": [
@@ -2925,27 +3103,40 @@
           "red": "Addisonian crisis (hypotension, collapse) is an emergency."
         },
         {
-          "n": "Pituitary",
-          "ask": "Headaches or change in peripheral vision? Have your hands, feet or features changed? Any milk discharge from the breasts?",
-          "why": "A pituitary mass causes symptoms two ways — local pressure (bitemporal visual field loss, headache) and hormone excess/deficiency.",
+          "n": "Headache & visual fields",
+          "ask": "Any headaches, or a change in your side (peripheral) vision?",
+          "why": "A pituitary mass presses upward on the optic chiasm, classically producing bitemporal hemianopia — a mass effect independent of which hormone is over- or under-produced.",
           "points": [
             [
               "in",
               "Bitemporal hemianopia + headache → chiasmal compression"
-            ],
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Acral growth (acromegaly)",
+          "ask": "Have your hands, feet or facial features changed — bigger rings, shoe size, jaw?",
+          "why": "Excess growth hormone after epiphyseal closure thickens soft tissue and bone rather than causing height growth — the change is usually gradual enough that old photos are more revealing than the patient's own recollection.",
+          "points": [
             [
               "in",
               "Enlarging hands/feet (ring/shoe size), coarse features, sweating → acromegaly"
-            ],
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Galactorrhoea",
+          "ask": "Any milk discharge from the breasts?",
+          "why": "Prolactin excess suppresses the gonadal axis, so galactorrhoea usually travels with amenorrhoea or low libido rather than appearing alone.",
+          "points": [
             [
               "in",
               "Galactorrhoea + amenorrhoea / low libido → prolactinoma"
-            ],
-            [
-              "in",
-              "Symptoms of several hormone deficiencies → hypopituitarism"
             ]
-          ]
+          ],
+          "minor": true
         },
         {
           "n": "Calcium — hyper | hypo mirror",
@@ -3118,9 +3309,21 @@
           "red": "Iron-deficiency anaemia in a man or postmenopausal woman is a GI cancer until excluded."
         },
         {
-          "n": "Bleeding / bruising",
-          "ask": "Do you bruise easily or bleed more than expected — gums, nosebleeds, after cuts? Any mouth ulcers? Blood in urine or stool?",
-          "why": "Screens platelet and coagulation function. The pattern of bleeding separates the two mechanisms.",
+          "n": "Mouth ulcers",
+          "ask": "Any mouth ulcers?",
+          "why": "Recurrent or severe mouth ulcers can be a mucosal bleeding-tendency sign, or reflect the neutropenia of marrow failure — worth asking separately rather than folding into 'bruising'.",
+          "points": [
+            [
+              "out",
+              "Isolated, recurrent, no other bleeding/infection signs → usually benign aphthous ulcers"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Bruising & bleeding",
+          "ask": "Do you bruise easily or bleed more than expected — gums, nosebleeds, after cuts? Blood in urine or stool?",
+          "why": "The pattern of bleeding separates platelet/vascular from coagulation-factor disease — see the discriminator table below.",
           "points": [
             [
               "in",
@@ -3176,27 +3379,60 @@
           ]
         },
         {
-          "n": "Reticuloendothelial / systemic",
-          "ask": "Any lumps in the neck, armpits or groin? Fullness in the upper abdomen? Night sweats, weight loss, itching, bone pain?",
-          "why": "Lymphadenopathy, splenomegaly and B symptoms are the hallmark of the lymphoproliferative and myeloproliferative diseases — this is where haematology and the constitutional screen fuse.",
+          "n": "Lymphadenopathy",
+          "ask": "Any lumps in the neck, armpits or groin?",
+          "why": "Painless, rubbery, persistent nodes with B symptoms are the hallmark of lymphoma; tender nodes with a recent infection are usually reactive.",
           "points": [
             [
               "in",
               "Painless rubbery persistent nodes + drenching night sweats + weight loss + itch → lymphoma (the B-symptom cluster)"
             ],
             [
-              "in",
-              "Left-upper-quadrant fullness/early satiety → splenomegaly (myeloproliferative, lymphoma, haemolysis)"
-            ],
+              "out",
+              "Tender, associated with a local infection → reactive"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Splenic fullness / early satiety",
+          "ask": "Any fullness or discomfort in the upper-left abdomen, or filling up quickly when you eat?",
+          "why": "The spleen enlarges quietly — early satiety from it pressing on the stomach is often the only clue before it's felt on examination.",
+          "points": [
             [
               "in",
-              "Bone pain + fatigue + recurrent infection + thirst/constipation (hypercalcaemia) in an older patient → myeloma"
+              "Left-upper-quadrant fullness/early satiety → splenomegaly (myeloproliferative disease, lymphoma, haemolysis)"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Constitutional (B) symptoms",
+          "ask": "Any night sweats, weight loss, or generalised itching?",
+          "why": "This triad — the classic 'B symptoms' — marks lymphoproliferative and myeloproliferative disease as systemic, not just a nodal or marrow problem; itch after a hot shower with a ruddy complexion specifically suggests polycythaemia.",
+          "points": [
+            [
+              "in",
+              "Drenching night sweats + weight loss + itch → the B-symptom cluster (lymphoma)"
             ],
             [
               "in",
               "Generalised itch (esp. after a hot shower) + ruddy complexion → polycythaemia"
             ]
-          ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Bone pain",
+          "ask": "Any persistent bone pain?",
+          "why": "Marrow infiltration or expansion causes bone pain directly — in an older patient with fatigue and recurrent infection it raises myeloma.",
+          "points": [
+            [
+              "in",
+              "Bone pain + fatigue + recurrent infection + thirst/constipation (hypercalcaemia) in an older patient → myeloma"
+            ]
+          ],
+          "minor": true
         }
       ],
       "checklist": [
@@ -3351,14 +3587,23 @@
           ]
         },
         {
-          "n": "Changing / non-healing lesion",
-          "ask": "Have any moles or spots changed in size, shape or colour? Anything that won’t heal?",
-          "why": "The skin-cancer screen. Melanoma is caught by change; keratinocyte cancers by non-healing.",
+          "n": "Changing mole",
+          "ask": "Have any moles or spots changed in size, shape or colour?",
+          "why": "Melanoma is caught by change — the ABCDE rule structures what to ask about.",
           "points": [
             [
               "in",
               "Changing mole — use ABCDE (Asymmetry, Border irregularity, Colour variation, Diameter >6 mm, Evolving) → melanoma until excluded"
-            ],
+            ]
+          ],
+          "red": "A new or changing pigmented lesion — never file under reassurance without looking.",
+          "minor": true
+        },
+        {
+          "n": "Non-healing lesion",
+          "ask": "Anything on your skin that won't heal?",
+          "why": "Keratinocyte cancers present as non-healing rather than as change — a lesion sitting there for months on sun-exposed skin is the tell.",
+          "points": [
             [
               "in",
               "Pearly nodule with telangiectasia / rolled edge, slowly growing, sun-exposed site → basal cell carcinoma"
@@ -3372,7 +3617,7 @@
               "Any non-healing lesion >4–6 weeks → needs examination"
             ]
           ],
-          "red": "A new, changing, or non-healing pigmented lesion — never file under reassurance without looking."
+          "minor": true
         },
         {
           "n": "Systemic associations",
@@ -3539,27 +3784,52 @@
           ]
         },
         {
-          "n": "Anxiety",
-          "ask": "Do you worry a lot? Sudden attacks of intense fear with physical symptoms? Repetitive thoughts or rituals?",
-          "why": "Anxiety disorders are common, treatable, and frequently somatised — patients present with palpitations, chest pain and breathlessness (cross-reference cardio/resp).",
+          "n": "Generalised worry",
+          "ask": "Do you worry a lot, more days than not?",
+          "why": "Persistent, hard-to-control worry across multiple areas of life, with physical tension, is generalised anxiety disorder — common and frequently somatised.",
           "points": [
             [
               "in",
               "Persistent excessive worry most days, with restlessness/tension/poor sleep → generalised anxiety"
-            ],
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Panic attacks",
+          "ask": "Do you get sudden attacks of intense fear with physical symptoms, out of the blue?",
+          "why": "Panic disorder is a real and common diagnosis, but it's also a diagnosis of exclusion in the moment — the physical symptoms overlap completely with cardiac, respiratory and endocrine emergencies.",
+          "points": [
             [
               "in",
-              "Discrete attacks of terror with palpitations, chest tightness, paraesthesiae, fear of dying → panic disorder (but exclude hyperthyroidism, phaeochromocytoma, arrhythmia/MI and PE first)"
-            ],
+              "Discrete attacks of terror with palpitations, chest tightness, paraesthesiae, fear of dying → panic disorder — but exclude hyperthyroidism, phaeochromocytoma, arrhythmia/MI and PE first"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Obsessions & compulsions",
+          "ask": "Any repetitive thoughts that keep intruding, or rituals you feel you have to do?",
+          "why": "OCD is defined by the pairing — intrusive thoughts causing distress, and compulsions performed to relieve that distress — not by either alone.",
+          "points": [
             [
               "in",
               "Intrusive thoughts + compulsive rituals to relieve them → OCD"
-            ],
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Trauma & PTSD",
+          "ask": "Has anything very frightening or traumatic happened to you? Do you get flashbacks or avoid things that remind you of it?",
+          "why": "PTSD requires a specific link to trauma exposure, distinguishing it from anxiety that arises without a triggering event.",
+          "points": [
             [
               "in",
               "Anxiety tied to a specific trauma with flashbacks/avoidance/hypervigilance → PTSD"
             ]
-          ]
+          ],
+          "minor": true
         },
         {
           "n": "Psychosis",
@@ -3606,7 +3876,7 @@
           ]
         },
         {
-          "n": "Risk",
+          "n": "Self-harm & suicide risk",
           "ask": "Sometimes when people feel this low they have thoughts life isn't worth living, or of harming themselves. Have you had thoughts like that?",
           "why": "The single most important part of the psychiatric review. Escalate gently through the stages; a plan, means, and intent mark high risk.",
           "points": [
@@ -3617,13 +3887,25 @@
             [
               "out",
               "Fleeting passive thoughts, no plan/intent, strong protective factors and support → lower acute risk, but document and safety-net"
-            ],
-            [
-              "in",
-              "Also screen risk to others and self-neglect / vulnerability"
             ]
           ],
           "red": "Never send away a patient with a plan, means and intent — act on safety."
+        },
+        {
+          "n": "Risk to others & self-neglect",
+          "ask": "Any thoughts of harming anyone else? How are you managing day to day — eating, washing, paying bills?",
+          "why": "Risk assessment isn't only about the patient's own safety — thoughts of harming others and an inability to care for oneself both change the urgency and the disposition.",
+          "points": [
+            [
+              "in",
+              "Specific threats or plans toward a named person → duty-to-warn considerations, urgent escalation"
+            ],
+            [
+              "in",
+              "Self-neglect (not eating, not managing medications/finances, unsafe living conditions) → vulnerability requiring support, even without active risk"
+            ]
+          ],
+          "minor": true
         }
       ],
       "checklist": [
@@ -3777,28 +4059,61 @@
           "red": "Sudden sensorineural hearing loss has a treatable window — refer same day."
         },
         {
-          "n": "Tinnitus, discharge, vertigo",
-          "ask": "Any ringing, discharge, pain or spinning sensation?",
-          "why": "Localises within the ear and flags the vascular/tumour and infective causes.",
+          "n": "Tinnitus",
+          "ask": "Any ringing or buzzing in the ears? One side or both — constant, or pulsing with your heartbeat?",
+          "why": "Pulsatile or strictly unilateral tinnitus needs vascular/tumour work-up; most tinnitus tracks with hearing loss or an ototoxic drug (aminoglycosides, loop diuretics, aspirin/NSAIDs, quinine, some chemotherapy agents).",
           "points": [
             [
               "in",
-              "Pulsatile/unilateral tinnitus → needs investigation (vascular, tumour)"
+              "Pulsatile or strictly unilateral → needs investigation (vascular anomaly, acoustic neuroma)"
             ],
             [
               "in",
-              "Discharge + pain + fever → otitis externa/media; foul discharge + hearing loss → cholesteatoma"
+              "Tinnitus + hearing loss + vertigo → Ménière's"
             ],
             [
-              "in",
-              "Vertigo + hearing loss + tinnitus → Ménière's; vertigo alone → cross-reference the neuro vertigo entry"
+              "out",
+              "Bilateral, non-pulsatile, with noise exposure or an ototoxic drug on the list → benign/drug-related"
             ]
-          ]
+          ],
+          "minor": true
         },
         {
-          "n": "Nasal symptoms",
-          "ask": "Any blockage, discharge, nosebleeds or loss of smell? Facial pain or pressure?",
-          "why": "Separates benign allergic/infective disease from the sinister unilateral tumour.",
+          "n": "Ear discharge & earache",
+          "ask": "Any discharge or pain from the ear?",
+          "why": "Localises within the outer, middle or inner ear and separates simple infection from the sinister chronic discharge of cholesteatoma.",
+          "points": [
+            [
+              "in",
+              "Discharge + pain + fever → otitis externa/media"
+            ],
+            [
+              "in",
+              "Foul, chronic discharge + hearing loss → cholesteatoma — needs ENT referral"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Vertigo",
+          "ask": "Do you get spells where the room feels like it's spinning?",
+          "why": "True rotational vertigo localises to the vestibular system or its central connections — cross-reference the Neurological Dizziness/vertigo entry for the full vertigo-vs-presyncope work-up.",
+          "points": [
+            [
+              "in",
+              "Vertigo + hearing loss + tinnitus → Ménière's"
+            ],
+            [
+              "out",
+              "Brief, positional, vertigo alone → BPPV"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Nasal blockage & discharge",
+          "ask": "Is your nose blocked or running? One side or both?",
+          "why": "Bilateral symptoms are usually allergic or infective; persistent unilateral symptoms need a tumour excluded.",
           "points": [
             [
               "in",
@@ -3806,41 +4121,147 @@
             ],
             [
               "in",
-              "Unilateral blockage/bloody discharge, persistent → exclude nasal/sinus tumour (red flag)"
+              "Unilateral blockage or discharge, persistent → exclude nasal/sinus tumour"
             ],
             [
               "out",
-              "Facial pain/pressure + purulent discharge + post-URTI → sinusitis"
-            ],
-            [
-              "in",
-              "Recurrent epistaxis → local (dry/trauma) usually; consider antiplatelets/anticoagulants and (bilateral/severe) bleeding disorders. (Hypertension is commonly cited but the causal link is contested — treat it as a soft association, not an established cause.)"
+              "Foreign body (children) or deviated septum → structural, usually unilateral and longstanding"
             ]
           ],
-          "red": "Persistent unilateral nasal obstruction or bloody discharge → tumour until excluded."
+          "red": "Persistent unilateral nasal obstruction or discharge → tumour until excluded.",
+          "minor": true
         },
         {
-          "n": "Throat / neck",
-          "ask": "Any sore throat, difficulty or pain swallowing, voice change, or lumps in the neck?",
-          "why": "Hosts the deep-space emergency and the head-and-neck cancers.",
+          "n": "Epistaxis",
+          "ask": "Have you ever had nosebleeds? How often, how much, and do they stop easily?",
+          "why": "Most epistaxis is local (trauma, nose-picking, dry mucosa), but recurrent, severe or bilateral bleeding raises anticoagulant/antiplatelet use, bleeding disorders and, rarely, a nasal tumour.",
           "points": [
             [
               "in",
-              "Acute sore throat + fever + exudate → tonsillitis/pharyngitis; unilateral severe with trismus/drooling → quinsy/deep space (red flag)"
+              "Recurrent, minor, with dry air/nose-picking → local trauma, the commonest cause"
             ],
             [
               "in",
-              "Persistent hoarseness >3 weeks in a smoker → laryngeal/lung cancer (recurrent laryngeal nerve) — cross-reference resp"
+              "On antiplatelets/anticoagulants, or bruising elsewhere → medication effect or a bleeding disorder (haematological malignancy, haemophilia)"
             ],
+            [
+              "in",
+              "Severe enough to need transfusion, or unilateral and persistent in an older adult → exclude nasal tumour"
+            ],
+            [
+              "out",
+              "Hypertension is commonly cited as a cause but the causal link is contested — treat it as a soft association, not an established one"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Loss of smell",
+          "ask": "Any change in your sense of smell — or taste, since the two often go together?",
+          "why": "Anosmia localises to mechanical obstruction (polyps), infection (including post-viral/COVID), or trauma if complete; isolated anosmia in an older adult can be an early non-motor feature of neurodegenerative disease.",
+          "points": [
+            [
+              "in",
+              "With nasal obstruction or known polyps → local/mechanical"
+            ],
+            [
+              "in",
+              "Post-viral (including post-COVID) → common, usually recovers over weeks to months"
+            ],
+            [
+              "out",
+              "Isolated, no nasal symptoms, older adult → consider a neurodegenerative cause"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Facial pain / pressure",
+          "ask": "Any pain or pressure over your face or sinuses — worse bending forward?",
+          "why": "Localises inflammation to the paranasal sinuses; pain above the eye points to frontal sinusitis, periorbital pain to ethmoid sinusitis.",
+          "points": [
+            [
+              "in",
+              "Facial pain/pressure + purulent nasal discharge + maxillary toothache, worse bending forward, post-URTI → sinusitis"
+            ],
+            [
+              "out",
+              "Itchy eyes + sneezing, no purulent discharge → favours allergic rhinitis over sinusitis"
+            ]
+          ],
+          "red": "Periorbital swelling, visual change or severe headache with sinusitis → orbital or intracranial spread — emergency.",
+          "minor": true
+        },
+        {
+          "n": "Sore throat",
+          "ask": "Any sore throat? Fever, or trouble opening your mouth?",
+          "why": "Most sore throat is viral pharyngitis; the job is to catch the bacterial minority and the rare deep-space emergency.",
+          "points": [
+            [
+              "in",
+              "Acute sore throat + fever + tonsillar exudate → bacterial pharyngitis/tonsillitis (group A strep), or in adolescents, EBV"
+            ],
+            [
+              "in",
+              "Unilateral severe pain + trismus + drooling → quinsy (peritonsillar abscess) — red flag"
+            ],
+            [
+              "in",
+              "Sore throat + odynophagia + fever ± stridor → epiglottitis — red flag, do not examine the throat"
+            ]
+          ],
+          "red": "Trismus/drooling (quinsy) or stridor with sore throat (epiglottitis) are emergencies.",
+          "minor": true
+        },
+        {
+          "n": "Dysphagia / odynophagia",
+          "ask": "Any difficulty or pain swallowing?",
+          "why": "Progressive dysphagia with weight loss is oesophageal/pharyngeal cancer until excluded — cross-reference the GI dysphagia entry for the solid-vs-liquid localisation.",
+          "points": [
             [
               "in",
               "Progressive dysphagia + weight loss → oesophageal/pharyngeal malignancy"
             ],
             [
               "in",
-              "Persistent unilateral neck lump in an adult → assume malignancy (nodal/thyroid/salivary) until excluded"
+              "Painful swallowing (odynophagia) → pharyngitis, tonsillitis, or rarely epiglottitis"
             ]
-          ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Hoarseness",
+          "ask": "Has your voice changed or become hoarse?",
+          "why": "Persistent hoarseness >3 weeks needs laryngoscopy — in a smoker it can be the first sign of laryngeal or lung cancer via recurrent laryngeal nerve involvement (cross-reference the Respiratory hoarseness entry).",
+          "points": [
+            [
+              "in",
+              "Persistent hoarseness >3 weeks in a smoker → laryngeal or lung cancer until excluded"
+            ],
+            [
+              "out",
+              "Hoarseness after a URTI, resolving within days–weeks → laryngitis — benign"
+            ]
+          ],
+          "red": "Persistent hoarseness >3 weeks needs laryngoscopy.",
+          "minor": true
+        },
+        {
+          "n": "Neck lump",
+          "ask": "Any lumps or swelling in the neck?",
+          "why": "A persistent unilateral neck lump in an adult is malignancy until excluded — nodal, thyroid or salivary.",
+          "points": [
+            [
+              "in",
+              "Persistent, unilateral, firm, in an adult → assume malignancy until excluded"
+            ],
+            [
+              "out",
+              "Tender, bilateral, in a child or with a recent URTI → reactive lymphadenopathy"
+            ]
+          ],
+          "red": "Persistent unilateral neck lump in an adult → assume malignancy until excluded.",
+          "minor": true
         },
         {
           "n": "Visual loss",
@@ -3863,28 +4284,49 @@
           "red": "Sudden visual loss is an emergency — same-day ophthalmology."
         },
         {
-          "n": "Red / painful eye, diplopia",
-          "ask": "Any red, painful eye? Any double vision or discharge?",
-          "why": "The painful red eye is sight-threatening; diplopia can localise a cranial-nerve lesion or raised ICP.",
+          "n": "Red / painful eye",
+          "ask": "Any redness or pain in the eye?",
+          "why": "The painful red eye is sight-threatening until proven otherwise; the benign mimic (conjunctivitis) is gritty and painless with normal vision.",
           "points": [
             [
               "in",
-              "Painful red eye + photophobia/reduced vision → sight-threatening: acute glaucoma, uveitis, keratitis, scleritis — red flag, needs same-day ophthalmology"
+              "Painful red eye + photophobia/reduced vision → sight-threatening: acute angle-closure glaucoma, uveitis, keratitis, scleritis"
             ],
             [
               "out",
-              "Red eye, gritty, discharge, vision normal, no pain → conjunctivitis (benign)"
-            ],
-            [
-              "in",
-              "Diplopia → cranial nerve palsy (III/IV/VI) — think microvascular, compressive (aneurysm — painful III with fixed pupil is an emergency), or raised ICP; cross-reference neuro"
-            ],
-            [
-              "in",
-              "Painful loss of vision on eye movement + colour desaturation → optic neuritis"
+              "Red, gritty, discharge, vision normal, no pain → conjunctivitis — benign"
             ]
           ],
-          "red": "A painful red eye with reduced vision needs same-day ophthalmology."
+          "red": "Painful red eye with reduced vision needs same-day ophthalmology.",
+          "minor": true
+        },
+        {
+          "n": "Diplopia",
+          "ask": "Any double vision?",
+          "why": "Diplopia localises a cranial-nerve lesion (III, IV, VI) or raised ICP — cross-reference the Neurological special-senses entry.",
+          "points": [
+            [
+              "in",
+              "→ cranial nerve palsy: think microvascular, compressive (aneurysm — painful III with a fixed pupil is an emergency), or raised ICP"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Eye discharge",
+          "ask": "Any discharge from the eye?",
+          "why": "The character of the discharge separates the infective causes and flags when it's actually part of a sight-threatening picture rather than simple conjunctivitis.",
+          "points": [
+            [
+              "out",
+              "Watery/mucopurulent, gritty, vision normal → conjunctivitis (viral or bacterial) — benign"
+            ],
+            [
+              "in",
+              "Purulent discharge + pain + reduced vision → part of a sight-threatening picture, not simple conjunctivitis"
+            ]
+          ],
+          "minor": true
         }
       ],
       "checklist": [
@@ -3958,9 +4400,53 @@
       "scaffoldOutro": "**Framing matters here more than anywhere else.** Signpost why you're asking (\"I ask everyone these questions, to make sure I don't miss anything\"), use inclusive language, don't assume orientation or partners, and confirm confidentiality. The clinical red flags — ectopic pregnancy, testicular torsion, postmenopausal bleeding — sit inside an intensely personal history, so the manner of asking is part of the skill.",
       "questions": [
         {
-          "n": "General sexual history",
-          "ask": "I’d like to ask some questions about your sexual health — I ask everyone these. Are you sexually active at the moment?",
-          "why": "Frames every reproductive symptom, sets STI and blood-borne-virus risk, and is essential before interpreting abdominal or pelvic pain. Ask sensitively, without assumptions.",
+          "n": "Sexual activity & partners",
+          "ask": "I'd like to ask some questions about your sexual health — I ask everyone these. Are you sexually active at the moment? Can you tell me about your partner(s)?",
+          "why": "Frames every reproductive symptom and sets the context for everything that follows. Ask sensitively, without assuming orientation, gender of partners, or number of partners.",
+          "points": []
+        },
+        {
+          "n": "Contraception & protection",
+          "ask": "What do you use for contraception, if anything? Do you use condoms?",
+          "why": "Contraceptive method affects the differential for abnormal bleeding and the discussion of STI risk — condom use specifically tracks STI/BBV exposure, separately from pregnancy prevention.",
+          "points": [],
+          "minor": true
+        },
+        {
+          "n": "Dyspareunia",
+          "ask": "Any pain during sex?",
+          "why": "Deep dyspareunia points to a pelvic cause; superficial pain points to a local/vulval one — the distinction narrows the differential fast.",
+          "points": [
+            [
+              "in",
+              "Deep dyspareunia + pelvic pain → endometriosis, PID"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Fertility",
+          "ask": "Are you currently trying to conceive, or have you had any difficulty with fertility?",
+          "why": "Fertility concerns reframe the relevance of menstrual, endocrine and structural findings, and often prompt the reason for presenting at all.",
+          "points": [],
+          "minor": true
+        },
+        {
+          "n": "STI & BBV risk screen",
+          "ask": "Any history of sexually transmitted infections, or contact with someone who has one? Any risk factors like injecting drug use or tattoos done outside a licensed studio?",
+          "why": "Sets pre-test probability for STI symptoms elsewhere in the screen and identifies who should be offered blood-borne virus testing.",
+          "points": [
+            [
+              "in",
+              "BBV risk factors → offer testing (HIV, hepatitis B/C)"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Genital rashes, ulcers & lumps",
+          "ask": "Any rashes, ulcers or lumps in the genital area?",
+          "why": "Character and pain of a genital ulcer is a fast bedside split between the common causes.",
           "points": [
             [
               "in",
@@ -3969,21 +4455,41 @@
             [
               "in",
               "Genital ulcer — painful (herpes) vs painless (syphilis chancre)"
-            ],
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Menstrual history",
+          "ask": "When was your last period? Are your cycles regular? How heavy are they?",
+          "why": "The menstrual pattern is a vital sign of reproductive health.",
+          "points": [
             [
               "in",
-              "Deep dyspareunia + pelvic pain → endometriosis, PID"
+              "Heavy regular periods → common cause of iron-deficiency anaemia"
             ],
             [
-              "in",
-              "BBV risk factors → offer testing (HIV, hepatitis B/C)"
+              "out",
+              "Secondary amenorrhoea → pregnancy first, then endocrine (thyroid, prolactin, PCOS)"
             ]
           ]
         },
         {
-          "n": "Female — menstrual history",
-          "ask": "When was your last period? Are they regular? Any bleeding between periods, after sex, or after menopause?",
-          "why": "The menstrual pattern is a vital sign of reproductive health, and the possibility of pregnancy reframes any abdominal pain.",
+          "n": "Dysmenorrhoea",
+          "ask": "Are your periods painful?",
+          "why": "Primary dysmenorrhoea (no pelvic pathology) is common and benign; pain that's new, progressive, or with deep dyspareunia and pelvic pain raises endometriosis.",
+          "points": [
+            [
+              "in",
+              "Progressive, severe dysmenorrhoea + deep dyspareunia + pelvic pain → endometriosis"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Abnormal bleeding",
+          "ask": "Any bleeding between periods, after sex, or after menopause?",
+          "why": "Bleeding outside the expected pattern is the single most important menstrual red-flag thread — each pattern points to a different structural cause.",
           "points": [
             [
               "in",
@@ -3996,42 +4502,44 @@
             [
               "in",
               "Intermenstrual bleeding → cervical or endometrial pathology — an indication for investigation (hysteroscopy ± endometrial biopsy)"
-            ],
-            [
-              "in",
-              "Heavy regular periods → common cause of iron-deficiency anaemia"
-            ],
-            [
-              "out",
-              "Secondary amenorrhoea → pregnancy first, then endocrine (thyroid, prolactin, PCOS)"
             ]
           ],
-          "red": "Postmenopausal bleeding is endometrial cancer until excluded."
+          "red": "Postmenopausal bleeding is endometrial cancer until excluded.",
+          "minor": true
         },
         {
-          "n": "Female — pelvic & pregnancy",
-          "ask": "Any pelvic pain or vaginal discharge? Is there any chance you could be pregnant?",
-          "why": "The possibility of pregnancy reframes any abdominal pain, and discharge patterns separate infective causes.",
+          "n": "Pelvic pain & discharge",
+          "ask": "Any pelvic pain or vaginal discharge?",
+          "why": "Discharge character and associated pain/fever separate the infective causes.",
+          "points": [
+            [
+              "in",
+              "Discharge + pain + fever → PID; itchy discharge → candida (bacterial vaginosis is characteristically non-itchy — its clue is a thin grey, fishy-smelling discharge, not pruritus)"
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Pregnancy status & obstetric history",
+          "ask": "Is there any chance you could be pregnant? Tell me about any previous pregnancies.",
+          "why": "The possibility of pregnancy reframes any abdominal pain and must be established before imaging or prescribing.",
           "points": [
             [
               "in",
               "Abdominal pain + missed period + possible pregnancy → ectopic pregnancy until excluded (a can't-miss)"
             ],
             [
-              "in",
-              "Discharge + pain + fever → PID; itchy discharge → candida (bacterial vaginosis is characteristically non-itchy — its clue is a thin grey, fishy-smelling discharge, not pruritus)"
-            ],
-            [
               "out",
               "Always establish pregnancy status before imaging or prescribing"
             ]
           ],
-          "red": "Abdominal pain + missed period → ectopic pregnancy until excluded."
+          "red": "Abdominal pain + missed period → ectopic pregnancy until excluded.",
+          "minor": true
         },
         {
-          "n": "Female — endocrine & screening",
-          "ask": "Any milk discharge from the breasts, excess hair or acne, or menopausal symptoms? Are you up to date with cervical and breast screening?",
-          "why": "Links reproductive symptoms to the endocrine axes and captures the two cancer-screening programs.",
+          "n": "Galactorrhoea, hyperandrogenism & menopause",
+          "ask": "Any milk discharge from the breasts, excess hair or acne, or menopausal symptoms?",
+          "why": "Links reproductive symptoms to the endocrine axes — each pattern points to a distinct hormonal cause.",
           "points": [
             [
               "in",
@@ -4045,17 +4553,33 @@
               "in",
               "Menopausal symptoms (hot flushes, mood swings, night sweats) → menopause"
             ]
-          ]
+          ],
+          "minor": true
         },
         {
-          "n": "Male — genital & testicular",
-          "ask": "Any discharge from the penis, rashes or ulcers? Any testicular pain, lumps or swelling?",
-          "why": "Screens the STI causes and the two testicular red flags.",
+          "n": "Cervical & breast screening",
+          "ask": "Are you up to date with cervical and breast screening?",
+          "why": "The two population cancer-screening programs — easy to skip if you're focused on the presenting symptom, but part of a complete reproductive history.",
+          "points": [],
+          "minor": true
+        },
+        {
+          "n": "Urethral discharge",
+          "ask": "Any discharge from the penis, or rashes or ulcers?",
+          "why": "Urethral discharge is the cardinal STI symptom in men.",
           "points": [
             [
               "in",
               "Urethral discharge → STI screen"
-            ],
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Testicular pain / lump",
+          "ask": "Any testicular pain, lumps or swelling?",
+          "why": "Testicular symptoms host two can't-miss diagnoses at opposite ends of the tempo spectrum — a painless lump and a painful acute scrotum.",
+          "points": [
             [
               "in",
               "Painless testicular lump → testicular cancer until excluded"
@@ -4065,22 +4589,32 @@
               "Painful swelling + dysuria/discharge → epididymo-orchitis"
             ]
           ],
-          "red": "Sudden severe testicular pain in a young man → testicular torsion (surgical emergency)."
+          "red": "Sudden severe testicular pain in a young man → testicular torsion (surgical emergency).",
+          "minor": true
         },
         {
-          "n": "Male — function & screening",
-          "ask": "Any difficulty with erections? Any urinary symptoms or discussion about prostate checks?",
-          "why": "Erectile dysfunction is an early vascular marker (shares risk factors with IHD) and a common drug/endocrine effect; prostate links to the GU voiding screen.",
+          "n": "Erectile function",
+          "ask": "Any difficulty with erections?",
+          "why": "Erectile dysfunction is an early vascular marker — it shares risk factors with IHD and often predates a cardiac event — and a common drug/endocrine effect.",
           "points": [
             [
               "in",
               "ED + cardiovascular risk factors → endothelial/vascular disease; review antihypertensives, antidepressants, and mood"
-            ],
+            ]
+          ],
+          "minor": true
+        },
+        {
+          "n": "Prostate screening",
+          "ask": "Any urinary symptoms, or have you discussed prostate checks?",
+          "why": "Prostate disease presents through the voiding LUTS screen (cross-reference GU) as much as through a screening conversation.",
+          "points": [
             [
               "in",
               "Prostate: voiding LUTS (cross-reference GU), family history, screening discussion"
             ]
-          ]
+          ],
+          "minor": true
         }
       ],
       "checklist": [

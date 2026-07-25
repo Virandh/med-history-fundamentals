@@ -32,20 +32,7 @@ The **storage (irritative) vs voiding (obstructive)** split is the key LUTS fram
 
 ---
 
-### 2. Voiding / obstructive symptoms — *"Trouble starting? Weak stream? Dribble at the end, feel you haven’t emptied, or need to go again straight away?"*
-
-**Why we ask:** Hesitancy, poor stream, terminal dribbling, pis-en-deux (double voiding — passing urine, then needing to go again minutes later) and incomplete emptying are the classic outflow obstruction cluster — in older men that means the prostate.
-
-**Rules in / rules out:**
-- **Voiding LUTS in an older man** → BPH; with weight loss/bone pain/haematuria → exclude prostate cancer
-- **Complete inability to pass urine + painful distended bladder** → acute urinary retention (emergency)
-- **Painless retention with overflow incontinence** → chronic retention/neurogenic bladder
-
-**Red flag:** Acute urinary retention is an emergency.
-
----
-
-### 3. Incontinence — *"Do you ever leak urine? With coughing/laughing, or with a sudden urge you can’t defer?"*
+### 2. Incontinence — *"Do you ever leak urine? With coughing/laughing, or with a sudden urge you can’t defer?"*
 
 **Why we ask:** The trigger separates two mechanisms with opposite treatments.
 
@@ -55,6 +42,19 @@ The **storage (irritative) vs voiding (obstructive)** split is the key LUTS fram
 - **Continuous dribble** → overflow (chronic retention) or fistula
 
 **Red flag:** New incontinence + back pain + saddle anaesthesia + bilateral leg symptoms → cauda equina.
+
+---
+
+### 3. Voiding / obstructive symptoms — *"Trouble starting? Weak stream? Dribble at the end, feel you haven’t emptied, or need to go again straight away?"*
+
+**Why we ask:** Hesitancy, poor stream, terminal dribbling, pis-en-deux (double voiding — passing urine, then needing to go again minutes later) and incomplete emptying are the classic outflow obstruction cluster — in older men that means the prostate.
+
+**Rules in / rules out:**
+- **Voiding LUTS in an older man** → BPH; with weight loss/bone pain/haematuria → exclude prostate cancer
+- **Complete inability to pass urine + painful distended bladder** → acute urinary retention (emergency)
+- **Painless retention with overflow incontinence** → chronic retention/neurogenic bladder
+
+**Red flag:** Acute urinary retention is an emergency.
 
 ---
 
@@ -69,23 +69,31 @@ The **storage (irritative) vs voiding (obstructive)** split is the key LUTS fram
 
 ---
 
-### 5. Haematuria + urine appearance — *"Have you ever seen blood in your urine? Any change in colour, smell, or how frothy it is? How much are you passing?"*
+### 5. Haematuria — *"Have you ever seen blood in your urine?"*
 
-**Why we ask:** The GU red flag. Any visible haematuria needs an explanation — the differential includes urological cancers. Volume and appearance add renal clues.
+**Why we ask:** The GU red flag. Any visible haematuria needs an explanation — the differential includes urological cancers.
 
 **Rules in / rules out:**
 - **Painless visible haematuria** → bladder/renal cancer until excluded (esp. older, smoker)
 - **+ loin-to-groin colic** → stone
 - **+ dysuria/frequency/fever** → UTI
 - **Within a few days of a sore throat (synpharyngitic)** → IgA nephropathy; ~1–2 weeks after a throat/skin infection, with hypertension/oedema → post-streptococcal glomerulonephritis
-- **Frothy urine** → significant proteinuria (nephrotic range); offensive smell → infection
 - Confirm it isn't menstrual, dietary (beetroot), or drug-related (rifampicin) discolouration
 
 **Red flag:** Painless visible haematuria is cancer until excluded.
 
 ---
 
-### 6. Loin pain — *"Any pain in your back or side, below the ribs?"*
+### 6. Urine appearance — *"Any change in the colour, smell, or how frothy your urine is? How much are you passing?"*
+
+**Why we ask:** Frothiness and smell add renal clues beyond blood alone.
+
+**Rules in / rules out:**
+- **Frothy urine** → significant proteinuria (nephrotic range); offensive smell → infection
+
+---
+
+### 7. Loin pain — *"Any pain in your back or side, below the ribs?"*
 
 **Why we ask:** Localises disease to the kidney/ureter.
 
@@ -96,12 +104,20 @@ The **storage (irritative) vs voiding (obstructive)** split is the key LUTS fram
 
 ---
 
-### 7. Renal failure / uraemia screen — *"Any swelling, generalised itching, easy bruising, or persistent hiccups?"*
+### 8. Oedema (renal) — *"Any swelling, especially around the eyes or ankles?"*
 
-**Why we ask:** As the kidneys fail, fluid and uraemic toxins accumulate, producing a quiet cluster that is easy to miss if you don't ask for it specifically.
+**Why we ask:** Fluid retention from a failing kidney has a nephrotic (heavy proteinuria, periorbital) or nephritic (salt/water retention) pattern.
 
 **Rules in / rules out:**
 - **Oedema + frothy urine** → nephrotic/nephritic picture
+
+---
+
+### 9. Uraemia screen — *"Any generalised itching, easy bruising, or persistent hiccups?"*
+
+**Why we ask:** As the kidneys fail, retained toxins produce a quiet cluster that's easy to miss unless you ask for it specifically.
+
+**Rules in / rules out:**
 - **Generalised itch (pruritus) + easy bruising + hiccups + nausea + fatigue** → uraemia (advanced renal failure)
 - **Reduced urine output (oliguria/anuria)** → acute kidney injury — look for the cause (pre-renal, renal, post-renal)
 
