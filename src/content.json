@@ -1248,7 +1248,7 @@
           "gen": "Smoking, occupation, pets/travel, TB contact, snoring/OSA"
         }
       ],
-      "scaffoldOutro": "The airway chunk flows logically: air moving through a diseased tube makes noise (wheeze), irritates it (cough), and the tube produces secretions (sputum). Say \"airway, air sacs, lining, sinister, context\" and the ~10 questions rebuild themselves.",
+      "scaffoldOutro": "The airway chunk flows logically: air moving through a diseased tube makes noise (wheeze), irritates it (cough), and the tube produces secretions (sputum). Say \"airway, air sacs, lining, sinister, context\" and the ~11 questions rebuild themselves.",
       "seeAlso": "ENT & Eyes — epistaxis, hoarseness, sore throat and other URTI symptoms",
       "questions": [
         {
@@ -1311,32 +1311,47 @@
           ]
         },
         {
-          "n": "Haemoptysis",
-          "ask": "Have you ever coughed up blood, even streaks?",
-          "why": "This is the highest-stakes question in the respiratory screen. Any haemoptysis needs an explanation; the differential includes three killers.",
+          "n": "Wheeze",
+          "ask": "Do you ever hear a whistling sound when you breathe?",
+          "why": "Wheeze = airflow through narrowed lower airways, predominantly expiratory. It establishes obstructive physiology and, with pattern, splits asthma from COPD.",
           "points": [
             [
               "in",
-              "Haemoptysis + weight loss + smoking history → lung cancer until excluded"
+              "Episodic wheeze, diurnal variation (worse at night/early morning), triggers (exercise, cold, allergens, viral URTIs), atopy → rules in asthma"
             ],
             [
               "in",
-              "Haemoptysis + fever + night sweats ± TB contact/travel → tuberculosis"
-            ],
-            [
-              "in",
-              "Sudden haemoptysis + pleuritic pain + dyspnoea ± recent surgery/immobility → pulmonary embolism"
-            ],
-            [
-              "in",
-              "Blood-streaked purulent sputum during an infective exacerbation → usually infection/bronchiectasis — the common benign end of the spectrum"
+              "Fixed wheeze with chronic dyspnoea in a heavy smoker → COPD"
             ],
             [
               "out",
-              "Confirm it's coughed, not vomited (haematemesis) or from the nose/gums — patients confuse these"
+              "Stridor — harsh, inspiratory, heard loudest over the trachea → upper airway obstruction (tumour, foreign body, anaphylaxis) — do not file this as wheeze; it's an emergency"
+            ],
+            [
+              "in",
+              "New localised/monophonic wheeze in a smoker → single obstructed bronchus — think tumour or foreign body"
+            ]
+          ]
+        },
+        {
+          "n": "Hoarseness",
+          "ask": "Has your voice changed or become hoarse?",
+          "why": "A sneaky but crucial screen: the left recurrent laryngeal nerve hooks under the aortic arch through the chest, so a left hilar/mediastinal lung cancer can present as a voice change (apical/Pancoast tumours instead cause Horner's syndrome and brachial-plexus signs). Persistent hoarseness >3 weeks needs laryngoscopy.",
+          "points": [
+            [
+              "in",
+              "Hoarseness + smoking + cough/haemoptysis → rules in possible lung cancer or laryngeal cancer"
+            ],
+            [
+              "out",
+              "Hoarseness after a URTI, resolving in days–weeks → laryngitis — benign"
+            ],
+            [
+              "out",
+              "Hoarse voice in a heavy inhaled-corticosteroid user → local steroid effect/candida — check inhaler technique"
             ]
           ],
-          "red": "The whole question is a red flag — never omit it, never ignore a positive."
+          "red": "Persistent hoarseness >3 weeks needs laryngoscopy."
         },
         {
           "n": "Dyspnoea + exercise tolerance",
@@ -1367,29 +1382,6 @@
           "red": "Dyspnoea at rest, rapid progression, dyspnoea with stridor (upper airway obstruction — an emergency, not a wheeze)."
         },
         {
-          "n": "Wheeze",
-          "ask": "Do you ever hear a whistling sound when you breathe?",
-          "why": "Wheeze = airflow through narrowed lower airways, predominantly expiratory. It establishes obstructive physiology and, with pattern, splits asthma from COPD.",
-          "points": [
-            [
-              "in",
-              "Episodic wheeze, diurnal variation (worse at night/early morning), triggers (exercise, cold, allergens, viral URTIs), atopy → rules in asthma"
-            ],
-            [
-              "in",
-              "Fixed wheeze with chronic dyspnoea in a heavy smoker → COPD"
-            ],
-            [
-              "out",
-              "Stridor — harsh, inspiratory, heard loudest over the trachea → upper airway obstruction (tumour, foreign body, anaphylaxis) — do not file this as wheeze; it's an emergency"
-            ],
-            [
-              "in",
-              "New localised/monophonic wheeze in a smoker → single obstructed bronchus — think tumour or foreign body"
-            ]
-          ]
-        },
-        {
           "n": "Pleuritic chest pain",
           "ask": "Any sharp chest pain when you breathe in or cough?",
           "why": "The lung itself is insensate — respiratory chest pain means pleural or chest wall involvement. Character separates it from cardiac pain.",
@@ -1417,6 +1409,34 @@
           ]
         },
         {
+          "n": "Haemoptysis",
+          "ask": "Have you ever coughed up blood, even streaks?",
+          "why": "This is the highest-stakes question in the respiratory screen. Any haemoptysis needs an explanation; the differential includes three killers.",
+          "points": [
+            [
+              "in",
+              "Haemoptysis + weight loss + smoking history → lung cancer until excluded"
+            ],
+            [
+              "in",
+              "Haemoptysis + fever + night sweats ± TB contact/travel → tuberculosis"
+            ],
+            [
+              "in",
+              "Sudden haemoptysis + pleuritic pain + dyspnoea ± recent surgery/immobility → pulmonary embolism"
+            ],
+            [
+              "in",
+              "Blood-streaked purulent sputum during an infective exacerbation → usually infection/bronchiectasis — the common benign end of the spectrum"
+            ],
+            [
+              "out",
+              "Confirm it's coughed, not vomited (haematemesis) or from the nose/gums — patients confuse these"
+            ]
+          ],
+          "red": "The whole question is a red flag — never omit it, never ignore a positive."
+        },
+        {
           "n": "Fever, night sweats",
           "ask": "Any fevers, shivers or drenching night sweats?",
           "why": "Marks the process as infective or inflammatory, and drenching night sweats specifically flag the chronic granulomatous and malignant causes.",
@@ -1436,39 +1456,24 @@
           ]
         },
         {
-          "n": "Hoarseness",
-          "ask": "Has your voice changed or become hoarse?",
-          "why": "A sneaky but crucial screen: the left recurrent laryngeal nerve hooks under the aortic arch through the chest, so a left hilar/mediastinal lung cancer can present as a voice change (apical/Pancoast tumours instead cause Horner's syndrome and brachial-plexus signs). Persistent hoarseness >3 weeks needs laryngoscopy.",
+          "n": "Weight loss",
+          "ask": "Have you lost weight without trying to? How much, and over how long?",
+          "why": "Unintentional weight loss reframes a respiratory symptom as systemic disease. Paired with cough, haemoptysis or night sweats, it moves malignancy and TB to the top of the differential.",
           "points": [
             [
               "in",
-              "Hoarseness + smoking + cough/haemoptysis → rules in possible lung cancer or laryngeal cancer"
+              "Weight loss + haemoptysis + smoking history → lung cancer until excluded"
+            ],
+            [
+              "in",
+              "Weight loss + drenching night sweats + chronic cough ± TB contact/travel → TB or lymphoma"
             ],
             [
               "out",
-              "Hoarseness after a URTI, resolving in days–weeks → laryngitis — benign"
-            ],
-            [
-              "out",
-              "Hoarse voice in a heavy inhaled-corticosteroid user → local steroid effect/candida — check inhaler technique"
+              "Weight loss explained by reduced intake (anorexia, dysphagia, low mood) with no chest symptoms → look outside the respiratory system first"
             ]
           ],
-          "red": "Persistent hoarseness >3 weeks needs laryngoscopy."
-        },
-        {
-          "n": "Snoring / daytime sleepiness",
-          "ask": "Do you snore heavily? Has anyone seen you stop breathing in your sleep? Do you fall asleep by day — even driving?",
-          "why": "Obstructive sleep apnoea is common, underdiagnosed, and dangerous (motor vehicle accidents, resistant hypertension, AF). The best historian is the bed partner.",
-          "points": [
-            [
-              "in",
-              "Loud snoring + witnessed apnoeas + unrefreshing sleep + daytime somnolence (especially while driving) → rules in OSA — refer for a sleep study"
-            ],
-            [
-              "out",
-              "Distinguish from PND (wakes gasping but from pulmonary oedema, with other failure symptoms) and simple poor sleep hygiene"
-            ]
-          ]
+          "red": "Unintentional weight loss with any respiratory symptom is a red flag — quantify (kg and timeframe) and pursue to a cause."
         },
         {
           "n": "Exposure screen",
@@ -1494,6 +1499,21 @@
             [
               "in",
               "Medications: amiodarone, methotrexate, nitrofurantoin (pulmonary fibrosis); ACE inhibitor (cough); beta-blockers (bronchospasm)"
+            ]
+          ]
+        },
+        {
+          "n": "Snoring / daytime sleepiness",
+          "ask": "Do you snore heavily? Has anyone seen you stop breathing in your sleep? Do you fall asleep by day — even driving?",
+          "why": "Obstructive sleep apnoea is common, underdiagnosed, and dangerous (motor vehicle accidents, resistant hypertension, AF). The best historian is the bed partner.",
+          "points": [
+            [
+              "in",
+              "Loud snoring + witnessed apnoeas + unrefreshing sleep + daytime somnolence (especially while driving) → rules in OSA — refer for a sleep study"
+            ],
+            [
+              "out",
+              "Distinguish from PND (wakes gasping but from pulmonary oedema, with other failure symptoms) and simple poor sleep hygiene"
             ]
           ]
         }
