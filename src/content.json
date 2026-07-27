@@ -5692,7 +5692,42 @@
               "Conductive loss with blockage/discharge → wax, effusion, perforation, otosclerosis"
             ]
           ],
-          "red": "Sudden sensorineural hearing loss has a treatable window — refer same day."
+          "red": "Sudden sensorineural hearing loss has a treatable window — refer same day.",
+          "followups": [
+            {
+              "q": "One ear or both, and did it come on suddenly or gradually?",
+              "probes": "Sudden → possible emergency, needs same-day ENT; gradual, bilateral, high-frequency in an older person → presbyacusis",
+              "danger": true
+            },
+            {
+              "q": "How long has this been a problem — days, or years?",
+              "probes": "Distinguishes an acute event from a longstanding/congenital problem"
+            },
+            {
+              "q": "Any exposure to loud noise at work or in hobbies, past or present?",
+              "probes": "Chronic noise exposure is a common, often under-recognised, cause of sensorineural loss"
+            },
+            {
+              "q": "Any ringing in the ears, or dizziness with it?",
+              "probes": "Tinnitus + hearing loss + vertigo → Ménière's disease"
+            },
+            {
+              "q": "Any ear pain, discharge, or a recent cold?",
+              "probes": "Suggests a conductive cause — wax, effusion, infection, perforation — rather than sensorineural"
+            },
+            {
+              "q": "Any family history of deafness, or problems with wax in the past?",
+              "probes": "Family history raises otosclerosis; past wax problems point to a recurring conductive cause"
+            },
+            {
+              "q": "Have you been on any medications that can affect hearing — antibiotics, chemotherapy, aspirin, loop diuretics?",
+              "probes": "Ototoxic drugs are a common, reversible-if-caught-early cause"
+            },
+            {
+              "q": "Any head injury, or a serious infection like meningitis?",
+              "probes": "Trauma or past meningitis can directly damage the cochlea or acoustic nerve"
+            }
+          ]
         },
         {
           "n": "Tinnitus",
@@ -5712,7 +5747,21 @@
               "Bilateral, non-pulsatile, with noise exposure or an ototoxic drug on the list → benign/drug-related"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is it constant, or does it pulse in time with your heartbeat?",
+              "probes": "Pulsatile tinnitus needs a vascular work-up, unlike the common non-pulsatile kind"
+            },
+            {
+              "q": "One side or both, and is your hearing affected too?",
+              "probes": "Strictly unilateral, or with hearing loss/vertigo, needs investigation — Ménière's, or rarely an acoustic neuroma"
+            },
+            {
+              "q": "Any medications that could cause this — aspirin, some antibiotics, or diuretics?",
+              "probes": "A long list of ototoxic drugs cause tinnitus, and it often resolves on stopping them"
+            }
+          ]
         },
         {
           "n": "Ear discharge & earache",
@@ -5728,7 +5777,21 @@
               "Foul, chronic discharge + hearing loss → cholesteatoma — needs ENT referral"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is there pain, and any fever with the discharge?",
+              "probes": "Discharge + pain + fever → otitis externa or media, usually straightforward infection"
+            },
+            {
+              "q": "Has this been going on for a long time, and does it smell foul?",
+              "probes": "Chronic, foul-smelling discharge with hearing loss → cholesteatoma, needs ENT referral rather than just antibiotics"
+            },
+            {
+              "q": "Do you wear hearing aids, or use cotton buds or other objects in your ear?",
+              "probes": "Common triggers for chronic otitis externa through local irritation"
+            }
+          ]
         },
         {
           "n": "Vertigo",
@@ -5744,7 +5807,22 @@
               "Brief, positional, vertigo alone → BPPV"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Does it come with a specific head movement, and how long does each spell last?",
+              "probes": "Brief, positional spells → BPPV"
+            },
+            {
+              "q": "Any hearing loss or ringing in the ears with it?",
+              "probes": "Present → Ménière's or labyrinthitis; absent → vestibular neuritis or BPPV more likely"
+            },
+            {
+              "q": "Any weakness, double vision, or slurred speech alongside it?",
+              "probes": "Any of these points to a central cause rather than the inner ear — a red flag",
+              "danger": true
+            }
+          ]
         },
         {
           "n": "Nasal blockage & discharge",
@@ -5765,7 +5843,22 @@
             ]
           ],
           "red": "Persistent unilateral nasal obstruction or discharge → tumour until excluded.",
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "One side, or both?",
+              "probes": "Bilateral → usually allergic/infective; unilateral and persistent → exclude a nasal/sinus tumour",
+              "danger": true
+            },
+            {
+              "q": "Is it worse at certain times of year, and does it come with sneezing or itchy eyes?",
+              "probes": "Seasonal pattern with sneezing/itch → allergic rhinitis"
+            },
+            {
+              "q": "Any past nasal injury, or could something be stuck in there?",
+              "probes": "A structural cause (deviated septum) or foreign body, especially relevant in children"
+            }
+          ]
         },
         {
           "n": "Epistaxis",
@@ -5809,7 +5902,17 @@
               "Isolated, no nasal symptoms, older adult → consider a neurodegenerative cause"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Did this come on suddenly after a cold, or has it developed slowly over time?",
+              "probes": "Post-viral (including post-COVID) loss usually recovers over weeks to months; slow, isolated loss in an older adult with no nasal symptoms raises a neurodegenerative cause"
+            },
+            {
+              "q": "Any nasal blockage or known polyps?",
+              "probes": "Local/mechanical obstruction is the commonest treatable cause"
+            }
+          ]
         },
         {
           "n": "Facial pain / pressure",
@@ -5826,7 +5929,22 @@
             ]
           ],
           "red": "Periorbital swelling, visual change or severe headache with sinusitis → orbital or intracranial spread — emergency.",
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is it worse bending forward, and any purulent discharge or maxillary toothache?",
+              "probes": "The classic sinusitis triad — bending-forward pain, purulent discharge, maxillary toothache"
+            },
+            {
+              "q": "Any periorbital swelling, visual change, or severe headache with it?",
+              "probes": "Suggests orbital or intracranial spread of sinusitis — an emergency, not simple sinusitis",
+              "danger": true
+            },
+            {
+              "q": "Any itchy eyes or sneezing, without much discharge?",
+              "probes": "Favours allergic rhinitis over true sinusitis"
+            }
+          ]
         },
         {
           "n": "Sore throat",
@@ -5847,7 +5965,23 @@
             ]
           ],
           "red": "Trismus/drooling (quinsy) or stridor with sore throat (epiglottitis) are emergencies.",
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Any fever, or white patches/pus on your tonsils?",
+              "probes": "Fever + tonsillar exudate → bacterial pharyngitis/tonsillitis, or in adolescents, glandular fever (EBV)"
+            },
+            {
+              "q": "Is it one-sided and severe, with trouble opening your mouth or drooling?",
+              "probes": "Unilateral severe pain + trismus + drooling → quinsy (peritonsillar abscess)",
+              "danger": true
+            },
+            {
+              "q": "Any difficulty breathing, or a harsh noise when you breathe in?",
+              "probes": "Stridor with a sore throat → epiglottitis, a red flag — do not examine the throat if suspected",
+              "danger": true
+            }
+          ]
         },
         {
           "n": "Dysphagia / odynophagia",
@@ -5863,7 +5997,22 @@
               "Painful swallowing (odynophagia) → pharyngitis, tonsillitis, or rarely epiglottitis"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is it solids only, or solids and liquids together?",
+              "probes": "Solids only → mechanical (stricture, tumour); solids and liquids from the start → a motor problem"
+            },
+            {
+              "q": "Has it been getting steadily worse, and any weight loss?",
+              "probes": "Progressive dysphagia + weight loss → oesophageal/pharyngeal malignancy until excluded",
+              "danger": true
+            },
+            {
+              "q": "Is it painful to swallow, and does it come with a sore throat or fever?",
+              "probes": "Odynophagia with a sore throat and fever points to pharyngitis or tonsillitis rather than a structural cause"
+            }
+          ]
         },
         {
           "n": "Hoarseness",
@@ -5880,7 +6029,22 @@
             ]
           ],
           "red": "Persistent hoarseness >3 weeks needs laryngoscopy.",
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "How long has this lasted, and is it getting worse?",
+              "probes": "Short history → laryngitis; persistent beyond 3 weeks needs laryngoscopy",
+              "danger": true
+            },
+            {
+              "q": "Do you smoke, and any recent anaesthetic or intubation, or heavy voice use?",
+              "probes": "Smoking raises laryngeal/lung cancer; recent intubation raises injury; heavy voice use raises overuse or vocal cord nodules"
+            },
+            {
+              "q": "Any thyroid symptoms, or a steroid inhaler you use?",
+              "probes": "Hypothyroidism and inhaled corticosteroid use are both reversible causes worth checking before further work-up"
+            }
+          ]
         },
         {
           "n": "Neck lump",
@@ -5897,7 +6061,22 @@
             ]
           ],
           "red": "Persistent unilateral neck lump in an adult → assume malignancy until excluded.",
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "How long has it been there, and has it changed in size?",
+              "probes": "Persistent and enlarging over weeks is more concerning than a lump present for years unchanged"
+            },
+            {
+              "q": "Is it painful or tender, or did it come on with a cold/sore throat?",
+              "probes": "Tender, especially with a recent infection, in a child → reactive lymphadenopathy; painless and firm in an adult → assume malignancy until excluded",
+              "danger": true
+            },
+            {
+              "q": "Is it firm and fixed, or soft and mobile? Any weight loss, night sweats, or hoarseness?",
+              "probes": "Firm, fixed, with systemic symptoms raises malignancy (nodal, thyroid, or salivary) as the leading concern"
+            }
+          ]
         },
         {
           "n": "Visual loss",
@@ -5917,7 +6096,44 @@
               "Gradual painless → cataract, chronic glaucoma, macular degeneration, refractive/diabetic"
             ]
           ],
-          "red": "Sudden visual loss is an emergency — same-day ophthalmology."
+          "red": "Sudden visual loss is an emergency — same-day ophthalmology.",
+          "followups": [
+            {
+              "q": "One eye or both — and does it persist if you close each eye in turn?",
+              "probes": "Confirms it's a true visual field/eye problem, not something that resolves with one eye covered — and localises to one eye vs a field defect"
+            },
+            {
+              "q": "Did it come on suddenly, or gradually over weeks to months?",
+              "probes": "Sudden → emergencies (vascular occlusion, detachment, glaucoma, GCA); gradual → cataract, chronic glaucoma, macular degeneration"
+            },
+            {
+              "q": "Was it like a curtain coming down, and has your vision come back?",
+              "probes": "Curtain descending, then resolving → amaurosis fugax, a TIA warning",
+              "danger": true
+            },
+            {
+              "q": "Is the eye painful?",
+              "probes": "Pain + visual loss → acute angle-closure glaucoma, optic neuritis, or arteritic causes — a different, more urgent pathway than painless loss"
+            },
+            {
+              "q": "Any flashes of light or floaters beforehand?",
+              "probes": "Flashes and a shower of new floaters → retinal detachment, needs same-day referral",
+              "danger": true
+            },
+            {
+              "q": "Are you over 50, with any scalp tenderness, jaw pain chewing, or headache on that side?",
+              "probes": "Raises giant cell arteritis — same-day treatment prevents the fellow eye from also being lost",
+              "danger": true
+            },
+            {
+              "q": "Do you have diabetes, high blood pressure, or atrial fibrillation?",
+              "probes": "Sets pre-test probability for diabetic retinopathy, retinal vein occlusion, or an embolic retinal artery occlusion"
+            },
+            {
+              "q": "Any weakness, tingling, or bladder/bowel changes alongside it?",
+              "probes": "Raises optic neuritis and multiple sclerosis as a unifying diagnosis"
+            }
+          ]
         },
         {
           "n": "Red / painful eye",
@@ -5934,7 +6150,22 @@
             ]
           ],
           "red": "Painful red eye with reduced vision needs same-day ophthalmology.",
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is it painful when you move your eyes, and are your eyelids stuck together in the morning?",
+              "probes": "Pain on movement → iritis/scleritis; lids stuck together → conjunctivitis, the benign mimic"
+            },
+            {
+              "q": "Any reduced vision, or sensitivity to light, with it?",
+              "probes": "Reduced vision or photophobia alongside redness makes it sight-threatening — acute glaucoma, uveitis, keratitis, scleritis",
+              "danger": true
+            },
+            {
+              "q": "Do you wear contact lenses, or have you had an injury or worked with grinding/welding equipment?",
+              "probes": "Raises corneal ulceration, a foreign body, or a flash burn as the cause"
+            }
+          ]
         },
         {
           "n": "Diplopia",
@@ -5946,7 +6177,18 @@
               "→ cranial nerve palsy: think microvascular, compressive (aneurysm — painful III with a fixed pupil is an emergency), or raised ICP"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Does it go away when you cover one eye?",
+              "probes": "Persists with one eye covered → an eye problem (astigmatism, cataract, dislocated lens), not a nerve palsy; resolves with one eye covered → true binocular diplopia from a cranial nerve or muscle problem"
+            },
+            {
+              "q": "Any drooping eyelid, or is one pupil bigger than the other? Any pain?",
+              "probes": "Painful with a dilated pupil → compressive third nerve palsy (aneurysm), a neurosurgical emergency",
+              "danger": true
+            }
+          ]
         },
         {
           "n": "Eye discharge",
@@ -5962,7 +6204,18 @@
               "Purulent discharge + pain + reduced vision → part of a sight-threatening picture, not simple conjunctivitis"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "What colour is it, and are your eyelids stuck together, especially in the morning?",
+              "probes": "Thick, discoloured, lids stuck together → bacterial; watery with itching/sneezing → allergic; watery after a cold, one eye first → viral"
+            },
+            {
+              "q": "Any pain or reduced vision with the discharge?",
+              "probes": "Pain or reduced vision alongside discharge means this isn't simple conjunctivitis — it's part of a sight-threatening picture",
+              "danger": true
+            }
+          ]
         }
       ],
       "checklist": [
