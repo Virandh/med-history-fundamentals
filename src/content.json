@@ -4940,9 +4940,50 @@
             [
               "in",
               "Ask about GI symptoms of malabsorption (coeliac) and known chronic disease (renal, inflammatory)"
+            ],
+            [
+              "in",
+              "Anaemia + bruising + recurrent infections together → marrow failure, not simple anaemia — a failure of all three cell lines"
             ]
           ],
-          "red": "Iron-deficiency anaemia in a man or postmenopausal woman is a GI cancer until excluded."
+          "red": "Iron-deficiency anaemia in a man or postmenopausal woman is a GI cancer until excluded.",
+          "followups": [
+            {
+              "q": "How much can you do before you're tired or breathless — has that changed?",
+              "probes": "Quantifies functional impact and gives a severity/trajectory baseline"
+            },
+            {
+              "q": "Any bleeding from the bowel, black stools, or vomited blood?",
+              "probes": "GI blood loss is the commonest cause of iron-deficiency anaemia in men and postmenopausal women — right-sided colon cancer classically presents this way",
+              "danger": true
+            },
+            {
+              "q": "For women — are your periods heavy or frequent?",
+              "probes": "The commonest cause of iron deficiency in women of reproductive age"
+            },
+            {
+              "q": "What's your diet like — any chance you're low in iron, B12, or folate?",
+              "probes": "Vegan/vegetarian diet → B12; poor intake generally → iron/folate; ask about prior stomach or bowel surgery too (reduced absorption)"
+            },
+            {
+              "q": "Any yellowing of the skin or eyes, or dark urine?",
+              "probes": "Jaundice alongside anaemia raises haemolysis rather than a nutritional or bleeding cause"
+            },
+            {
+              "q": "Any chronic illness — kidney disease, rheumatoid arthritis, or another inflammatory condition?",
+              "probes": "Anaemia of chronic disease is a diagnosis of exclusion once bleeding and deficiency are ruled out"
+            },
+            {
+              "q": "Any bone pain, recurrent infections, or unusual bruising alongside the tiredness?",
+              "probes": "A failure of all three cell lines together points to marrow failure/leukaemia rather than simple anaemia",
+              "danger": true
+            },
+            {
+              "q": "Any recent travel, especially somewhere with malaria?",
+              "probes": "Chronic malarial or parasitic infection (e.g. hookworm) is a common cause of chronic anaemia globally"
+            }
+          ],
+          "approach": "tiredness"
         },
         {
           "n": "Mouth ulcers",
@@ -4954,7 +4995,17 @@
               "Isolated, recurrent, no other bleeding/infection signs → usually benign aphthous ulcers"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "How many at once, and how often do they come back?",
+              "probes": "Multiple or unusually frequent ulcers raise a systemic cause rather than isolated benign aphthous ulcers"
+            },
+            {
+              "q": "Any other bleeding, bruising, or infections around the same time?",
+              "probes": "Combined with other cytopenic signs, mouth ulcers can reflect the neutropenia of marrow failure rather than a standalone problem"
+            }
+          ]
         },
         {
           "n": "Bruising & bleeding",
@@ -4974,7 +5025,42 @@
               "Ask about anticoagulants/antiplatelets and family history of bleeding"
             ]
           ],
-          "red": "New widespread bruising + fatigue + infections → marrow failure/leukaemia."
+          "red": "New widespread bruising + fatigue + infections → marrow failure/leukaemia.",
+          "followups": [
+            {
+              "q": "Where do you bruise or bleed — skin and gums, or deep into joints and muscles?",
+              "probes": "Skin/mucosal (petechiae, gum/nose bleeding) → platelet problem; deep bleeding into joints/muscles → coagulation factor problem"
+            },
+            {
+              "q": "Does bleeding start immediately after a cut, or is it delayed?",
+              "probes": "Immediate → platelet/vascular; delayed after trauma → coagulation factor"
+            },
+            {
+              "q": "Are the bruises small and numerous, or large single ones?",
+              "probes": "Small, numerous, superficial → platelet; large, deep haematomas → coagulation factor"
+            },
+            {
+              "q": "Any blood in your urine or stool, or heavy periods?",
+              "probes": "Extends the bleeding survey beyond skin — mucosal bleeding elsewhere supports the same platelet/vascular pattern"
+            },
+            {
+              "q": "Are you on aspirin, another blood thinner, or anti-inflammatory tablets?",
+              "probes": "Medication is a common, reversible cause — always check before assuming an intrinsic bleeding disorder"
+            },
+            {
+              "q": "Any family history of bleeding problems?",
+              "probes": "Raises an inherited disorder (haemophilia, von Willebrand disease) — often only diagnosed after unusual bleeding at surgery"
+            },
+            {
+              "q": "Any fatigue, fevers, or recurrent infections alongside the bruising?",
+              "probes": "New widespread bruising + fatigue + infections → marrow failure/leukaemia, not an isolated platelet problem",
+              "danger": true
+            },
+            {
+              "q": "Have you ever had your spleen removed?",
+              "probes": "Splenectomy can increase platelet numbers (thrombocytosis), changing the picture rather than causing bleeding"
+            }
+          ]
         },
         {
           "n": "Thrombosis",
@@ -4993,6 +5079,30 @@
               "out",
               "Ask about provoking factors: surgery, immobility, long flights, oestrogens, pregnancy"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Any swelling, pain, or redness in one calf?",
+              "probes": "Unilateral calf swelling/pain → DVT"
+            },
+            {
+              "q": "Any sudden breathlessness or sharp chest pain with it?",
+              "probes": "Suggests extension to pulmonary embolism",
+              "danger": true
+            },
+            {
+              "q": "Has this happened before, unprovoked, or in an unusual place, or is there a family history?",
+              "probes": "Recurrent, unprovoked, or unusual-site thrombosis raises an inherited thrombophilia — and unprovoked VTE can itself be the first sign of an occult cancer",
+              "danger": true
+            },
+            {
+              "q": "Any recent surgery, long flight, immobility, or hormone treatment (pill, HRT, pregnancy)?",
+              "probes": "The common provoking factors — worth identifying because they change how aggressively you look for an underlying cause"
+            },
+            {
+              "q": "Do you smoke, or are you overweight?",
+              "probes": "Additional modifiable risk factors that compound the inherited and provoked risks"
+            }
           ]
         },
         {
@@ -5012,6 +5122,25 @@
               "in",
               "Recurrent specific infection types can point to specific immune defects"
             ]
+          ],
+          "followups": [
+            {
+              "q": "How often, how severe, and how long do they take to clear compared with before?",
+              "probes": "Frequency, severity and clearance time together are more telling than any single infection"
+            },
+            {
+              "q": "Any particular type recurring — chest, sinus, skin, or urinary?",
+              "probes": "The pattern of infection type can point to a specific immune defect"
+            },
+            {
+              "q": "Any fatigue, bruising, or weight loss alongside the infections?",
+              "probes": "Frequent severe bacterial infections + fatigue + bruising → marrow failure/leukaemia",
+              "danger": true
+            },
+            {
+              "q": "Any risk factors for HIV — could we talk about your sexual history or drug use?",
+              "probes": "Recurrent infections + weight loss + risk factors → HIV; ask sensitively but directly"
+            }
           ]
         },
         {
@@ -5028,7 +5157,22 @@
               "Tender, associated with a local infection → reactive"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Are the lumps painful or tender, and did they come on with an infection nearby?",
+              "probes": "Tender, with a recent local infection → usually reactive; painless → warrants more concern"
+            },
+            {
+              "q": "Are they firm and rubbery, and have they been there for weeks without shrinking?",
+              "probes": "Painless, rubbery, persistent nodes are the textbook lymphoma pattern"
+            },
+            {
+              "q": "Any night sweats, weight loss, fevers, or itching alongside the lumps?",
+              "probes": "The B-symptom cluster alongside lymphadenopathy strengthens concern for lymphoma",
+              "danger": true
+            }
+          ]
         },
         {
           "n": "Splenic fullness / early satiety",
@@ -5040,7 +5184,17 @@
               "Left-upper-quadrant fullness/early satiety → splenomegaly (myeloproliferative disease, lymphoma, haemolysis)"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is it on the left side, under your ribs, and does it fill up quickly when you eat?",
+              "probes": "Left-upper-quadrant fullness with early satiety is the classic (if subtle) symptom of a spleen enlarging before it's felt on examination"
+            },
+            {
+              "q": "Any fatigue, bruising, or night sweats alongside it?",
+              "probes": "Points to the underlying cause — myeloproliferative disease, lymphoma, or haemolysis — rather than a GI explanation"
+            }
+          ]
         },
         {
           "n": "Constitutional (B) symptoms",
@@ -5056,7 +5210,22 @@
               "Generalised itch (esp. after a hot shower) + ruddy complexion → polycythaemia"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Are the night sweats drenching enough to need changing the sheets?",
+              "probes": "Drenching, not just feeling warm at night, is the specific pattern that matters for the B-symptom cluster"
+            },
+            {
+              "q": "Is the itch worse after a hot shower, and do you have a ruddy or flushed complexion?",
+              "probes": "This specific pattern points to polycythaemia rather than the lymphoma-associated itch"
+            },
+            {
+              "q": "Any lumps, bone pain, or unexplained bruising alongside these?",
+              "probes": "Ties the constitutional symptoms back to a nodal, marrow, or myeloproliferative source"
+            }
+          ],
+          "approach": "weight-loss"
         },
         {
           "n": "Bone pain",
@@ -5068,7 +5237,18 @@
               "Bone pain + fatigue + recurrent infection + thirst/constipation (hypercalcaemia) in an older patient → myeloma"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is it in one spot, or several bones, and is it worse at night or with movement?",
+              "probes": "Multifocal bone pain, worse with movement, in an older adult raises myeloma"
+            },
+            {
+              "q": "Any thirst, constipation, or confusion alongside it?",
+              "probes": "Symptoms of hypercalcaemia (part of the CRAB criteria) support myeloma as the underlying cause",
+              "danger": true
+            }
+          ]
         }
       ],
       "checklist": [
