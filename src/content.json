@@ -938,7 +938,46 @@
               "Burning, related to meals/lying flat, relieved by antacids → GORD"
             ]
           ],
-          "red": "rest pain, crescendo pattern (unstable angina), associated syncope or diaphoresis, tearing interscapular pain."
+          "red": "rest pain, crescendo pattern (unstable angina), associated syncope or diaphoresis, tearing interscapular pain.",
+          "followups": [
+            {
+              "q": "Can you describe the pain — sharp or dull, heavy or tight?",
+              "probes": "Character does most of the work: tight/heavy/crushing → ischaemic pattern · sharp/stabbing → pleuritic or pericardial · burning → reflux"
+            },
+            {
+              "q": "When do you get it — out of the blue, or with exertion? Worse after a meal or in the cold?",
+              "probes": "Exertional, reproducible → angina · unrelated to exertion, worse lying down or after meals → reflux"
+            },
+            {
+              "q": "How long does it last, and does it ease with rest?",
+              "probes": "Minutes, eases with rest → stable angina · over 30 min at rest, unrelieved → acute coronary syndrome",
+              "danger": true
+            },
+            {
+              "q": "Does it radiate anywhere — jaw, arms, back?",
+              "probes": "Radiation to jaw/left arm → cardiac · sudden tearing pain radiating to the back → aortic dissection",
+              "danger": true
+            },
+            {
+              "q": "Is it coming on with less effort than before, or now at rest?",
+              "probes": "A crescendo pattern or pain at rest → unstable angina/ACS, needs urgent assessment",
+              "danger": true
+            },
+            {
+              "q": "Any sweating, nausea, or feeling faint with it?",
+              "probes": "Sweating, nausea and breathlessness alongside the pain raise the likelihood of ACS",
+              "danger": true
+            },
+            {
+              "q": "Is it affected by breathing, movement, or position?",
+              "probes": "Worse on inspiration → pleuritic (PE, pericarditis, pneumothorax); worse on movement/palpation → musculoskeletal — but never rule out ACS on this alone"
+            },
+            {
+              "q": "Have you taken anything for it — does a spray under the tongue, or an antacid, help?",
+              "probes": "GTN relief is not specific — it also eases oesophageal spasm and carries a placebo effect — so use it to support, not confirm, an ischaemic cause"
+            }
+          ],
+          "approach": "chest-pain"
         },
         {
           "n": "Dyspnoea + exercise tolerance",
@@ -962,7 +1001,39 @@
               "Dyspnoea on exertion with exertional chest tightness → may be an angina equivalent, especially in diabetics and the elderly"
             ]
           ],
-          "red": "dyspnoea at rest, rapidly progressive over days."
+          "red": "dyspnoea at rest, rapidly progressive over days.",
+          "followups": [
+            {
+              "q": "How far can you walk on the flat, or how many stairs, before you're stopped? Compared with a year ago?",
+              "probes": "Quantify — this maps onto NYHA class and gives a trajectory, more reliable than the patient's own severity grading"
+            },
+            {
+              "q": "Did it come on suddenly, or has it crept up gradually?",
+              "probes": "Sudden → MI, pulmonary oedema, arrhythmia, PE · gradual → progressive left ventricular impairment"
+            },
+            {
+              "q": "Any tightness in the chest when you're breathless?",
+              "probes": "Dyspnoea with exertional chest tightness may be an angina equivalent, especially in diabetics and the elderly",
+              "danger": true
+            },
+            {
+              "q": "Do you get breathless lying flat, or wake at night gasping?",
+              "probes": "Orthopnoea/PND strongly favour a cardiac over a respiratory cause — pursue with those specific questions"
+            },
+            {
+              "q": "Any wheeze, cough, sputum, or a smoking history?",
+              "probes": "Pulls the picture toward a respiratory cause (COPD/asthma) rather than cardiac — the classic cardio-resp discriminator zone"
+            },
+            {
+              "q": "Any past heart attacks, angina, high blood pressure, or heavy alcohol use?",
+              "probes": "Known IHD points to reduced LV contractility; hypertension or heavy alcohol intake point to hypertensive heart disease or alcoholic cardiomyopathy"
+            },
+            {
+              "q": "Does it feel like you can't get a big enough breath in, coming on at rest rather than with exertion?",
+              "probes": "Suggests anxiety-related breathlessness — a diagnosis of exclusion, not the first assumption"
+            }
+          ],
+          "approach": "breathlessness"
         },
         {
           "n": "Orthopnoea",
@@ -981,7 +1052,22 @@
               "in",
               "New increase in pillow count → decompensation"
             ]
-          ]
+          ],
+          "followups": [
+            {
+              "q": "How many pillows do you use, and has that changed recently?",
+              "probes": "Pillow count is a semi-quantitative severity score — a new increase signals decompensation"
+            },
+            {
+              "q": "Is it lying flat itself that brings it on, or are you just generally limited by effort?",
+              "probes": "True orthopnoea is positional and rapid (minutes) — COPD patients may also prefer sitting up, but their limitation is effort-related and all-day, not positional"
+            },
+            {
+              "q": "How quickly does it come on after lying down, and does sitting up relieve it?",
+              "probes": "Onset within minutes of lying flat, relieved by sitting up, strongly favours LVF over lung disease as the cause of dyspnoea"
+            }
+          ],
+          "approach": "breathlessness"
         },
         {
           "n": "Paroxysmal nocturnal dyspnoea",
@@ -997,7 +1083,27 @@
               "Distinguish from nocturnal asthma (wheeze-predominant, often with cough, responds to inhaler) and OSA (witnessed apnoeas, snoring, unrefreshed sleep — the patient's partner often gives the history)"
             ]
           ],
-          "red": "new PND = decompensated heart failure until proven otherwise."
+          "red": "new PND = decompensated heart failure until proven otherwise.",
+          "followups": [
+            {
+              "q": "How long after falling asleep does it happen, and what do you have to do to recover — sit up, stand, go to the window?",
+              "probes": "Waking 1–2 hours in, gasping, needing several minutes upright to recover, is the classic pattern — highly specific for LVF"
+            },
+            {
+              "q": "Is it wheeze that wakes you, and does an inhaler help?",
+              "probes": "Wheeze-predominant, with cough, responsive to an inhaler, points to nocturnal asthma instead"
+            },
+            {
+              "q": "Does your partner notice loud snoring or pauses in your breathing?",
+              "probes": "Witnessed apnoeas/snoring with unrefreshed sleep points to OSA rather than PND"
+            },
+            {
+              "q": "Is this new, or has it happened before?",
+              "probes": "New PND = decompensated heart failure until proven otherwise",
+              "danger": true
+            }
+          ],
+          "approach": "breathlessness"
         },
         {
           "n": "Ankle swelling / oedema",
@@ -1020,13 +1126,63 @@
               "in",
               "Ask about abdominal swelling and weight gain — ascites and rapid weight gain suggest significant fluid retention"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Is it both ankles, or just one?",
+              "probes": "Bilateral → systemic/cardiac cause · unilateral → DVT or a local cause (cellulitis, ruptured Baker's cyst) — a completely different pathway",
+              "danger": true
+            },
+            {
+              "q": "Worse by evening, better after a night lying flat?",
+              "probes": "The classic pattern of dependent, cardiac-origin oedema"
+            },
+            {
+              "q": "Any breathlessness, orthopnoea or PND alongside it?",
+              "probes": "Oedema plus the pump-failure cluster rules in congestive cardiac failure — oedema alone is poorly correlated with heart failure"
+            },
+            {
+              "q": "Any recent weight gain, or swelling of the abdomen?",
+              "probes": "Rapid weight gain (3 kg or more) and ascites suggest significant fluid retention"
+            },
+            {
+              "q": "Any new medications, especially for blood pressure?",
+              "probes": "Calcium-channel blockers (e.g. amlodipine) are a classic drug cause of peripheral oedema unrelated to the heart"
+            }
           ]
         },
         {
           "n": "Fatigue",
           "ask": "How is your energy? More tired than you used to be?",
           "why": "Low cardiac output presents as fatigue before frank dyspnoea in some patients (especially the elderly). Non-specific alone — its value is in aggregate with the pump-failure cluster. Also a common symptom of beta-blocker therapy — review the medication list.",
-          "points": []
+          "points": [
+            [
+              "in",
+              "Fatigue accompanying dyspnoea, orthopnoea, PND or oedema → part of the low-output/congestive picture, and may precede frank breathlessness, especially in the elderly"
+            ],
+            [
+              "out",
+              "Fatigue in isolation, or explained by poor sleep, anaemia, depression or a new beta-blocker → look outside cardiac failure first"
+            ]
+          ],
+          "followups": [
+            {
+              "q": "Is this fatigue different from feeling normal tiredness — is it limiting what you can do?",
+              "probes": "Low-output fatigue tracks with exertion and may precede frank dyspnoea, especially in the elderly"
+            },
+            {
+              "q": "Any breathlessness, ankle swelling, or chest symptoms alongside it?",
+              "probes": "Fatigue is non-specific alone — its value is in aggregate with the pump-failure cluster"
+            },
+            {
+              "q": "Are you on a beta-blocker, or any new medication?",
+              "probes": "Beta-blockers commonly cause fatigue — review the medication list before assuming cardiac decompensation"
+            },
+            {
+              "q": "Any other explanation — poor sleep, low mood, or heavy periods/bleeding?",
+              "probes": "Rules out the other common causes of fatigue — anaemia, depression, poor sleep — before anchoring on cardiac output"
+            }
+          ]
         },
         {
           "n": "Palpitations",
@@ -1054,7 +1210,45 @@
               "Palpitations with syncope or chest pain → possible VT / structural disease"
             ]
           ],
-          "red": "palpitations + syncope, family history of sudden death (channelopathies, HOCM), known structural heart disease."
+          "red": "palpitations + syncope, family history of sudden death (channelopathies, HOCM), known structural heart disease.",
+          "followups": [
+            {
+              "q": "Can you tap out the rhythm for me — is it fast or slow, regular or irregular?",
+              "probes": "The tapped rhythm is often more useful than the verbal description — irregularly irregular → AF · very fast and regular → SVT/VT"
+            },
+            {
+              "q": "How does it start and stop — suddenly, or does it build up gradually?",
+              "probes": "Abrupt on/off → arrhythmia (SVT/VT) · gradual → sinus tachycardia (anxiety, exertion, fever)"
+            },
+            {
+              "q": "How long do episodes last, and how often do they happen?",
+              "probes": "Brief and occasional suggests resting ectopics; sustained episodes need more urgent characterisation"
+            },
+            {
+              "q": "Any chest tightness or breathlessness with it?",
+              "probes": "Palpitations + chest tightness/dyspnoea raise concern for a haemodynamically significant arrhythmia",
+              "danger": true
+            },
+            {
+              "q": "Have you ever blacked out, or felt about to, during an episode?",
+              "probes": "Palpitations + syncope suggest VT, especially with known structural heart disease",
+              "danger": true
+            },
+            {
+              "q": "Any triggers — caffeine, alcohol, stress — or things that stop it, like holding your breath or coughing?",
+              "probes": "Response to vagal manoeuvres (Valsalva, cold water, coughing) supports SVT"
+            },
+            {
+              "q": "Has a smartwatch or home monitor recorded anything?",
+              "probes": "Increasingly common corroborating evidence, but these devices are often confused by ectopic beats — don't over-interpret an unreviewed alert"
+            },
+            {
+              "q": "Any family history of unexplained sudden death, or known heart disease yourself?",
+              "probes": "Raises concern for inherited channelopathies (long QT, Brugada) or structural disease underlying the arrhythmia",
+              "danger": true
+            }
+          ],
+          "approach": "palpitations"
         },
         {
           "n": "Syncope / presyncope",
@@ -1082,7 +1276,44 @@
               "Lateral tongue-biting and post-ictal confusion/drowsiness → shifts to seizure, a different system entirely (jerk duration is not a reliable discriminator: brief clonic jerks occur in ordinary convulsive syncope, and prolonged jerking actually suggests non-epileptic seizures)"
             ]
           ],
-          "red": "exertional syncope, syncope with no prodrome, family history of sudden cardiac death."
+          "red": "exertional syncope, syncope with no prodrome, family history of sudden cardiac death.",
+          "followups": [
+            {
+              "q": "What were you doing right when it happened?",
+              "probes": "Circumstances are almost the whole diagnosis — exertional syncope is sinister (AS, HOCM, VT); standing, coughing or micturition point to reflex/situational causes",
+              "danger": true
+            },
+            {
+              "q": "Was there any warning — nausea, sweating, tunnel vision — or did it come out of nowhere?",
+              "probes": "A vasovagal prodrome rules out a cardiac cause with reasonable confidence; no warning at all suggests an arrhythmic (Stokes–Adams) cause"
+            },
+            {
+              "q": "How quickly did you recover, and were you confused or drowsy afterwards?",
+              "probes": "Rapid, full recovery favours cardiac/vasovagal; slow recovery with confusion favours seizure or a neurological cause"
+            },
+            {
+              "q": "Did you bite your tongue, or did anyone see jerking movements?",
+              "probes": "Lateral tongue-biting and prolonged jerking suggest seizure — though brief clonic jerks can occur in ordinary convulsive syncope, so don't over-weight jerking alone"
+            },
+            {
+              "q": "Any chest pain, palpitations, or known heart disease beforehand?",
+              "probes": "Suggests an arrhythmic or ischaemic cause, especially with a background of structural heart disease",
+              "danger": true
+            },
+            {
+              "q": "Did it happen on standing up, or after a meal or dehydration? Any recent change to your blood pressure tablets?",
+              "probes": "Points to orthostatic hypotension — review antihypertensives, diuretics and fluid losses"
+            },
+            {
+              "q": "Any family history of sudden unexplained death at a young age?",
+              "probes": "Raises concern for inherited channelopathies (long/short QT, Brugada syndrome)",
+              "danger": true
+            },
+            {
+              "q": "Has anyone filmed an episode, or do you wear a device that might have recorded it?",
+              "probes": "A bystander video or smartwatch ECG can be the single most useful piece of evidence you'll get"
+            }
+          ]
         },
         {
           "n": "Intermittent claudication",
@@ -1106,7 +1337,30 @@
               "Ask also about cold feet, colour change, ulcers that won't heal"
             ]
           ],
-          "red": "Rest pain / critical limb ischaemia needs urgent vascular review."
+          "red": "Rest pain / critical limb ischaemia needs urgent vascular review.",
+          "followups": [
+            {
+              "q": "Where do you feel it — calf, thigh, or buttock — and how far can you walk before it starts?",
+              "probes": "Location clues the level of arterial disease; claudication distance is the severity yardstick"
+            },
+            {
+              "q": "Does it ease within a few minutes of stopping, or do you need to sit down first?",
+              "probes": "Relief on simply standing still → vascular claudication · relief only on sitting/leaning forward, with back pain → spinal (pseudo-)claudication from canal stenosis"
+            },
+            {
+              "q": "Does the pain ever happen at rest, especially at night, and does hanging your foot out of bed help?",
+              "probes": "Rest pain relieved by dependency → critical limb ischaemia, needs urgent vascular review",
+              "danger": true
+            },
+            {
+              "q": "Any colour change, coldness, or sores/ulcers on your feet that won't heal?",
+              "probes": "Pallor, coldness and non-healing ulcers complete the peripheral arterial disease picture (the six Ps)"
+            },
+            {
+              "q": "Do you have diabetes, high blood pressure, or a smoking history?",
+              "probes": "The same atherosclerotic risk factors — this patient's biggest killer is MI, not the leg"
+            }
+          ]
         },
         {
           "n": "Modifiable risk factors",
