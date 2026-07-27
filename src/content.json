@@ -4633,7 +4633,43 @@
               "Recurrent infections (thrush, skin, urinary) and slow healing"
             ]
           ],
-          "red": "Rapid-onset ketotic symptoms → type 1 / DKA — an emergency."
+          "red": "Rapid-onset ketotic symptoms → type 1 / DKA — an emergency.",
+          "followups": [
+            {
+              "q": "How much are you drinking and passing urine, and has that changed recently?",
+              "probes": "Polyuria and polydipsia together are the classic osmotic symptoms — quantify the change from baseline"
+            },
+            {
+              "q": "Any unexplained weight loss despite a normal or increased appetite?",
+              "probes": "Weight loss with preserved/increased appetite reflects glucose being lost in the urine rather than reduced intake"
+            },
+            {
+              "q": "Any blurred vision?",
+              "probes": "Reflects osmotic swelling of the lens — often reversible once glucose is controlled, but worth distinguishing from retinopathy"
+            },
+            {
+              "q": "Any recurrent infections — thrush, skin, or urinary — or wounds that are slow to heal?",
+              "probes": "Hyperglycaemia impairs immune function and wound healing; recurrent candidal infections are a common tell in previously undiagnosed diabetes"
+            },
+            {
+              "q": "Any nausea, vomiting, abdominal pain, or fast/deep breathing?",
+              "probes": "Raises diabetic ketoacidosis, especially in a patient who may have type 1 diabetes — a medical emergency",
+              "danger": true
+            },
+            {
+              "q": "How quickly has this come on — days, or weeks to months?",
+              "probes": "Rapid onset, especially with weight loss in a younger patient, points to type 1; gradual onset in an older, overweight patient points to type 2"
+            },
+            {
+              "q": "Any family history of diabetes, or gestational diabetes in a pregnancy?",
+              "probes": "Both raise pre-test probability and shift the likely type"
+            },
+            {
+              "q": "Have you actually been drowsy, confused, or hard to rouse?",
+              "probes": "A disturbed conscious state alongside these symptoms is itself an emergency, not just a symptom to note",
+              "danger": true
+            }
+          ]
         },
         {
           "n": "Diabetes — hypoglycaemia symptoms",
@@ -4656,6 +4692,33 @@
               "out",
               "Not on insulin or a sulfonylurea → hypoglycaemia unlikely, can skip"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Are you on insulin or a sulfonylurea tablet?",
+              "probes": "Hypoglycaemia is essentially only relevant with these treatments — if not on either, this can usually be skipped"
+            },
+            {
+              "q": "What do you notice first — shakiness, sweating, or a racing heart?",
+              "probes": "Autonomic warning symptoms (tremor, sweating, palpitations, hunger) usually come first and are the patient's own early-warning system"
+            },
+            {
+              "q": "Does it happen at a particular time — overnight, or before meals?",
+              "probes": "Nocturnal hypos may only show up as morning headaches or unrefreshing sleep, and are easy to miss without asking directly"
+            },
+            {
+              "q": "Does it ever progress to confusion, seizures, or blacking out?",
+              "probes": "Neuroglycopenic symptoms mark a more severe, dangerous hypo — needs urgent treatment-plan review",
+              "danger": true
+            },
+            {
+              "q": "Does eating or drinking something sugary fix it quickly?",
+              "probes": "Rapid relief with carbohydrate is itself diagnostic and distinguishes it from other causes of these symptoms"
+            },
+            {
+              "q": "Has your weight changed from snacking to prevent or treat these episodes?",
+              "probes": "Defensive eating to avoid hypoglycaemia is a recognised, under-reported driver of weight gain in insulin-treated patients"
+            }
           ]
         },
         {
@@ -4675,6 +4738,36 @@
               "in",
               "Other: erectile dysfunction (early vascular + autonomic marker), non-healing ulcers"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Any change in your vision, or do you have regular eye checks?",
+              "probes": "Screens retinopathy — often asymptomatic until advanced, which is why regular screening (not just symptom-asking) matters"
+            },
+            {
+              "q": "Any numbness, tingling, or pain in your feet, or any sores that won't heal?",
+              "probes": "Peripheral neuropathy plus non-healing ulcers together define the at-risk diabetic foot"
+            },
+            {
+              "q": "Any swelling, or known problems with your kidneys?",
+              "probes": "Screens nephropathy — again frequently silent until advanced"
+            },
+            {
+              "q": "Any chest pain, breathlessness, or leg pain on walking?",
+              "probes": "Screens the macrovascular triad — coronary, cerebrovascular and peripheral arterial disease"
+            },
+            {
+              "q": "Any problems with erections, or other symptoms of nerve damage — dizziness on standing, bladder problems?",
+              "probes": "Erectile dysfunction is often an early marker of vascular and autonomic nerve damage, sometimes preceding a cardiac diagnosis"
+            },
+            {
+              "q": "When did you last have your eyes, feet and kidneys checked?",
+              "probes": "Screening intervals matter as much as symptoms — many complications are picked up before they become symptomatic"
+            },
+            {
+              "q": "Have you needed any treatment already — laser for the eyes, or wound care for the feet?",
+              "probes": "Past treatment for a complication signals more advanced disease and a higher-risk patient going forward"
+            }
           ]
         },
         {
@@ -4698,6 +4791,24 @@
               "in",
               "Complications: run the complications screen"
             ]
+          ],
+          "followups": [
+            {
+              "q": "When were you diagnosed, and were you told it was type 1 or type 2?",
+              "probes": "Type materially changes the whole conversation — insulin dependence, DKA risk, and associated autoimmune conditions"
+            },
+            {
+              "q": "How is it managed — diet alone, tablets, or insulin? Who helps you monitor it?",
+              "probes": "Establishes the treatment intensity and the support structure around it"
+            },
+            {
+              "q": "Do you know your last HbA1c, and how often do you check your glucose at home?",
+              "probes": "HbA1c is the best available marker of average control; home readings show the day-to-day picture HbA1c can't"
+            },
+            {
+              "q": "How often do you have hypos, and have you needed hospital admission for your diabetes recently?",
+              "probes": "Frequency of hypos and recent admissions are the most practical markers of how things are actually going, beyond the numbers"
+            }
           ]
         },
         {
@@ -4748,7 +4859,17 @@
               "Bitemporal hemianopia + headache → chiasmal compression"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Has your peripheral (side) vision changed — bumping into things on one side, or missing things at the edges?",
+              "probes": "Bitemporal hemianopia from chiasmal compression often first shows up as peripheral, not central, vision loss — and patients rarely notice it themselves"
+            },
+            {
+              "q": "Is the headache constant, or worse at particular times?",
+              "probes": "A new, persistent headache accompanying visual field loss supports a mass effect rather than a primary headache disorder"
+            }
+          ]
         },
         {
           "n": "Acral growth (acromegaly)",
@@ -4760,7 +4881,21 @@
               "Enlarging hands/feet (ring/shoe size), coarse features, sweating → acromegaly"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Have your rings, gloves or shoe size changed as an adult?",
+              "probes": "Concrete markers (ring/shoe size) are more reliable than the patient's own sense of change, which is often too gradual to notice"
+            },
+            {
+              "q": "Do you have any old photos you could compare yourself to?",
+              "probes": "Old photographs are often more revealing than the patient's own recollection for a change this gradual"
+            },
+            {
+              "q": "Any headaches, sweating, joint pains, or visual changes alongside it?",
+              "probes": "Completes the acromegaly cluster and screens for the mass effect (headache, visual field loss) of the underlying pituitary tumour"
+            }
+          ]
         },
         {
           "n": "Galactorrhoea",
@@ -4772,7 +4907,17 @@
               "Galactorrhoea + amenorrhoea / low libido → prolactinoma"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is it from one breast or both, and does it happen without you trying to express it?",
+              "probes": "Spontaneous, bilateral discharge is more suggestive of a hormonal cause than a breast-specific one"
+            },
+            {
+              "q": "Any change in your periods, or in your libido?",
+              "probes": "Prolactin excess suppresses the gonadal axis, so galactorrhoea usually travels with amenorrhoea or low libido rather than appearing alone"
+            }
+          ]
         },
         {
           "n": "Calcium — hyper | hypo mirror",
@@ -4828,6 +4973,24 @@
               "in",
               "Low libido + fatigue + loss of body hair → hypogonadism"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Any change in your periods — irregular, heavier, or stopped altogether?",
+              "probes": "Menstrual pattern is one of the most sensitive markers of an underlying endocrine disturbance"
+            },
+            {
+              "q": "Any change in libido or sexual function?",
+              "probes": "A shared final pathway for thyroid, pituitary, adrenal and gonadal disease — worth asking even when the presenting complaint seems unrelated"
+            },
+            {
+              "q": "Any hot flushes, or change in body or facial hair?",
+              "probes": "Hot flushes with irregular-then-absent periods → menopause; new hirsutism/acne → androgen excess (PCOS or, rarely, an adrenal/ovarian tumour)"
+            },
+            {
+              "q": "Any recent significant weight change, intense exercise, or high stress?",
+              "probes": "Functional causes (low body weight, over-exercise, stress) can suppress the reproductive axis just as much as structural endocrine disease"
+            }
           ]
         }
       ],
