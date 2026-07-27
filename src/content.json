@@ -1355,6 +1355,10 @@
               "Mucoid, chronic, worse in the mornings, in a smoker → chronic bronchitis"
             ],
             [
+              "in",
+              "Foul-smelling, dark-coloured sputum → lung abscess with anaerobic organisms"
+            ],
+            [
               "out",
               "Pink and frothy → pulmonary oedema — a cardiac answer hiding in a respiratory question"
             ],
@@ -1362,7 +1366,38 @@
               "in",
               "Rusty sputum → classic (if now uncommon) for pneumococcal pneumonia"
             ]
-          ]
+          ],
+          "followups": [
+            {
+              "q": "How much do you cough up in a day — a teaspoon, an eggcup, a cupful?",
+              "probes": "Quantify in household measures: cupfuls daily, especially worse with position, is the volume that rules in bronchiectasis"
+            },
+            {
+              "q": "What colour is it?",
+              "probes": "Yellow/green and purulent → infective · clear/white (mucoid) → chronic bronchitis or asthma · rusty → classic (if now rare) for pneumococcal pneumonia"
+            },
+            {
+              "q": "Does it smell foul?",
+              "probes": "Foul-smelling, dark-coloured sputum → lung abscess with anaerobic organisms"
+            },
+            {
+              "q": "Is there any blood in it?",
+              "probes": "Any streak of blood needs its own work-up — see the haemoptysis question"
+            },
+            {
+              "q": "Is it frothy and pink rather than a true sputum?",
+              "probes": "Pink frothy secretions are not sputum at all → pulmonary oedema, a cardiac answer hiding in a respiratory question"
+            },
+            {
+              "q": "Worse in the mornings, or worse lying on one side?",
+              "probes": "Morning-predominant in a smoker → chronic bronchitis · postural pooling → bronchiectasis"
+            },
+            {
+              "q": "Any fever with it?",
+              "probes": "Fever + purulent sputum → acute infective exacerbation or pneumonia"
+            }
+          ],
+          "approach": "cough-haemoptysis"
         },
         {
           "n": "Wheeze",
@@ -1385,6 +1420,30 @@
               "in",
               "New localised/monophonic wheeze in a smoker → single obstructed bronchus — think tumour or foreign body"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Does it come and go, or is it there all the time?",
+              "probes": "Episodic, variable → asthma · fixed and persistent → COPD"
+            },
+            {
+              "q": "What brings it on — exercise, cold air, allergens, colds?",
+              "probes": "Classic asthma triggers; also ask about hay fever and eczema (atopy)"
+            },
+            {
+              "q": "Is it worse at night or first thing in the morning?",
+              "probes": "Nocturnal or early-morning wheeze is a marker of poorly controlled asthma"
+            },
+            {
+              "q": "Is the noise loudest in your throat or neck, and is it worse breathing in or out?",
+              "probes": "Loudest over the trachea and worse on inspiration = stridor, not wheeze — upper airway obstruction, an emergency, not asthma/COPD",
+              "danger": true
+            },
+            {
+              "q": "Is it all over the chest, or in one spot, and is it a single note or many?",
+              "probes": "New, localised, single-pitch (monophonic) wheeze in a smoker → think an obstructing tumour or foreign body, not diffuse airway disease",
+              "danger": true
+            }
           ]
         },
         {
@@ -1405,7 +1464,23 @@
               "Hoarse voice in a heavy inhaled-corticosteroid user → local steroid effect/candida — check inhaler technique"
             ]
           ],
-          "red": "Persistent hoarseness >3 weeks needs laryngoscopy."
+          "red": "Persistent hoarseness >3 weeks needs laryngoscopy.",
+          "followups": [
+            {
+              "q": "How long has your voice been like this?",
+              "probes": "Days–weeks after a cold → laryngitis, benign · persistent beyond 3 weeks needs laryngoscopy",
+              "danger": true
+            },
+            {
+              "q": "Do you smoke? Any cough, or coughing up blood, with it?",
+              "probes": "Hoarseness + smoking + cough/haemoptysis → raises lung cancer (via recurrent laryngeal nerve involvement) or laryngeal cancer",
+              "danger": true
+            },
+            {
+              "q": "Do you use a steroid inhaler, and how do you use it?",
+              "probes": "Hoarse voice in a heavy inhaled-corticosteroid user → local steroid effect or oral candidiasis — check inhaler technique and spacer use"
+            }
+          ]
         },
         {
           "n": "Dyspnoea + exercise tolerance",
@@ -1431,9 +1506,54 @@
             [
               "out",
               "Use the cardiac-vs-respiratory discriminator table in the cardio file — orthopnoea/PND/oedema pull cardiac; wheeze/sputum/smoking pull respiratory"
+            ],
+            [
+              "in",
+              "Wakes at night breathless, or needs to sleep propped on pillows → orthopnoea/PND, pulling toward cardiac failure rather than primary lung disease"
+            ],
+            [
+              "out",
+              "Sensation of not getting a satisfying breath in, with perioral/finger tingling → hyperventilation/anxiety, a diagnosis of exclusion"
             ]
           ],
-          "red": "Dyspnoea at rest, rapid progression, dyspnoea with stridor (upper airway obstruction — an emergency, not a wheeze)."
+          "red": "Dyspnoea at rest, rapid progression, dyspnoea with stridor (upper airway obstruction — an emergency, not a wheeze).",
+          "followups": [
+            {
+              "q": "How long have you been short of breath — did it come on suddenly, over hours, or gradually over months?",
+              "probes": "Seconds–minutes → PE, pneumothorax, anaphylaxis, foreign body · hours–days → infection, asthma exacerbation, effusion · months–years → COPD, pulmonary fibrosis, anaemia, deconditioning"
+            },
+            {
+              "q": "How far can you walk on the flat, and how many stairs, before it stops you? How does that compare with a year ago?",
+              "probes": "Quantify in blocks/stairs and track the trajectory — more reliable than the patient's own grading of severity"
+            },
+            {
+              "q": "Do you ever wake at night breathless, or need to sleep propped up on pillows?",
+              "probes": "Orthopnoea and paroxysmal nocturnal dyspnoea point to left ventricular failure, not primary lung disease",
+              "danger": true
+            },
+            {
+              "q": "Any fever with it?",
+              "probes": "Fever → infective cause — pneumonia or an infective exacerbation"
+            },
+            {
+              "q": "Do you smoke?",
+              "probes": "Sets pre-test probability for COPD and lung cancer"
+            },
+            {
+              "q": "Any tightness in the chest when you're breathless?",
+              "probes": "Tightness → angina or asthma, depending on the rest of the story",
+              "danger": true
+            },
+            {
+              "q": "Any wheeze or cough with it?",
+              "probes": "Points to airways disease — asthma or COPD"
+            },
+            {
+              "q": "Does it feel like you can't get a satisfying breath in, with tingling round your lips or fingers?",
+              "probes": "Suggests hyperventilation/anxiety — a diagnosis of exclusion once organic causes are covered"
+            }
+          ],
+          "approach": "breathlessness"
         },
         {
           "n": "Pleuritic chest pain",
@@ -1460,7 +1580,32 @@
               "out",
               "Central, tight, exertional → back to the cardiac pathway"
             ]
-          ]
+          ],
+          "followups": [
+            {
+              "q": "Where exactly is the pain, and does it stay in one spot?",
+              "probes": "Localised, one-sided pain points to a pleural rather than a cardiac source"
+            },
+            {
+              "q": "Is it worse breathing in, or coughing?",
+              "probes": "Confirms a pleuritic pattern — pleura or chest wall, not the (insensate) lung itself"
+            },
+            {
+              "q": "Did it come on suddenly, and are you short of breath with it?",
+              "probes": "Sudden pleuritic pain + acute dyspnoea in a tall, thin, young smoker → spontaneous pneumothorax",
+              "danger": true
+            },
+            {
+              "q": "Any swelling or pain in a calf, recent surgery, a long flight or immobility?",
+              "probes": "Pleuritic pain + calf swelling/recent immobility → pulmonary embolism until excluded",
+              "danger": true
+            },
+            {
+              "q": "Does pressing on the area, or twisting your chest, reproduce it?",
+              "probes": "Reproducible on palpation points to a musculoskeletal cause — but only after PE, pneumothorax and pneumonia are excluded"
+            }
+          ],
+          "approach": "chest-pain"
         },
         {
           "n": "Haemoptysis",
@@ -1486,9 +1631,48 @@
             [
               "out",
               "Confirm it's coughed, not vomited (haematemesis) or from the nose/gums — patients confuse these"
+            ],
+            [
+              "in",
+              "Rapid, or over 250 mL in 24 hours → massive haemoptysis: a medical emergency needing immediate escalation, not just outpatient work-up"
             ]
           ],
-          "red": "The whole question is a red flag — never omit it, never ignore a positive."
+          "red": "The whole question is a red flag — never omit it, never ignore a positive.",
+          "followups": [
+            {
+              "q": "Are you sure it's coughed up, not vomited, or from your nose or gums?",
+              "probes": "Distinguishes true haemoptysis from haematemesis (follows nausea/retching, mixed with vomit) and nasopharyngeal bleeding (appears in the mouth, not mixed with sputum)"
+            },
+            {
+              "q": "How much — streaks, a teaspoon, or much more? How often?",
+              "probes": "Streaks/under 20 mL in 24h = mild · over 250 mL in 24h, or rapid, = massive haemoptysis, a medical emergency",
+              "danger": true
+            },
+            {
+              "q": "Do you smoke, and have you lost weight?",
+              "probes": "Haemoptysis + smoking + weight loss → lung cancer until excluded",
+              "danger": true
+            },
+            {
+              "q": "Any fever or drenching night sweats? Any TB contact or travel?",
+              "probes": "Fever, night sweats ± TB contact/travel → tuberculosis",
+              "danger": true
+            },
+            {
+              "q": "Did it come on suddenly, with breathlessness or sharp chest pain? Any recent surgery, long flight or immobility?",
+              "probes": "Sudden haemoptysis + pleuritic pain + dyspnoea ± immobility → pulmonary embolism",
+              "danger": true
+            },
+            {
+              "q": "Is it streaked through infected, purulent sputum?",
+              "probes": "Blood-streaked purulent sputum during an infective flare is usually the common, benign end of the spectrum — infection or bronchiectasis"
+            },
+            {
+              "q": "Any past TB, bronchiectasis or cystic fibrosis?",
+              "probes": "Known structural lung disease makes recurrent haemoptysis more likely from that same source — but still work it up fresh each time"
+            }
+          ],
+          "approach": "cough-haemoptysis"
         },
         {
           "n": "Fever, night sweats",
@@ -1507,7 +1691,31 @@
               "in",
               "Recurrent low-grade fevers with copious sputum → bronchiectasis exacerbations"
             ]
-          ]
+          ],
+          "followups": [
+            {
+              "q": "Is it a fever with shivers/rigors, or drenching sweats that soak the sheets at night?",
+              "probes": "Rigors point to bacteraemia/acute infection — drenching night sweats (changing the sheets) is the specific pattern that flags TB and lymphoma, not just feeling hot at night"
+            },
+            {
+              "q": "How long has this been going on?",
+              "probes": "Acute, short prodrome → bacterial pneumonia · longer prodrome over days → viral · weeks, with weight loss → TB, lymphoma"
+            },
+            {
+              "q": "Any cough, sputum or chest pain with it?",
+              "probes": "Fever + productive cough ± pleuritic pain → pneumonia"
+            },
+            {
+              "q": "Any weight loss, or contact with TB, or recent travel?",
+              "probes": "Adds to the TB/lymphoma picture — pursue with the weight-loss and exposure questions",
+              "danger": true
+            },
+            {
+              "q": "Do you have a chronic lung condition like bronchiectasis? Are these fevers low-grade and recurring?",
+              "probes": "Recurrent low-grade fevers with copious sputum in a known bronchiectatic → infective exacerbation"
+            }
+          ],
+          "approach": "fever"
         },
         {
           "n": "Weight loss",
@@ -1527,7 +1735,32 @@
               "Weight loss explained by reduced intake (anorexia, dysphagia, low mood) with no chest symptoms → look outside the respiratory system first"
             ]
           ],
-          "red": "Unintentional weight loss with any respiratory symptom is a red flag — quantify (kg and timeframe) and pursue to a cause."
+          "red": "Unintentional weight loss with any respiratory symptom is a red flag — quantify (kg and timeframe) and pursue to a cause.",
+          "followups": [
+            {
+              "q": "How much weight, and over how long?",
+              "probes": "Quantify in kg and timeframe — unintentional loss of >5% body weight over 6–12 months is what makes this significant"
+            },
+            {
+              "q": "Is it definitely unintentional — appetite, diet and activity unchanged?",
+              "probes": "Confirms it's not simply reduced intake or increased exercise before chasing an organic cause"
+            },
+            {
+              "q": "Any cough, haemoptysis or smoking history?",
+              "probes": "Weight loss + haemoptysis + smoking → lung cancer until excluded",
+              "danger": true
+            },
+            {
+              "q": "Any night sweats, or TB contact/travel?",
+              "probes": "Weight loss + drenching night sweats + chronic cough ± TB contact/travel → TB or lymphoma",
+              "danger": true
+            },
+            {
+              "q": "Any reason you might be eating less — appetite, swallowing, mood?",
+              "probes": "Weight loss explained by reduced intake with no chest symptoms points outside the respiratory system entirely"
+            }
+          ],
+          "approach": "weight-loss"
         },
         {
           "n": "Exposure screen",
@@ -1554,6 +1787,37 @@
               "in",
               "Medications: amiodarone, methotrexate, nitrofurantoin (pulmonary fibrosis); ACE inhibitor (cough); beta-blockers (bronchospasm)"
             ]
+          ],
+          "followups": [
+            {
+              "q": "How many cigarettes or packs a day, and for how many years — or when did you quit?",
+              "probes": "Quantify in pack-years (packs/day × years) — the single most useful number for COPD and lung cancer risk"
+            },
+            {
+              "q": "What jobs have you done across your whole working life, not just now?",
+              "probes": "Ask lifetime exposure — asbestos disease and silicosis can surface 20–40 years after exposure ended"
+            },
+            {
+              "q": "Any work with stone benchtops, mining, quarrying, construction, shipyards or insulation?",
+              "probes": "Engineered/artificial stone cutting → silicosis (Australia's current high-yield exposure, product banned 2024) · asbestos trades → asbestosis/mesothelioma, latency up to 30 years",
+              "danger": true
+            },
+            {
+              "q": "Any pets or birds at home, or work with animals?",
+              "probes": "Bird fancier's lung, psittacosis, Q fever"
+            },
+            {
+              "q": "Any recent travel, or contact with someone with TB?",
+              "probes": "Sets pre-test probability for TB and endemic mycoses by geography"
+            },
+            {
+              "q": "Do your symptoms get better on holidays or over the weekend, away from work?",
+              "probes": "Improvement away from work is the classic clue to occupational asthma — commonly from spray paints, flour dust or soldering fumes"
+            },
+            {
+              "q": "Any medications — amiodarone, methotrexate, nitrofurantoin, ACE inhibitors, beta-blockers?",
+              "probes": "Amiodarone/methotrexate/nitrofurantoin → pulmonary fibrosis · ACE inhibitor → cough · beta-blocker → bronchospasm"
+            }
           ]
         },
         {
@@ -1569,6 +1833,26 @@
               "out",
               "Distinguish from PND (wakes gasping but from pulmonary oedema, with other failure symptoms) and simple poor sleep hygiene"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Has anyone seen you stop breathing, choke or gasp in your sleep?",
+              "probes": "Witnessed apnoea/choking is a more reliable sign of OSA than snoring alone — snoring is common without OSA",
+              "danger": true
+            },
+            {
+              "q": "Do you wake unrefreshed, or fall asleep during the day — reading, watching TV, or driving?",
+              "probes": "Daytime somnolence, especially at the wheel, is what makes this dangerous (motor vehicle accidents) and worth a sleep study",
+              "danger": true
+            },
+            {
+              "q": "Are you waking breathless and needing to sit up, or is it more that you're gasping/snoring through the night?",
+              "probes": "Distinguishes OSA from paroxysmal nocturnal dyspnoea (cardiac failure) — PND wakes the patient gasping with other symptoms of failure, not snoring"
+            },
+            {
+              "q": "Any high blood pressure that's hard to control, or an irregular heartbeat?",
+              "probes": "OSA is linked to resistant hypertension and atrial fibrillation — worth flagging even if sleep itself isn't the presenting complaint"
+            }
           ]
         }
       ],
