@@ -1298,7 +1298,44 @@
               "Cough with reflux symptoms or postnasal drip → the two great non-pulmonary causes of chronic cough"
             ]
           ],
-          "red": "New or changed cough >3 weeks in a smoker → exclude lung cancer."
+          "red": "New or changed cough >3 weeks in a smoker → exclude lung cancer.",
+          "followups": [
+            {
+              "q": "How long have you had it?",
+              "probes": "Under 3 weeks → usually infective · over 8 weeks → chronic cough, needs a systematic cause"
+            },
+            {
+              "q": "Do you cough anything up? How much a day — a teaspoon, an eggcup, a cupful? What colour?",
+              "probes": "Purulent with fever → infection · cupfuls, worse with position → bronchiectasis · mucoid most mornings in a smoker → chronic bronchitis"
+            },
+            {
+              "q": "Any blood in it, even streaks?",
+              "probes": "Any haemoptysis needs an explanation — cancer, TB and PE all sit here",
+              "danger": true
+            },
+            {
+              "q": "Is it worse at any particular time — at night, or first thing in the morning?",
+              "probes": "Night → asthma or reflux · early morning and productive → chronic bronchitis, bronchiectasis"
+            },
+            {
+              "q": "Any wheeze or tightness in the chest with it?",
+              "probes": "Points to obstruction — asthma or COPD"
+            },
+            {
+              "q": "Any fever, chills or night sweats? Have you become short of breath?",
+              "probes": "Fever → infective · new breathlessness → parenchymal disease, not just airway irritation"
+            },
+            {
+              "q": "Do you smoke or vape? Has a long-standing cough changed recently?",
+              "probes": "A new or changed cough in a smoker → exclude lung cancer",
+              "danger": true
+            },
+            {
+              "q": "Any new tablets, especially for blood pressure? Any heartburn, or a blocked, dripping nose?",
+              "probes": "ACE inhibitor, reflux and post-nasal drip — the three commonest causes of a chronic dry cough, all missed if you don't ask"
+            }
+          ],
+          "approach": "cough-haemoptysis"
         },
         {
           "n": "Sputum",
@@ -2550,10 +2587,54 @@
             ],
             [
               "in",
+              "Bouts over weeks, strictly unilateral around one eye, with watering/red eye, nose running, restless and pacing → cluster headache (the \"alarm clock\" headache — wakes them at the same time each night)"
+            ],
+            [
+              "in",
               "Band-like, bilateral, stress-related → tension-type"
             ]
           ],
-          "red": "SNOOP: Systemic (fever, weight loss), Neuro deficit, Onset sudden, Older (>50 new), Papilloedema/positional/pattern change."
+          "red": "SNOOP: Systemic (fever, weight loss), Neuro deficit, Onset sudden, Older (>50 new), Papilloedema/positional/pattern change.",
+          "followups": [
+            {
+              "q": "Was it at its worst in the very first second — like being hit on the head?",
+              "probes": "Thunderclap onset → subarachnoid haemorrhage. It's the speed to maximum that flags it, not the severity",
+              "danger": true
+            },
+            {
+              "q": "Any fever, or does it hurt to bend your neck forward?",
+              "probes": "Fever + neck stiffness + photophobia → meningitis",
+              "danger": true
+            },
+            {
+              "q": "Is it worse first thing in the morning, or when you cough or bend forward? Any vomiting?",
+              "probes": "Worse on waking or with Valsalva → raised intracranial pressure",
+              "danger": true
+            },
+            {
+              "q": "Is your scalp tender brushing your hair? Does your jaw ache when you chew?",
+              "probes": "Giant cell arteritis — ask this of anyone over 50 with a new headache",
+              "danger": true
+            },
+            {
+              "q": "Any weakness, numbness, or trouble with speech or vision alongside it?",
+              "probes": "Any focal deficit → structural or vascular cause, not a primary headache",
+              "danger": true
+            },
+            {
+              "q": "How long does each one last, and how often do you get them?",
+              "probes": "Seconds → neuralgia · 15–180 min in bouts → cluster · 4–72 h → migraine · daily and constant → tension-type or medication-overuse"
+            },
+            {
+              "q": "Any warning before it starts — flashing lights or zigzag lines? Does light bother you?",
+              "probes": "Aura and photophobia → migraine"
+            },
+            {
+              "q": "How often are you taking painkillers for it?",
+              "probes": "Most days → medication-overuse headache — common, missed, reversible"
+            }
+          ],
+          "approach": "headache"
         }
       ],
       "checklist": [

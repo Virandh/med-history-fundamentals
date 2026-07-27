@@ -22,6 +22,7 @@ const content = JSON.parse(readFileSync(join(ROOT, 'src/content.json'), 'utf8'))
 const template = readFileSync(join(ROOT, 'src/app.template.html'), 'utf8');
 
 /* ---------- helpers ---------- */
+
 // Bold the segment before the first "→" so generated md bullets keep the
 // hand-written emphasis style ("**cue** → consequence").
 function mdPoint(text) {
@@ -51,6 +52,15 @@ function blockToMarkdown(s, L, { hLevel = 2 } = {}) {
     if (q.mirror) {
       L.push(`| ⬆ ${q.mirror.left} | ⬇ ${q.mirror.right} |`, '|---|---|');
       for (const r of q.mirror.rows) L.push(`| ${r[0]} | ${r[1]} |`);
+      L.push('');
+    }
+    if (q.followups && q.followups.length) {
+      L.push('**If yes, ask:**');
+      // "!" marks the must-not-miss probes, mirroring Talley's own convention
+      for (const f of q.followups) {
+        L.push(`- ${f.danger ? '**!** ' : ''}*"${f.q}"* — ${f.probes}`);
+      }
+      if (q.approach) L.push('', `> Full work-up → **${q.approach}** approach`);
       L.push('');
     }
     if (q.points && q.points.length) {
@@ -106,6 +116,8 @@ function blockToAppData(s) {
   out.questions = s.questions.map(q => {
     const o = { n: q.n, ask: q.ask, why: q.why, points: q.points || [] };
     if (q.mirror) o.mirror = q.mirror;
+    if (q.followups) o.followups = q.followups;
+    if (q.approach) o.approach = q.approach;
     if (q.red) o.red = q.red;
     if (q.minor) o.minor = true;
     return o;

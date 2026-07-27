@@ -26,6 +26,18 @@ The airway chunk flows logically: air moving through a diseased tube makes noise
 
 **Why we ask:** Duration and pattern do most of the diagnostic work. The single most important split is acute (<3 weeks) vs chronic (>8 weeks) — acute is usually infective; chronic demands an explanation.
 
+**If yes, ask:**
+- *"How long have you had it?"* — Under 3 weeks → usually infective · over 8 weeks → chronic cough, needs a systematic cause
+- *"Do you cough anything up? How much a day — a teaspoon, an eggcup, a cupful? What colour?"* — Purulent with fever → infection · cupfuls, worse with position → bronchiectasis · mucoid most mornings in a smoker → chronic bronchitis
+- **!** *"Any blood in it, even streaks?"* — Any haemoptysis needs an explanation — cancer, TB and PE all sit here
+- *"Is it worse at any particular time — at night, or first thing in the morning?"* — Night → asthma or reflux · early morning and productive → chronic bronchitis, bronchiectasis
+- *"Any wheeze or tightness in the chest with it?"* — Points to obstruction — asthma or COPD
+- *"Any fever, chills or night sweats? Have you become short of breath?"* — Fever → infective · new breathlessness → parenchymal disease, not just airway irritation
+- **!** *"Do you smoke or vape? Has a long-standing cough changed recently?"* — A new or changed cough in a smoker → exclude lung cancer
+- *"Any new tablets, especially for blood pressure? Any heartburn, or a blocked, dripping nose?"* — ACE inhibitor, reflux and post-nasal drip — the three commonest causes of a chronic dry cough, all missed if you don't ask
+
+> Full work-up → **cough-haemoptysis** approach
+
 **Rules in / rules out:**
 - **Chronic productive cough, most days for 3 months in 2 consecutive years** → rules in chronic bronchitis (COPD) by definition
 - **Dry nocturnal cough, with wheeze, worse with exercise/cold air/allergens** → asthma (nocturnal symptoms = poor control)

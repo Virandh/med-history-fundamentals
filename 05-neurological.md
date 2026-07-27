@@ -188,12 +188,25 @@ The single most useful discriminator running through the whole system is the tem
 
 **Why we ask:** Overwhelmingly benign (tension, migraine) but hosts several neurological emergencies — the whole skill is pattern-matching the dangerous ones.
 
+**If yes, ask:**
+- **!** *"Was it at its worst in the very first second — like being hit on the head?"* — Thunderclap onset → subarachnoid haemorrhage. It's the speed to maximum that flags it, not the severity
+- **!** *"Any fever, or does it hurt to bend your neck forward?"* — Fever + neck stiffness + photophobia → meningitis
+- **!** *"Is it worse first thing in the morning, or when you cough or bend forward? Any vomiting?"* — Worse on waking or with Valsalva → raised intracranial pressure
+- **!** *"Is your scalp tender brushing your hair? Does your jaw ache when you chew?"* — Giant cell arteritis — ask this of anyone over 50 with a new headache
+- **!** *"Any weakness, numbness, or trouble with speech or vision alongside it?"* — Any focal deficit → structural or vascular cause, not a primary headache
+- *"How long does each one last, and how often do you get them?"* — Seconds → neuralgia · 15–180 min in bouts → cluster · 4–72 h → migraine · daily and constant → tension-type or medication-overuse
+- *"Any warning before it starts — flashing lights or zigzag lines? Does light bother you?"* — Aura and photophobia → migraine
+- *"How often are you taking painkillers for it?"* — Most days → medication-overuse headache — common, missed, reversible
+
+> Full work-up → **headache** approach
+
 **Rules in / rules out:**
 - **Thunderclap — instant, worst-ever, "hit on the head"** → subarachnoid haemorrhage until excluded
 - **Headache + fever + neck stiffness + photophobia ± rash** → meningitis
 - **Worse in the morning / on coughing/bending, with vomiting** → raised intracranial pressure (mass)
 - **New headache >50 with scalp tenderness, jaw claudication, visual loss** → giant cell arteritis
 - **Unilateral, throbbing, with aura/nausea/photophobia, recurrent** → migraine
+- **Bouts over weeks, strictly unilateral around one eye, with watering/red eye, nose running, restless and pacing** → cluster headache (the "alarm clock" headache — wakes them at the same time each night)
 - **Band-like, bilateral, stress-related** → tension-type
 
 **Red flag:** SNOOP: Systemic (fever, weight loss), Neuro deficit, Onset sudden, Older (>50 new), Papilloedema/positional/pattern change.
