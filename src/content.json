@@ -2896,8 +2896,44 @@
             [
               "out",
               "Nocturia alone → also cardiac failure (nocturnal fluid redistribution) and, in older men, prostatic disease"
+            ],
+            [
+              "in",
+              "Fever + loin pain alongside storage symptoms → upper tract involvement (pyelonephritis), not simple cystitis"
             ]
-          ]
+          ],
+          "followups": [
+            {
+              "q": "How many times a day, and how many times overnight?",
+              "probes": "Quantify frequency and nocturia — the baseline to track change and severity"
+            },
+            {
+              "q": "Do you get a sudden strong urge that's hard to hold on, or is it more just going often?",
+              "probes": "Urgency implies detrusor overactivity/overactive bladder rather than simple frequency"
+            },
+            {
+              "q": "Any burning or stinging when you go, or cloudy/smelly urine?",
+              "probes": "Dysuria + cloudy urine → UTI"
+            },
+            {
+              "q": "Are you drinking more, or losing weight without trying?",
+              "probes": "Polyuria + polydipsia + weight loss → screen for diabetes"
+            },
+            {
+              "q": "Any breathlessness, ankle swelling, or known heart failure?",
+              "probes": "Nocturia alone can be nocturnal fluid redistribution from cardiac failure, not a bladder problem"
+            },
+            {
+              "q": "In men — any trouble starting, weak stream, or a feeling of not emptying alongside this?",
+              "probes": "Combined storage + voiding symptoms in an older man points to prostatic outflow obstruction"
+            },
+            {
+              "q": "Any fever, loin pain, or feeling generally unwell?",
+              "probes": "Suggests upper tract involvement (pyelonephritis) rather than simple cystitis",
+              "danger": true
+            }
+          ],
+          "approach": "micturition"
         },
         {
           "n": "Incontinence",
@@ -2917,7 +2953,31 @@
               "Continuous dribble → overflow (chronic retention) or fistula"
             ]
           ],
-          "red": "New incontinence + back pain + saddle anaesthesia + bilateral leg symptoms → cauda equina."
+          "red": "New incontinence + back pain + saddle anaesthesia + bilateral leg symptoms → cauda equina.",
+          "followups": [
+            {
+              "q": "Does it leak with coughing, laughing, sneezing or lifting, or with a sudden urge you can't defer?",
+              "probes": "Leak with raised intra-abdominal pressure → stress incontinence; leak preceded by urge → urge incontinence (overactive bladder) — opposite mechanisms, opposite treatments"
+            },
+            {
+              "q": "Is it a small squirt, or does it empty the whole bladder?",
+              "probes": "Small squirts → stress · larger volume, may empty the bladder → urge"
+            },
+            {
+              "q": "Is it more a continuous dribble, especially after you think you've finished?",
+              "probes": "Continuous dribble suggests overflow (chronic retention) or, rarely, a fistula — a different mechanism again"
+            },
+            {
+              "q": "Any back pain, numbness around the saddle area, or weakness/numbness in the legs with it?",
+              "probes": "New incontinence + back pain + saddle anaesthesia + bilateral leg symptoms → cauda equina, a surgical emergency",
+              "danger": true
+            },
+            {
+              "q": "Did this start after a delivery, around menopause, or with a new medical problem or medication?",
+              "probes": "Pelvic floor trauma and oestrogen withdrawal point to stress incontinence; a new neurological trigger or medication points elsewhere"
+            }
+          ],
+          "approach": "micturition"
         },
         {
           "n": "Voiding / obstructive symptoms",
@@ -2937,7 +2997,40 @@
               "Painless retention with overflow incontinence → chronic retention/neurogenic bladder"
             ]
           ],
-          "red": "Acute urinary retention is an emergency."
+          "red": "Acute urinary retention is an emergency.",
+          "followups": [
+            {
+              "q": "Is it hard to start, and does the stream come out weak or interrupted?",
+              "probes": "Hesitancy + poor/intermittent stream are the earliest outflow-obstruction symptoms"
+            },
+            {
+              "q": "Does it dribble at the end, and do you feel you've fully emptied?",
+              "probes": "Terminal dribbling and a sense of incomplete emptying complete the classic BPH picture"
+            },
+            {
+              "q": "Do you need to go again just minutes after you've just been?",
+              "probes": "Pis-en-deux (double voiding) is a specific marker of incomplete emptying from outflow obstruction"
+            },
+            {
+              "q": "Are you completely unable to pass urine, with a painful, swollen lower tummy?",
+              "probes": "Complete retention with a painful distended bladder is acute urinary retention — an emergency",
+              "danger": true
+            },
+            {
+              "q": "Any blood in the urine, bone pain, or weight loss alongside this?",
+              "probes": "In an older man these symptoms should prompt excluding prostate cancer, not just assuming benign hypertrophy",
+              "danger": true
+            },
+            {
+              "q": "Is the dribbling painless and continuous, without you noticing the urge?",
+              "probes": "Painless overflow incontinence without sensation suggests chronic retention or a neurogenic bladder rather than simple BPH"
+            },
+            {
+              "q": "Any fevers or recurrent infections alongside these symptoms?",
+              "probes": "Obstruction predisposes to urinary infection — treat the obstruction, not just the infection, or it will recur"
+            }
+          ],
+          "approach": "micturition"
         },
         {
           "n": "Dysuria",
@@ -2956,7 +3049,27 @@
               "in",
               "+ urethral/vaginal discharge + sexual history → STI (cross-reference the reproductive history)"
             ]
-          ]
+          ],
+          "followups": [
+            {
+              "q": "Any need to go more often, or urgently, with it?",
+              "probes": "Dysuria + frequency + urgency + suprapubic pain → cystitis/UTI"
+            },
+            {
+              "q": "Any fever, chills/rigors, or pain in your back or side?",
+              "probes": "Fever + loin pain + rigors → pyelonephritis, the more serious upper-tract infection",
+              "danger": true
+            },
+            {
+              "q": "Any discharge from the urethra or vagina, and are you sexually active?",
+              "probes": "Discharge + a relevant sexual history → consider an STI rather than a straightforward UTI"
+            },
+            {
+              "q": "Is the burning at the start of your stream, or throughout/at the end?",
+              "probes": "Burning right at the start, clearing after, points more to a urethral cause; burning throughout suggests cystitis"
+            }
+          ],
+          "approach": "micturition"
         },
         {
           "n": "Haematuria",
@@ -2984,7 +3097,43 @@
               "Confirm it isn't menstrual, dietary (beetroot), or drug-related (rifampicin) discolouration"
             ]
           ],
-          "red": "Painless visible haematuria is cancer until excluded."
+          "red": "Painless visible haematuria is cancer until excluded.",
+          "followups": [
+            {
+              "q": "Was the blood visible to you, or was this picked up on a test?",
+              "probes": "Visible (macroscopic) haematuria carries a much higher cancer risk than an incidental finding of microscopic blood — investigate both, but with different urgency"
+            },
+            {
+              "q": "Is it painful, or completely painless?",
+              "probes": "Painless visible haematuria → bladder/renal cancer until excluded, especially in an older smoker",
+              "danger": true
+            },
+            {
+              "q": "Any colicky loin-to-groin pain with it?",
+              "probes": "Colicky pain alongside blood points to a ureteric stone rather than malignancy"
+            },
+            {
+              "q": "Any burning, frequency, or fever with it?",
+              "probes": "Suggests a UTI as the source rather than a structural or malignant cause"
+            },
+            {
+              "q": "Did this start within a few days of a sore throat, or 1–2 weeks after a throat or skin infection?",
+              "probes": "Days after a sore throat (synpharyngitic) → IgA nephropathy · 1–2 weeks after, with hypertension/oedema, → post-streptococcal glomerulonephritis"
+            },
+            {
+              "q": "Could this be your period, something you've eaten like beetroot, or a new medication like rifampicin?",
+              "probes": "Rules out the mimics before committing to a true haematuria work-up"
+            },
+            {
+              "q": "Do you smoke, and have you lost weight?",
+              "probes": "The classic risk profile for urothelial and renal malignancy",
+              "danger": true
+            },
+            {
+              "q": "Are you on blood thinners, or have you had a recent catheter, procedure, or injury?",
+              "probes": "Anticoagulation and instrumentation are common, less sinister explanations — but painless haematuria should still be investigated even on anticoagulants"
+            }
+          ]
         },
         {
           "n": "Urine appearance",
@@ -2996,7 +3145,17 @@
               "Frothy urine → significant proteinuria (nephrotic range); offensive smell → infection"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is it frothy, tea-coloured, or does it have an unusual smell?",
+              "probes": "Persistent froth → significant proteinuria (nephrotic range); offensive smell → infection"
+            },
+            {
+              "q": "How much are you passing overall — more than usual, or noticeably less?",
+              "probes": "Very little (oliguria/anuria) raises acute kidney injury; unusually large volumes raise diabetes or a concentrating defect"
+            }
+          ]
         },
         {
           "n": "Loin pain",
@@ -3015,6 +3174,29 @@
               "in",
               "Dull bilateral loin ache → obstruction, polycystic kidneys"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Is it colicky — coming in waves — or a constant ache?",
+              "probes": "Colicky, severe, patient writhing → ureteric stone; constant → infection or obstruction"
+            },
+            {
+              "q": "Does it radiate anywhere — down towards the groin or testis?",
+              "probes": "Loin-to-groin radiation is classic for a ureteric stone tracking down the ureter"
+            },
+            {
+              "q": "Any fever, rigors, or feeling generally unwell with it?",
+              "probes": "Constant loin pain + fever + rigors → pyelonephritis",
+              "danger": true
+            },
+            {
+              "q": "Is it on one side, or a dull ache on both sides?",
+              "probes": "Dull bilateral loin ache raises obstruction or polycystic kidneys rather than a single stone"
+            },
+            {
+              "q": "Any family history of kidney problems, or high blood pressure?",
+              "probes": "Family history of enlarged kidneys and hypertension → polycystic kidney disease"
+            }
           ]
         },
         {
@@ -3027,7 +3209,17 @@
               "Oedema + frothy urine → nephrotic/nephritic picture"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is it around your eyes in the morning, or more in your ankles by evening?",
+              "probes": "Periorbital swelling suggests a nephrotic (heavy proteinuria) pattern; ankle swelling worse by evening is a more generalised fluid-retention pattern"
+            },
+            {
+              "q": "Is your urine frothy, and have you noticed weight gain?",
+              "probes": "Oedema + frothy urine → a nephrotic/nephritic picture rather than a cardiac or hepatic cause"
+            }
+          ]
         },
         {
           "n": "Uraemia screen",
@@ -3043,7 +3235,21 @@
               "Reduced urine output (oliguria/anuria) → acute kidney injury — look for the cause (pre-renal, renal, post-renal)"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Any nausea, poor appetite, or unusual tiredness alongside this?",
+              "probes": "Completes the uraemic cluster — itch, bruising, hiccups, nausea and fatigue together suggest advanced renal failure"
+            },
+            {
+              "q": "How much urine are you passing overall?",
+              "probes": "A marked reduction (oliguria/anuria) points to acute kidney injury — look for a pre-renal, renal, or post-renal cause"
+            },
+            {
+              "q": "Do you know your kidney function results — creatinine or eGFR?",
+              "probes": "Many patients already know this number and it tells you how advanced the picture is before you order anything"
+            }
+          ]
         }
       ],
       "checklist": [
