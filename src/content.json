@@ -5381,6 +5381,40 @@
               "in",
               "A single well-defined patch matching contact with something → contact dermatitis"
             ]
+          ],
+          "followups": [
+            {
+              "q": "How long have you had it, and has it changed since it started?",
+              "probes": "Duration and evolution — worsening, spreading, or resolving — narrows the timeline"
+            },
+            {
+              "q": "Where did it start, and where is it now — which parts of your skin are affected?",
+              "probes": "Site of onset and spread; sun-exposed vs clothing-contact areas point in different directions"
+            },
+            {
+              "q": "Was it flat, raised, or blistered to begin with?",
+              "probes": "The primary morphology (macule/papule/vesicle) is often more diagnostic than how it looks now, after scratching and evolution"
+            },
+            {
+              "q": "Is it itchy, and does anything make it better or worse?",
+              "probes": "Itch pattern and modifying factors help separate eczema, urticaria and contact causes"
+            },
+            {
+              "q": "Started any new tablets, creams, soaps or products in the last six weeks?",
+              "probes": "A new drug within days–weeks of a rash is a drug eruption until proven otherwise — patients often forget to mention antibiotics"
+            },
+            {
+              "q": "Any fever or joint pains with it?",
+              "probes": "Systemic upset alongside a rash changes the differential toward the dangerous — vasculitis, connective tissue disease, meningococcaemia"
+            },
+            {
+              "q": "Has anyone you live with or been in contact with got a similar rash?",
+              "probes": "Points to an infective or infestation cause (scabies, viral exanthem) shared by contacts"
+            },
+            {
+              "q": "Have you had this before?",
+              "probes": "If it's recurred in the same pattern, that itself supports a chronic/relapsing diagnosis rather than something new"
+            }
           ]
         },
         {
@@ -5400,6 +5434,25 @@
               "in",
               "Bleeding/crusting/non-healing → suspicious for skin malignancy (see below)"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Is it itchy — and if so, is it worse at night?",
+              "probes": "Worse at night, especially with burrows between the fingers → scabies; daytime, diffuse → eczema or urticaria"
+            },
+            {
+              "q": "Is it painful, or more just uncomfortable?",
+              "probes": "Pain suggests an infective (cellulitis, zoster) or ischaemic process rather than a purely inflammatory rash"
+            },
+            {
+              "q": "Is it weeping, crusting, or bleeding?",
+              "probes": "Bleeding, crusting or a non-healing quality is what should make you suspicious for skin malignancy rather than a benign inflammatory lesion",
+              "danger": true
+            },
+            {
+              "q": "Does anyone else in the house have the same itch?",
+              "probes": "Shared itch among household contacts points to an infestation like scabies"
+            }
           ]
         },
         {
@@ -5413,7 +5466,21 @@
             ]
           ],
           "red": "A new or changing pigmented lesion — never file under reassurance without looking.",
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Has it got bigger, or changed shape or colour?",
+              "probes": "Change in any of size, shape or colour is the trigger for concern, not any one feature alone"
+            },
+            {
+              "q": "Is it asymmetrical, with an irregular border, or more than one colour?",
+              "probes": "Runs through the ABCDE checklist — Asymmetry, Border irregularity, Colour variation, Diameter >6mm, Evolving"
+            },
+            {
+              "q": "Has it become itchy, bled, or crusted?",
+              "probes": "New symptoms in a pre-existing mole are as concerning as a visible change in appearance"
+            }
+          ]
         },
         {
           "n": "Non-healing lesion",
@@ -5433,7 +5500,21 @@
               "Any non-healing lesion >4–6 weeks → needs examination"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "How long has it been there without healing?",
+              "probes": "Any non-healing lesion beyond 4–6 weeks needs examination"
+            },
+            {
+              "q": "Is it pearly with visible tiny blood vessels, or more scaly and crusted?",
+              "probes": "Pearly nodule with telangiectasia and a rolled edge → basal cell carcinoma; scaly, crusted or ulcerated → squamous cell carcinoma"
+            },
+            {
+              "q": "Is it on a part of your skin that gets a lot of sun?",
+              "probes": "Sun-exposed sites are where keratinocyte cancers overwhelmingly arise"
+            }
+          ]
         },
         {
           "n": "Systemic associations",
@@ -5457,7 +5538,27 @@
               "Rash + joint pain + gut symptoms → the connective-tissue / reactive spectrum (cross-reference MSK)"
             ]
           ],
-          "red": "Non-blanching purpuric rash + fever is an emergency — do the glass test."
+          "red": "Non-blanching purpuric rash + fever is an emergency — do the glass test.",
+          "followups": [
+            {
+              "q": "Does the rash blanch (go pale) when you press on it?",
+              "probes": "Non-blanching, with fever and feeling unwell → meningococcaemia/vasculitis, an emergency — do the glass/tumbler test",
+              "danger": true
+            },
+            {
+              "q": "Any ulcers in your mouth or genitals, or is your skin peeling?",
+              "probes": "Mucosal involvement with skin peeling, especially after a new drug, → Stevens–Johnson syndrome/TEN, a dermatological emergency",
+              "danger": true
+            },
+            {
+              "q": "Any joint pains, hair loss, or sun sensitivity with the rash?",
+              "probes": "Photosensitive rash + joint pain + hair loss → SLE"
+            },
+            {
+              "q": "Any gut symptoms — diarrhoea or abdominal pain — alongside the joint and skin symptoms?",
+              "probes": "Rash + joint pain + gut symptoms sits in the connective-tissue/reactive spectrum"
+            }
+          ]
         },
         {
           "n": "Exposure / triggers",
@@ -5476,6 +5577,24 @@
               "in",
               "Sun exposure + rash on exposed sites → photosensitivity (idiopathic or drug-induced)"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Any new medications in the last six weeks, even over-the-counter ones?",
+              "probes": "New drug + widespread symmetrical rash → drug eruption; patients commonly forget short antibiotic courses"
+            },
+            {
+              "q": "Any new soaps, creams, cosmetics, or things you've touched at work or with a hobby?",
+              "probes": "A new topical or occupational contactant with a localised rash → contact dermatitis"
+            },
+            {
+              "q": "Has there been more sun exposure than usual, and is the rash on sun-exposed skin?",
+              "probes": "Sun exposure + a rash on exposed sites → photosensitivity, which can be idiopathic or drug-induced"
+            },
+            {
+              "q": "Any recent travel?",
+              "probes": "Travel-related infections and exposures can present with a rash days to weeks later"
+            }
           ]
         }
       ],
