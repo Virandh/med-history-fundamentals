@@ -5701,6 +5701,41 @@
               "in",
               "SIGECAPS = Sleep, Interest (anhedonia), Guilt/worthlessness, Energy, Concentration, Appetite/weight, Psychomotor change, Suicidality"
             ]
+          ],
+          "followups": [
+            {
+              "q": "In the past month, have you felt down, depressed or hopeless — and have you lost interest or pleasure in things?",
+              "probes": "The two-question screen (either positive) has a good negative likelihood ratio — a 'no' to both makes major depression unlikely"
+            },
+            {
+              "q": "How has your sleep and appetite been, and has your weight changed?",
+              "probes": "Two of the SIGECAPS somatic markers — disturbed in either direction (too much or too little) counts"
+            },
+            {
+              "q": "How's your energy and concentration been?",
+              "probes": "Two more SIGECAPS domains — ask concretely (reading a page, following a TV show) rather than accepting a vague 'fine'"
+            },
+            {
+              "q": "Have you been feeling guilty, worthless, or that you're a burden?",
+              "probes": "Guilt/worthlessness is a core cognitive symptom and, combined with hopelessness, raises suicide risk specifically"
+            },
+            {
+              "q": "Has anyone noticed you've slowed down, or that you seem restless and can't settle?",
+              "probes": "Psychomotor retardation or agitation, observed by others, adds objective weight to the history"
+            },
+            {
+              "q": "How long has this been going on — is it more than two weeks?",
+              "probes": "Duration threshold matters for the diagnosis, and distinguishes an episode from a brief reactive dip"
+            },
+            {
+              "q": "Any physical illness, thyroid problems, or new medications that started around the same time?",
+              "probes": "Screens the organic mimics — hypothyroidism, Parkinson's, chronic illness, interferons/chemotherapy — before assuming primary depression"
+            },
+            {
+              "q": "Sometimes when people feel this low, they have thoughts that life isn't worth living — have you had thoughts like that?",
+              "probes": "The bridge into the dedicated suicide-risk screen — never skip it because the mood questions felt complete without it",
+              "danger": true
+            }
           ]
         },
         {
@@ -5716,6 +5751,40 @@
               "out",
               "Distinguish from the sustained overactivity of stimulant use or hyperthyroidism"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Have there been times you felt unusually good about yourself, or on top of the world?",
+              "probes": "Elevated or expansive mood is the core affective feature"
+            },
+            {
+              "q": "Any times you needed much less sleep than usual but didn't feel tired?",
+              "probes": "Reduced need for sleep (not insomnia — the patient feels rested on less) is one of the more specific manic features"
+            },
+            {
+              "q": "Did you feel especially talkative, or find your thoughts racing?",
+              "probes": "Pressured speech and flight of ideas are classic accompanying features"
+            },
+            {
+              "q": "Any spending sprees, risky decisions, or behaviour out of character?",
+              "probes": "Disinhibited, risky behaviour (spending, sexual indiscretion) is often what brings the episode to someone else's attention, not the patient's own"
+            },
+            {
+              "q": "Did you feel especially important, or that you had special powers or abilities?",
+              "probes": "Grandiosity, when extreme, can shade into delusional — worth asking directly"
+            },
+            {
+              "q": "How long did this last, and did it disrupt your normal life?",
+              "probes": "A week or more, disruptive → mania (bipolar I); 4+ days, less severe → hypomania (bipolar II)"
+            },
+            {
+              "q": "Has anyone else noticed this and been concerned?",
+              "probes": "Collateral history matters — patients in a manic episode often lack insight and see nothing wrong"
+            },
+            {
+              "q": "Could this be related to stimulant use, or a thyroid problem?",
+              "probes": "Distinguish a true manic episode from the sustained overactivity of stimulant intoxication or hyperthyroidism"
+            }
           ]
         },
         {
@@ -5728,7 +5797,21 @@
               "Persistent excessive worry most days, with restlessness/tension/poor sleep → generalised anxiety"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is the worry hard to control, and does it spread across different areas of your life, not just one thing?",
+              "probes": "Diffuse, hard-to-control worry across domains, not focused on one specific fear, is what separates GAD from a phobia or a situational worry"
+            },
+            {
+              "q": "Has this been most days for six months or more?",
+              "probes": "Chronicity is part of the diagnostic threshold, not just intensity"
+            },
+            {
+              "q": "Any physical tension — restlessness, poor sleep, muscle tension, feeling on edge?",
+              "probes": "The physical tension cluster is what patients often present with instead of naming the worry itself"
+            }
+          ]
         },
         {
           "n": "Panic attacks",
@@ -5740,7 +5823,21 @@
               "Discrete attacks of terror with palpitations, chest tightness, paraesthesiae, fear of dying → panic disorder — but exclude hyperthyroidism, phaeochromocytoma, arrhythmia/MI and PE first"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "How quickly does it build up, and how long does it last?",
+              "probes": "Builds rapidly, peaks within minutes, and settles — the sudden crescendo-then-resolve pattern is characteristic of panic rather than a sustained medical process"
+            },
+            {
+              "q": "What goes through your mind during it — fear of dying, losing control, or going mad?",
+              "probes": "The catastrophic cognitions (fear of a heart attack, losing control) are part of the diagnostic picture, not just the physical symptoms"
+            },
+            {
+              "q": "Does it happen out of the blue, in situations where most people wouldn't be afraid?",
+              "probes": "Unprovoked, situationally inappropriate attacks distinguish panic disorder from a fear response to genuine danger"
+            }
+          ]
         },
         {
           "n": "Obsessions & compulsions",
@@ -5752,7 +5849,21 @@
               "Intrusive thoughts + compulsive rituals to relieve them → OCD"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Do you have thoughts that keep intruding even though you try to stop them?",
+              "probes": "Obsessions are ego-dystonic — the patient recognises them as excessive or senseless, unlike a delusion"
+            },
+            {
+              "q": "Do you feel you have to do something — checking, washing, counting — to make the anxiety go away?",
+              "probes": "Compulsions performed specifically to neutralise the obsession's distress complete the OCD pairing"
+            },
+            {
+              "q": "How much time does this take up each day, and does it get in the way of things?",
+              "probes": "Time cost and functional interference are what separate OCD from mild everyday habits or superstitions"
+            }
+          ]
         },
         {
           "n": "Trauma & PTSD",
@@ -5764,7 +5875,21 @@
               "Anxiety tied to a specific trauma with flashbacks/avoidance/hypervigilance → PTSD"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Do you get unwanted memories, nightmares, or flashbacks of what happened?",
+              "probes": "Intrusive re-experiencing is the core PTSD feature, distinguishing it from anxiety without a specific trigger"
+            },
+            {
+              "q": "Do you avoid places, people or situations that remind you of it?",
+              "probes": "Avoidance behaviour is a required diagnostic feature, not just distress about the memory"
+            },
+            {
+              "q": "Are you more jumpy, on edge, or sleeping poorly since it happened?",
+              "probes": "Hyperarousal completes the diagnostic picture, and timing matters — under a month favours acute stress disorder, over a month favours PTSD"
+            }
+          ]
         },
         {
           "n": "Psychosis",
@@ -5783,13 +5908,79 @@
               "out",
               "Acute onset with clouded consciousness/fluctuation, visual hallucinations → think delirium/organic or drug-induced — a medical, not primary psychiatric, emergency"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Have you ever heard voices or sounds when no one else was there?",
+              "probes": "Establishes true auditory hallucination — ask matter-of-factly, without judgement, to get an honest answer"
+            },
+            {
+              "q": "Do the voices talk about you to each other, or comment on what you're doing?",
+              "probes": "Third-person or running-commentary voices are more specific for schizophrenia than a single voice"
+            },
+            {
+              "q": "Do you ever feel your thoughts are being interfered with — put into your head, taken out, or broadcast so others can hear them?",
+              "probes": "Thought interference (insertion, withdrawal, broadcast) is a classic first-rank symptom of schizophrenia"
+            },
+            {
+              "q": "Do you have any beliefs that other people find hard to accept, or feel that people are watching, following, or plotting against you?",
+              "probes": "Screens for delusions — persecutory themes are the most common"
+            },
+            {
+              "q": "How long has this been going on, and did it come on suddenly or build up gradually?",
+              "probes": "Chronic, gradual onset supports a primary psychotic illness; acute onset with clouded consciousness points to delirium or a drug/organic cause instead"
+            },
+            {
+              "q": "Does this fit with a time your mood was very high or very low?",
+              "probes": "Psychosis congruent with extreme mood (grandiose in mania, nihilistic in severe depression) points to a mood disorder with psychotic features rather than schizophrenia"
+            },
+            {
+              "q": "Any recent drug or alcohol use, or a physical illness or fever?",
+              "probes": "Substance-induced and organic/delirium-related psychosis need to be excluded before assuming a primary psychiatric cause",
+              "danger": true
+            },
+            {
+              "q": "How is this affecting your daily life — work, relationships, looking after yourself?",
+              "probes": "Functional impact and duration (six months) are part of what distinguishes a full psychotic disorder from a brief or attenuated episode"
+            }
           ]
         },
         {
           "n": "Cognition",
           "ask": "Any problems with memory or concentration?",
           "why": "Bridges to neurology; distinguishes depression (\"pseudodementia\"), delirium and dementia — which have very different urgencies. (See the neuro delirium/dementia entry.)",
-          "points": []
+          "points": [
+            [
+              "in",
+              "Sudden, fluctuating confusion, worse at night → delirium — find the systemic cause"
+            ],
+            [
+              "in",
+              "Gradual, progressive memory/orientation loss over months to years, consciousness clear → dementia"
+            ],
+            [
+              "out",
+              "Reports \"don't know\" with poor effort, in the context of low mood → depressive pseudodementia, which improves as mood improves"
+            ]
+          ],
+          "followups": [
+            {
+              "q": "What day is it, and do you know where you are right now?",
+              "probes": "A quick orientation check — errors here point towards delirium or dementia rather than a purely mood-related complaint"
+            },
+            {
+              "q": "Did this come on suddenly, over days, or has it crept up gradually over months to years?",
+              "probes": "Sudden/fluctuating → delirium; gradual and progressive → dementia; a discrete depressive episode → 'pseudodementia', which improves as mood improves"
+            },
+            {
+              "q": "Does your concentration or memory vary through the day, or is it consistently the same?",
+              "probes": "Fluctuation, especially worse at night, favours delirium; a steady deficit favours dementia"
+            },
+            {
+              "q": "Has anyone else noticed this, and is it affecting your daily activities — finances, medications, safety?",
+              "probes": "Collateral history and functional impact matter more than the patient's own insight, which can be reduced in both dementia and psychosis"
+            }
+          ]
         },
         {
           "n": "Substances",
@@ -5808,6 +5999,41 @@
               "in",
               "Ask about stimulants (can mimic mania/psychosis/panic) and opioids (withdrawal, overdose risk)"
             ]
+          ],
+          "followups": [
+            {
+              "q": "How much alcohol do you drink in a typical week, and how many days do you drink?",
+              "probes": "Quantify in standard drinks — patients under-report, so ask specifically rather than accepting 'socially'"
+            },
+            {
+              "q": "Have you ever felt you should cut down, or felt annoyed by people criticising your drinking? Felt guilty, or needed a drink first thing in the morning?",
+              "probes": "CAGE — two or more positive answers is a strong screen for dependence"
+            },
+            {
+              "q": "Any shakes, sweats, or seizures if you go a while without a drink?",
+              "probes": "Physical withdrawal symptoms confirm dependence and flag a withdrawal that can itself be life-threatening",
+              "danger": true
+            },
+            {
+              "q": "Any recreational or illicit drug use — what, how often, and how do you take it?",
+              "probes": "Route of use (injecting) and the specific substance both change the risk profile and screening needed"
+            },
+            {
+              "q": "Any use of stimulants — cocaine, amphetamines?",
+              "probes": "Can mimic or precipitate mania, psychosis, or panic — important to distinguish from a primary psychiatric episode"
+            },
+            {
+              "q": "Any opioid use, prescribed or otherwise?",
+              "probes": "Carries specific withdrawal and overdose risks that need their own safety-netting"
+            },
+            {
+              "q": "Has your drinking or drug use affected your relationships, work, health or finances?",
+              "probes": "Screens the complications — social, hepatic, GI bleeding, nutritional — that follow from dependence"
+            },
+            {
+              "q": "Have you ever tried to cut down or stop, and what happened?",
+              "probes": "Prior quit attempts and their outcome, including withdrawal severity, inform how this attempt should be managed"
+            }
           ]
         },
         {
@@ -5824,7 +6050,45 @@
               "Fleeting passive thoughts, no plan/intent, strong protective factors and support → lower acute risk, but document and safety-net"
             ]
           ],
-          "red": "Never send away a patient with a plan, means and intent — act on safety."
+          "red": "Never send away a patient with a plan, means and intent — act on safety.",
+          "followups": [
+            {
+              "q": "Have you had thoughts that life isn't worth living, or of ending your life?",
+              "probes": "The direct question — asking does not plant the idea, and many patients feel relief at being asked"
+            },
+            {
+              "q": "How often do these thoughts come, and how does it feel when they do?",
+              "probes": "Frequency and how distressing/intrusive they are helps gauge how close to acting the thoughts sit"
+            },
+            {
+              "q": "Have you thought about how you might do it?",
+              "probes": "Moving from ideation to a specific method is a significant step up in risk",
+              "danger": true
+            },
+            {
+              "q": "Have you made any actual plans, or taken any steps — like saving up tablets or writing a note?",
+              "probes": "A concrete plan, especially with preparatory steps taken, marks a much higher acute risk than ideation alone",
+              "danger": true
+            },
+            {
+              "q": "Do you have access to the means — medications, a weapon, or anything else you were thinking of using?",
+              "probes": "Access to means is one of the strongest modifiable risk factors — restricting access is itself a safety intervention",
+              "danger": true
+            },
+            {
+              "q": "Have you ever acted on these feelings or attempted to harm yourself before?",
+              "probes": "A past attempt is one of the strongest predictors of a future one — always ask specifically, not just about current ideation",
+              "danger": true
+            },
+            {
+              "q": "What's stopping you — family, beliefs, pets, future plans?",
+              "probes": "Protective factors matter for the overall risk formulation, but never let their presence override a positive plan, means and intent"
+            },
+            {
+              "q": "Is there anyone at home, or is anyone aware of how you're feeling right now?",
+              "probes": "Establishes the immediate safety net and whether the patient is truly alone with these thoughts"
+            }
+          ]
         },
         {
           "n": "Risk to others & self-neglect",
@@ -5840,7 +6104,22 @@
               "Self-neglect (not eating, not managing medications/finances, unsafe living conditions) → vulnerability requiring support, even without active risk"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Have you had thoughts of harming anyone else, or a specific person in mind?",
+              "probes": "A named, specific target changes this from a general question into a duty-to-warn situation needing urgent escalation",
+              "danger": true
+            },
+            {
+              "q": "How are you managing day to day — eating regularly, washing, taking your medications, paying bills?",
+              "probes": "Self-neglect can be a silent, high-vulnerability finding even without any active risk of harm"
+            },
+            {
+              "q": "Is your home safe, and do you have people checking in on you?",
+              "probes": "Living conditions and social support shape the disposition decision as much as the mental state itself"
+            }
+          ]
         }
       ],
       "checklist": [
