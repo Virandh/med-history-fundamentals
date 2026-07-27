@@ -35,6 +35,12 @@ Note the two halves: the patient leads the **first** half (open question, uninte
 
 **Why we ask:** Rapport is the substrate of an accurate history — patients disclose more when at ease. Open the interview with an open-ended question and then listen: as Osler put it, the patient will "tell you the diagnosis" if you let them. Avoid "What brought you in?" (invites "an ambulance").
 
+**If yes, ask:**
+- *"What's brought you in today, in your own words?"* — The literal opening question — resist the urge to interrupt or redirect for as long as the patient is still talking
+- *"Is there anything else you wanted to mention?"* — Reopens the story — often surfaces the symptom the patient was building up to but hadn't said yet
+- *"How would you like me to address you?"* — A small courtesy that sets the tone for the whole rest of the consultation
+- *"Do you understand why I'm asking these questions today?"* — Confirms consent and understanding before moving into more detailed or sensitive territory
+
 **Rules in / rules out:**
 - **Let the patient talk uninterrupted first** → the "golden minute"; premature closure is the commonest interviewing error
 - **"Is there anything else?" / "What else?"** → reopens the story and surfaces the symptom they were building up to
@@ -46,6 +52,11 @@ Note the two halves: the patient leads the **first** half (open question, uninte
 
 **Why we ask:** A patient often has several symptoms; you must decide which one led them to present — and the patient’s idea of "serious" may differ from yours (the person with a cold who mentions, in passing, coughing up blood needs attention on the chest, not the nose). Record it in the patient’s own words, no technical terms yet.
 
+**If yes, ask:**
+- *"Of everything you've told me, what's troubling you the most right now?"* — Patients often have several complaints — you need to know which one actually brought them in, which isn't always the most medically 'serious' one
+- *"You mentioned that in passing — can we come back to it?"* — A symptom mentioned almost as an aside (like haemoptysis buried in a cold story) can be the most important thing said in the whole interview
+- *"Can you describe that in your own words, without the medical term?"* — Patients' own words avoid you both silently assuming different things by the same label (e.g. 'dizzy')
+
 **Rules in / rules out:**
 - **The symptom that most concerns the patient** → must be addressed, even if minor, or they leave dissatisfied
 - **A symptom mentioned "in passing" (e.g. haemoptysis)** → may be the most important — don’t let the loudest complaint bury it
@@ -55,6 +66,16 @@ Note the two halves: the patient leads the **first** half (open question, uninte
 #### 3. History of the presenting illness — *"Tell me about it from the very beginning — when did you last feel completely well?"*
 
 **Why we ask:** The core of the history. Get the story in chronological order, one problem at a time. Characterise each symptom with SOCRATES, and frame every complaint against the four diagnostic questions: Where (anatomical), What (pathological), How (functional), Why (aetiological) — a diagnosis is a disease process, not just a name.
+
+**If yes, ask:**
+- *"When did you last feel completely well?"* — Anchors the true onset — patients often understate how long a gradual problem has actually been present
+- *"Can you take me through it in order, from when it started to now?"* — Chronological order surfaces the tempo and pattern, which localises the diagnosis as much as any single symptom does
+- *"Where exactly is it?"* — The anatomical diagnosis — the first of the four diagnostic questions
+- *"What does it actually feel like?"* — The pathological diagnosis — character narrows the mechanism (e.g. crushing vs tearing chest pain)
+- *"How is it affecting what you can do?"* — The functional diagnosis — severity and disability, not just the presence of a symptom
+- *"Why do you think this has happened now?"* — The aetiological diagnosis — risk factors and triggers the patient may already suspect
+- *"Has anything like this happened before?"* — A recurrence changes the differential and the urgency compared with a first-ever episode
+- *"Is there another problem we haven't covered yet?"* — Keeps you from closing the HPI before every complaint has been characterised in turn
 
 **Rules in / rules out:**
 - **Where is it?** → anatomical diagnosis · What is its nature? → pathological diagnosis
@@ -67,6 +88,13 @@ Note the two halves: the patient leads the **first** half (open question, uninte
 
 **Why we ask:** Past illness shapes current risk and constrains investigation. Preface it ("These may affect your current tests and treatment") as it can feel intrusive. Some operations carry continuing risk (valve surgery, cancer surgery, prostheses); some conditions contraindicate tests.
 
+**If yes, ask:**
+- *"Have you ever been in hospital, and what for?"* — Admissions are often more reliably remembered than diagnoses mentioned in passing at a GP visit
+- *"Any operations — and were there any complications?"* — Prior complications (bleeding, anaesthetic reactions) matter for planning any future procedure
+- *"Do you have any implants, prostheses, or a pacemaker?"* — A pacemaker is an MRI contraindication; any foreign material carries an infection risk that changes how you interpret new symptoms
+- *"You mentioned you have that — how was it actually diagnosed?"* — Verify self-reported diagnoses rather than accepting them at face value — an untested 'ulcer' may never have been confirmed
+- *"Are your childhood immunisations and any boosters up to date?"* — Relevant to infection risk and, in pregnancy or immunosuppression, to what can safely be given
+
 **Rules in / rules out:**
 - **Prostheses / pacemakers** → pacemaker = MRI contraindication; foreign body = infection risk
 - **CKD** → caution with iodinated contrast and gadolinium; pregnancy → avoid radiation
@@ -77,6 +105,13 @@ Note the two halves: the patient leads the **first** half (open question, uninte
 #### 5. Drug history & allergies — *"What tablets, inhalers, patches or medicines are you on — can you show me them all? Do you take anything from the chemist or any natural remedies? Any allergies?"*
 
 **Why we ask:** The drug list is a map of hidden diagnoses (an antihypertensive reveals forgotten "normal" blood pressure). Ask by drug class to jog memory, and about OTC/complementary agents (~50% use them; some adulterated). Aspirin/NSAIDs — but not paracetamol — cause GI bleeding.
+
+**If yes, ask:**
+- *"Can you show me everything you're taking, including the packets?"* — Seeing the actual medications catches doses and drugs the patient forgets to mention verbally
+- *"Anything from the chemist without a prescription, or any natural or herbal remedies?"* — About half of patients use OTC or complementary agents and often don't think to mention them unprompted
+- *"For each one — what's it for, and are you taking it as prescribed?"* — Indication and adherence together reveal both hidden diagnoses and unrecognised undertreatment
+- *"What exactly happened when you had that allergic reaction?"* — Separates a true allergy (rash, swelling, bronchospasm) from a side effect (nausea) — a mislabelled 'allergy' unnecessarily narrows future treatment options
+- *"Do you use contraception, or any hormone treatment?"* — Patients frequently don't count 'the pill' or a patch as a medication unless asked directly
 
 **Rules in / rules out:**
 - **Prompt by class** → BP, cholesterol, diabetes, arthritis, mood, contraception (many don’t count "the pill"), HRT, epilepsy, anticoagulation
@@ -90,6 +125,11 @@ Note the two halves: the patient leads the **first** half (open question, uninte
 
 **Why we ask:** Familial clustering flags both inherited disease and shared risk. Premature IHD in a first-degree relative is a major risk factor; bowel and breast cancer are the two malignancies patients report accurately. Draw a family tree if a heritable disorder is suspected.
 
+**If yes, ask:**
+- *"Are your parents and siblings well? If not, what did they have, and at what age?"* — Age of onset matters as much as the diagnosis itself — premature disease in a relative raises the patient's own risk more than late-onset disease does
+- *"Has anyone in the family died young, or suddenly?"* — Sudden or premature death can point to an inherited cardiac or vascular condition worth asking about specifically
+- *"Are you and your partner related to each other at all?"* — Consanguinity raises the risk of autosomal-recessive conditions — ask tactfully if the family pattern suggests it
+
 **Rules in / rules out:**
 - **Numerous affected relatives, earlier-than-usual onset, the less-often-affected sex, or disease despite no risk factors** → raised genetic risk
 - **Consanguinity** → increases autosomal-recessive risk — ask tactfully if the pedigree suggests it
@@ -100,6 +140,11 @@ Note the two halves: the patient leads the **first** half (open question, uninte
 
 **Why we ask:** The safety net: a brief screen of the systems you haven’t covered, to catch important disease the presenting complaint would otherwise miss. Experienced clinicians do a TARGETED review guided by what they’ve already heard — not every question on every patient.
 
+**If yes, ask:**
+- *"Have you noticed anything else — even something that doesn't seem related?"* — A targeted screen, not an exhaustive one — let what you've already heard guide which systems to check
+- *"Any weight loss, fevers, or night sweats?"* — The constitutional screen catches systemic disease the organ-specific questions might miss entirely
+- *"If something new comes up here, what do you do with it?"* — Stop and characterise it fully with SOCRATES, then fold it back into the history of presenting illness rather than leaving it as an orphaned checklist tick
+
 **Rules in / rules out:**
 - **Record pertinent NEGATIVES, not just positives** → they narrow the differential and document your reasoning
 - **A new symptom unmasked here** → stop and characterise it fully, then fold it back into the HPI
@@ -109,6 +154,12 @@ Note the two halves: the patient leads the **first** half (open question, uninte
 #### 8. ICE & the effect of illness — *"What do you think might be going on? Is there anything you’re particularly worried about? What were you hoping we could do? — and how has this affected your life?"*
 
 **Why we ask:** Before closing, elicit the patient’s Ideas, Concerns and Expectations, and the illness’s functional/psychological impact. Their chief worry may not be the worst symptom but a specific fear — addressing it is central to rapport and to a management plan they’ll follow.
+
+**If yes, ask:**
+- *"What do you think might be going on?"* — The patient's own theory often reveals a specific fear worth addressing directly, even if medically unlikely
+- *"Is there anything in particular you're worried about?"* — Often not the worst symptom but a specific concern (e.g. 'is this cancer') — naming it changes the whole tone of the consultation
+- *"What were you hoping we could do today?"* — A mismatch between the patient's expectation and what's medically appropriate is worth surfacing early, not discovering at the end
+- *"How has this been affecting your day-to-day life?"* — Functional and psychological impact shapes both the management plan and how urgently it needs to happen
 
 **Rules in / rules out:**
 - **Ask what they think is wrong and most fear** → often reframes the consultation entirely
@@ -288,6 +339,14 @@ Match depth to relevance and timing: living situation and function matter most i
 
 **Why we ask:** Determines whether the person can safely function — the pivot of any discharge or management plan in chronic or disabling illness. Establish the main caregiver, the physical setup (steps to the door, location of the toilet), and mobility.
 
+**If yes, ask:**
+- *"Who else is at home with you?"* — Identifies whether there's a caregiver, and whether that person is coping too
+- *"Are you managing day to day on your own — dressing, washing, cooking?"* — Concrete ADL examples are more reliable than a general 'I'm fine, thanks'
+- *"How do you get around — can you manage stairs, and are you still driving?"* — Physical access (steps, an upstairs toilet) and mobility shape any discharge or rehab plan directly
+- *"Do you have any home help, or does anyone check in on you?"* — Existing support (formal or informal) is what a management plan builds on, not what it has to create from scratch
+- *"Is there anything about your living situation that worries you?"* — Opens the door to safety concerns — unsafe housing, isolation, or a relationship you might not otherwise hear about
+- *"How would managing at home change if this got worse?"* — Anticipates the discharge-planning conversation before it becomes urgent
+
 **Rules in / rules out:**
 - **Can’t manage ADLs unaided** → identify the main caregiver and available social support early
 - **Physical barriers (steps, upstairs toilet)** → shape rehab and discharge planning
@@ -297,6 +356,13 @@ Match depth to relevance and timing: living situation and function matter most i
 #### 2. Occupation & hobbies — *"What do you do for work? What does that involve day to day? — (WHACS)"*
 
 **Why we ask:** Occupation and hobbies link directly to disease. The WHACS mnemonic structures it: What do you do? How do you do it? Anything you’re concerned about (exposures)? Colleagues affected? Satisfied with the job? Ask specifically about dusts, chemicals and biological exposures.
+
+**If yes, ask:**
+- *"What does your job actually involve, day to day?"* — The 'How' in WHACS — a job title alone hides the specific exposures that matter
+- *"Is there anything about the work itself that concerns you?"* — The 'Anything concerning' in WHACS — patients often already suspect a work-related trigger before you ask
+- *"Are any of your colleagues affected in the same way?"* — Shared symptoms among coworkers supports an occupational or environmental cause over an individual one
+- *"Any exposure to dusts, chemicals, or animals — past or present?"* — Asbestos, silica, and biological exposures (mouldy hay, birds) can cause disease decades after the exposure itself
+- *"Are you satisfied with the job, and how does your health affect your ability to do it?"* — The 'Satisfied' in WHACS — job strain and functional capacity both feed into the overall picture, not just the physical exposures
 
 **Rules in / rules out:**
 - **Dust/mineral exposure** → asbestosis (builders, shipyards), silicosis (stonemasons, miners), pneumoconiosis (coal)
@@ -309,6 +375,14 @@ Match depth to relevance and timing: living situation and function matter most i
 
 **Why we ask:** Never ask only "do you smoke?" (a patient who quit this morning says no). Quantify as PACK-YEARS — (cigarettes/day ÷ 20) × years — because risk scales with cumulative dose and recency. Ask about vaping separately (nicotine content, EVALI risk).
 
+**If yes, ask:**
+- *"Have you ever smoked, even a little, at any point in your life?"* — Never ask only 'do you smoke?' — someone who quit this morning will answer no
+- *"How many a day, and for how many years?"* — The two numbers needed to calculate pack-years — (cigarettes/day ÷ 20) × years
+- *"If you've quit, when, and how long were you smoking before that?"* — Risk falls with time since quitting but never fully returns to a never-smoker's baseline — record both the burden and the quit date
+- *"Do you vape, and if so, what — nicotine strength, how often?"* — Vaping carries its own risks (EVALI, unclear long-term nicotine exposure) and needs asking about separately from cigarettes
+- *"How many are actually in a pack these days?"* — Modern packs often hold 30–50, not 20 — clarify the real number so the pack-year calculation is accurate
+- *"Has anyone else in the house smoked around you?"* — Passive smoke exposure carries its own, smaller but real, risk — relevant especially for children and pregnancy
+
 **Rules in / rules out:**
 - **1 pack-year = 20 cigarettes/day for 1 year** → the standard unit of tobacco burden
 - **Smoking** → premature coronary & peripheral vascular disease, COPD, many cancers, peptic ulcer, fetal harm
@@ -319,6 +393,14 @@ Match depth to relevance and timing: living situation and function matter most i
 #### 4. Alcohol — *"Do you drink alcohol? Beer, wine or spirits — and how many glasses on most days? — then screen (CAGE / AUDIT-C)."*
 
 **Why we ask:** Quantify first (1 standard drink ≈ 8–10 g ethanol), then screen for a use disorder. Self-report is often an underestimate — hold it with gentle scepticism. Liver risk rises above ~80 g/day (men) or ~40 g/day (women) sustained for years.
+
+**If yes, ask:**
+- *"What do you drink, and roughly how many standard drinks on a typical drinking day?"* — Quantify first in standard drinks (about 8–10 g ethanol each) before screening for a use disorder
+- *"How many days a week would that be?"* — Frequency multiplied by quantity gives the real weekly total — patients often report a 'typical' amount without multiplying it out
+- *"Have you ever felt you should cut down, or felt annoyed by people criticising your drinking? Guilty about it, or needed a drink first thing in the morning?"* — CAGE — two or more 'yes' answers suggests dependence, though it can miss unhealthy drinking that falls short of dependence
+- *"How often do you have five or more drinks (four or more for women) on one occasion?"* — The single-question binge screen — nearly as sensitive as the full AUDIT-C for unhealthy use
+- *"Any stomach problems, liver problems, or times you've felt shaky or unwell without a drink?"* — Screens the complications of excess alcohol — GI bleeding, liver disease, and withdrawal — rather than relying on quantity alone
+- *"Has anyone close to you commented on your drinking?"* — Collateral concern often surfaces a pattern the patient themselves has normalised
 
 **Rules in / rules out:**
 - **CAGE ≥ 2 "yes"** → suggests dependence (Cut down / Annoyed / Guilty / Eye-opener; 77% sens, 79% spec)
@@ -333,6 +415,13 @@ Match depth to relevance and timing: living situation and function matter most i
 
 **Why we ask:** That single question is ~100% sensitive (74% specific) for problem drug use — an efficient, non-judgemental opener. Injecting use adds blood-borne-virus and endocarditis risk; ask about needle sharing.
 
+**If yes, ask:**
+- *"How many times in the past year have you used a recreational drug, or taken a prescription medicine that wasn't prescribed to you?"* — This single question is close to 100% sensitive for problem drug use — an efficient, non-judgemental opener
+- *"Which substances, and how often?"* — Specific substance and frequency change both the risk profile and what to screen for next
+- *"How do you take it — smoked, swallowed, or injected?"* — Route of use is what determines the additional risks — injecting carries blood-borne virus and endocarditis risk that other routes don't
+- *"If injecting — do you ever share needles or other equipment?"* — Needle sharing is the single biggest modifiable risk factor for HIV and hepatitis transmission in this group
+- *"Has your use ever caused problems — with health, relationships, work, or the law?"* — Functional consequences are a more reliable marker of a use disorder than frequency or amount alone
+
 **Rules in / rules out:**
 - **Any non-zero answer** → explore substances, route, frequency, and dependence
 - **IV use** → HIV/hepatitis B & C, right-sided endocarditis, injection-site infection; ask about needle sharing
@@ -344,6 +433,13 @@ Match depth to relevance and timing: living situation and function matter most i
 
 **Why we ask:** Lifestyle modifies cardiometabolic risk; travel reframes infection risk. For diet, note adequacy and who cooks (frailty/social clue). For travel, ask destinations, how they lived (water, food), any illness or hospitalisation abroad, and malaria prophylaxis.
 
+**If yes, ask:**
+- *"Tell me briefly what you typically eat in a day, and who does the cooking?"* — Who cooks is a quiet clue to frailty and social support, not just a nutrition question
+- *"How physically active are you in a typical week?"* — Establishes baseline cardiometabolic risk and a functional benchmark to track change against
+- *"Have you travelled overseas recently — where, and for how long?"* — Reframes any current symptom, especially fever, around geography-specific infectious risk
+- *"What did you eat and drink there, and did you take any malaria prevention?"* — Food/water exposure and prophylaxis adherence both change the differential for a returned traveller with fever
+- *"Did you need any medical care or hospital treatment while you were away?"* — Overseas hospitalisation raises the risk of colonisation with multidrug-resistant organisms
+
 **Rules in / rules out:**
 - **Recent travel + fever** → ask destination, exposures, prophylaxis (malaria), and overseas hospitalisation (resistant organisms)
 - **Poor diet / can’t cook / relies on others** → nutritional and functional red flag in the frail or elderly
@@ -353,6 +449,13 @@ Match depth to relevance and timing: living situation and function matter most i
 #### 7. Mood & sexual history — *"How are things going at home and at work? Have you been feeling down, or lost interest in things you normally enjoy? — and, where relevant, a sexual history."*
 
 **Why we ask:** Depression is common (prevalence up to ~8%) and increases threefold with any significant medical illness — screen with mood + anhedonia; a "no" to both makes major depression unlikely. The sexual history is asked only when relevant and with good timing (see Reproductive).
+
+**If yes, ask:**
+- *"In the past month, have you felt down, depressed, or hopeless — or lost interest or pleasure in the things you usually enjoy?"* — The two-question screen — a 'no' to both makes major depression unlikely
+- *"How has this affected your sleep, appetite, or energy?"* — Somatic symptoms add weight to a positive mood screen and gauge severity
+- **!** *"Sometimes when people feel this low, they have thoughts that life isn't worth living — have you had thoughts like that?"* — Asking directly does not increase risk — it's a required, protective part of the screen once a mood problem is suspected
+- *"Any physical illness, or new medication, that started around the same time?"* — Screens the organic mimics — hypothyroidism, Cushing's — before assuming a purely psychological cause
+- *"Is now a good time to ask a few questions about your sexual health, or would you rather we came back to it another time?"* — Good judgement on timing matters — these questions land better once rapport is established, and deferring is sometimes the right clinical choice
 
 **Rules in / rules out:**
 - **Low mood AND anhedonia** → screen further; if depression likely, ask about suicidal ideation (asking does NOT increase risk)

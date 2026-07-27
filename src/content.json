@@ -78,6 +78,24 @@
                   "out",
                   "Deep personal/social questions up front → can feel intrusive; defer until you’ve shown interest in the presenting problem"
                 ]
+              ],
+              "followups": [
+                {
+                  "q": "What's brought you in today, in your own words?",
+                  "probes": "The literal opening question — resist the urge to interrupt or redirect for as long as the patient is still talking"
+                },
+                {
+                  "q": "Is there anything else you wanted to mention?",
+                  "probes": "Reopens the story — often surfaces the symptom the patient was building up to but hadn't said yet"
+                },
+                {
+                  "q": "How would you like me to address you?",
+                  "probes": "A small courtesy that sets the tone for the whole rest of the consultation"
+                },
+                {
+                  "q": "Do you understand why I'm asking these questions today?",
+                  "probes": "Confirms consent and understanding before moving into more detailed or sensitive territory"
+                }
               ]
             },
             {
@@ -93,6 +111,20 @@
                   "in",
                   "A symptom mentioned \"in passing\" (e.g. haemoptysis) → may be the most important — don’t let the loudest complaint bury it"
                 ]
+              ],
+              "followups": [
+                {
+                  "q": "Of everything you've told me, what's troubling you the most right now?",
+                  "probes": "Patients often have several complaints — you need to know which one actually brought them in, which isn't always the most medically 'serious' one"
+                },
+                {
+                  "q": "You mentioned that in passing — can we come back to it?",
+                  "probes": "A symptom mentioned almost as an aside (like haemoptysis buried in a cold story) can be the most important thing said in the whole interview"
+                },
+                {
+                  "q": "Can you describe that in your own words, without the medical term?",
+                  "probes": "Patients' own words avoid you both silently assuming different things by the same label (e.g. 'dizzy')"
+                }
               ]
             },
             {
@@ -112,6 +144,40 @@
                   "out",
                   "Finish one symptom before moving to the next → politely hold the garrulous patient: \"I’d like to finish about your blackouts before we discuss the tiredness.\""
                 ]
+              ],
+              "followups": [
+                {
+                  "q": "When did you last feel completely well?",
+                  "probes": "Anchors the true onset — patients often understate how long a gradual problem has actually been present"
+                },
+                {
+                  "q": "Can you take me through it in order, from when it started to now?",
+                  "probes": "Chronological order surfaces the tempo and pattern, which localises the diagnosis as much as any single symptom does"
+                },
+                {
+                  "q": "Where exactly is it?",
+                  "probes": "The anatomical diagnosis — the first of the four diagnostic questions"
+                },
+                {
+                  "q": "What does it actually feel like?",
+                  "probes": "The pathological diagnosis — character narrows the mechanism (e.g. crushing vs tearing chest pain)"
+                },
+                {
+                  "q": "How is it affecting what you can do?",
+                  "probes": "The functional diagnosis — severity and disability, not just the presence of a symptom"
+                },
+                {
+                  "q": "Why do you think this has happened now?",
+                  "probes": "The aetiological diagnosis — risk factors and triggers the patient may already suspect"
+                },
+                {
+                  "q": "Has anything like this happened before?",
+                  "probes": "A recurrence changes the differential and the urgency compared with a first-ever episode"
+                },
+                {
+                  "q": "Is there another problem we haven't covered yet?",
+                  "probes": "Keeps you from closing the HPI before every complaint has been characterised in turn"
+                }
               ]
             },
             {
@@ -131,6 +197,28 @@
                   "out",
                   "A \"diagnosis\" the patient reports → verify it (untested \"ulcer\" may never have been one); keep objective scepticism"
                 ]
+              ],
+              "followups": [
+                {
+                  "q": "Have you ever been in hospital, and what for?",
+                  "probes": "Admissions are often more reliably remembered than diagnoses mentioned in passing at a GP visit"
+                },
+                {
+                  "q": "Any operations — and were there any complications?",
+                  "probes": "Prior complications (bleeding, anaesthetic reactions) matter for planning any future procedure"
+                },
+                {
+                  "q": "Do you have any implants, prostheses, or a pacemaker?",
+                  "probes": "A pacemaker is an MRI contraindication; any foreign material carries an infection risk that changes how you interpret new symptoms"
+                },
+                {
+                  "q": "You mentioned you have that — how was it actually diagnosed?",
+                  "probes": "Verify self-reported diagnoses rather than accepting them at face value — an untested 'ulcer' may never have been confirmed"
+                },
+                {
+                  "q": "Are your childhood immunisations and any boosters up to date?",
+                  "probes": "Relevant to infection risk and, in pregnancy or immunosuppression, to what can safely be given"
+                }
               ]
             },
             {
@@ -147,7 +235,29 @@
                   "Capture dose, duration, indication, adherence, side effects for each"
                 ]
               ],
-              "red": "always separate a TRUE allergy (rash, bronchospasm) from a side effect — patients routinely confuse them, and a mislabelled \"allergy\" narrows future treatment unnecessarily. Ask exactly what the reaction was."
+              "red": "always separate a TRUE allergy (rash, bronchospasm) from a side effect — patients routinely confuse them, and a mislabelled \"allergy\" narrows future treatment unnecessarily. Ask exactly what the reaction was.",
+              "followups": [
+                {
+                  "q": "Can you show me everything you're taking, including the packets?",
+                  "probes": "Seeing the actual medications catches doses and drugs the patient forgets to mention verbally"
+                },
+                {
+                  "q": "Anything from the chemist without a prescription, or any natural or herbal remedies?",
+                  "probes": "About half of patients use OTC or complementary agents and often don't think to mention them unprompted"
+                },
+                {
+                  "q": "For each one — what's it for, and are you taking it as prescribed?",
+                  "probes": "Indication and adherence together reveal both hidden diagnoses and unrecognised undertreatment"
+                },
+                {
+                  "q": "What exactly happened when you had that allergic reaction?",
+                  "probes": "Separates a true allergy (rash, swelling, bronchospasm) from a side effect (nausea) — a mislabelled 'allergy' unnecessarily narrows future treatment options"
+                },
+                {
+                  "q": "Do you use contraception, or any hormone treatment?",
+                  "probes": "Patients frequently don't count 'the pill' or a patch as a medication unless asked directly"
+                }
+              ]
             },
             {
               "n": "Family history",
@@ -162,6 +272,20 @@
                   "in",
                   "Consanguinity → increases autosomal-recessive risk — ask tactfully if the pedigree suggests it"
                 ]
+              ],
+              "followups": [
+                {
+                  "q": "Are your parents and siblings well? If not, what did they have, and at what age?",
+                  "probes": "Age of onset matters as much as the diagnosis itself — premature disease in a relative raises the patient's own risk more than late-onset disease does"
+                },
+                {
+                  "q": "Has anyone in the family died young, or suddenly?",
+                  "probes": "Sudden or premature death can point to an inherited cardiac or vascular condition worth asking about specifically"
+                },
+                {
+                  "q": "Are you and your partner related to each other at all?",
+                  "probes": "Consanguinity raises the risk of autosomal-recessive conditions — ask tactfully if the family pattern suggests it"
+                }
               ]
             },
             {
@@ -177,6 +301,20 @@
                   "out",
                   "A new symptom unmasked here → stop and characterise it fully, then fold it back into the HPI"
                 ]
+              ],
+              "followups": [
+                {
+                  "q": "Have you noticed anything else — even something that doesn't seem related?",
+                  "probes": "A targeted screen, not an exhaustive one — let what you've already heard guide which systems to check"
+                },
+                {
+                  "q": "Any weight loss, fevers, or night sweats?",
+                  "probes": "The constitutional screen catches systemic disease the organ-specific questions might miss entirely"
+                },
+                {
+                  "q": "If something new comes up here, what do you do with it?",
+                  "probes": "Stop and characterise it fully with SOCRATES, then fold it back into the history of presenting illness rather than leaving it as an orphaned checklist tick"
+                }
               ]
             },
             {
@@ -192,6 +330,24 @@
                   "in",
                   "A serious illness reshapes work, finances, relationships and self-esteem → ask how they’re coping and what they hope for"
                 ]
+              ],
+              "followups": [
+                {
+                  "q": "What do you think might be going on?",
+                  "probes": "The patient's own theory often reveals a specific fear worth addressing directly, even if medically unlikely"
+                },
+                {
+                  "q": "Is there anything in particular you're worried about?",
+                  "probes": "Often not the worst symptom but a specific concern (e.g. 'is this cancer') — naming it changes the whole tone of the consultation"
+                },
+                {
+                  "q": "What were you hoping we could do today?",
+                  "probes": "A mismatch between the patient's expectation and what's medically appropriate is worth surfacing early, not discovering at the end"
+                },
+                {
+                  "q": "How has this been affecting your day-to-day life?",
+                  "probes": "Functional and psychological impact shapes both the management plan and how urgently it needs to happen"
+                }
               ]
             }
           ],
@@ -554,6 +710,32 @@
                   "in",
                   "Physical barriers (steps, upstairs toilet) → shape rehab and discharge planning"
                 ]
+              ],
+              "followups": [
+                {
+                  "q": "Who else is at home with you?",
+                  "probes": "Identifies whether there's a caregiver, and whether that person is coping too"
+                },
+                {
+                  "q": "Are you managing day to day on your own — dressing, washing, cooking?",
+                  "probes": "Concrete ADL examples are more reliable than a general 'I'm fine, thanks'"
+                },
+                {
+                  "q": "How do you get around — can you manage stairs, and are you still driving?",
+                  "probes": "Physical access (steps, an upstairs toilet) and mobility shape any discharge or rehab plan directly"
+                },
+                {
+                  "q": "Do you have any home help, or does anyone check in on you?",
+                  "probes": "Existing support (formal or informal) is what a management plan builds on, not what it has to create from scratch"
+                },
+                {
+                  "q": "Is there anything about your living situation that worries you?",
+                  "probes": "Opens the door to safety concerns — unsafe housing, isolation, or a relationship you might not otherwise hear about"
+                },
+                {
+                  "q": "How would managing at home change if this got worse?",
+                  "probes": "Anticipates the discharge-planning conversation before it becomes urgent"
+                }
               ]
             },
             {
@@ -573,6 +755,28 @@
                   "out",
                   "Ask if fellow workers are affected → shared exposure supports an occupational cause"
                 ]
+              ],
+              "followups": [
+                {
+                  "q": "What does your job actually involve, day to day?",
+                  "probes": "The 'How' in WHACS — a job title alone hides the specific exposures that matter"
+                },
+                {
+                  "q": "Is there anything about the work itself that concerns you?",
+                  "probes": "The 'Anything concerning' in WHACS — patients often already suspect a work-related trigger before you ask"
+                },
+                {
+                  "q": "Are any of your colleagues affected in the same way?",
+                  "probes": "Shared symptoms among coworkers supports an occupational or environmental cause over an individual one"
+                },
+                {
+                  "q": "Any exposure to dusts, chemicals, or animals — past or present?",
+                  "probes": "Asbestos, silica, and biological exposures (mouldy hay, birds) can cause disease decades after the exposure itself"
+                },
+                {
+                  "q": "Are you satisfied with the job, and how does your health affect your ability to do it?",
+                  "probes": "The 'Satisfied' in WHACS — job strain and functional capacity both feed into the overall picture, not just the physical exposures"
+                }
               ]
             },
             {
@@ -592,6 +796,32 @@
                   "out",
                   "Modern packs hold 30–50, not 20 → clarify actual number to compute pack-years correctly"
                 ]
+              ],
+              "followups": [
+                {
+                  "q": "Have you ever smoked, even a little, at any point in your life?",
+                  "probes": "Never ask only 'do you smoke?' — someone who quit this morning will answer no"
+                },
+                {
+                  "q": "How many a day, and for how many years?",
+                  "probes": "The two numbers needed to calculate pack-years — (cigarettes/day ÷ 20) × years"
+                },
+                {
+                  "q": "If you've quit, when, and how long were you smoking before that?",
+                  "probes": "Risk falls with time since quitting but never fully returns to a never-smoker's baseline — record both the burden and the quit date"
+                },
+                {
+                  "q": "Do you vape, and if so, what — nicotine strength, how often?",
+                  "probes": "Vaping carries its own risks (EVALI, unclear long-term nicotine exposure) and needs asking about separately from cigarettes"
+                },
+                {
+                  "q": "How many are actually in a pack these days?",
+                  "probes": "Modern packs often hold 30–50, not 20 — clarify the real number so the pack-year calculation is accurate"
+                },
+                {
+                  "q": "Has anyone else in the house smoked around you?",
+                  "probes": "Passive smoke exposure carries its own, smaller but real, risk — relevant especially for children and pregnancy"
+                }
               ]
             },
             {
@@ -612,7 +842,33 @@
                   "Excess alcohol → look for its complications: liver disease, pancreatitis, GI bleeding, cardiomyopathy/AF, withdrawal, neuropathy"
                 ]
               ],
-              "red": "flag the guideline nuance: Talley gives BOTH CAGE and AUDIT-C but notes CAGE misses unhealthy drinking short of dependence, so AUDIT-C (or the single \"how many times in the past year 5+/4+ drinks?\" question) is preferred for screening. Current NHMRC (AU) safe limits: ≤ 10 standard drinks/week AND ≤ 4 on any one day."
+              "red": "flag the guideline nuance: Talley gives BOTH CAGE and AUDIT-C but notes CAGE misses unhealthy drinking short of dependence, so AUDIT-C (or the single \"how many times in the past year 5+/4+ drinks?\" question) is preferred for screening. Current NHMRC (AU) safe limits: ≤ 10 standard drinks/week AND ≤ 4 on any one day.",
+              "followups": [
+                {
+                  "q": "What do you drink, and roughly how many standard drinks on a typical drinking day?",
+                  "probes": "Quantify first in standard drinks (about 8–10 g ethanol each) before screening for a use disorder"
+                },
+                {
+                  "q": "How many days a week would that be?",
+                  "probes": "Frequency multiplied by quantity gives the real weekly total — patients often report a 'typical' amount without multiplying it out"
+                },
+                {
+                  "q": "Have you ever felt you should cut down, or felt annoyed by people criticising your drinking? Guilty about it, or needed a drink first thing in the morning?",
+                  "probes": "CAGE — two or more 'yes' answers suggests dependence, though it can miss unhealthy drinking that falls short of dependence"
+                },
+                {
+                  "q": "How often do you have five or more drinks (four or more for women) on one occasion?",
+                  "probes": "The single-question binge screen — nearly as sensitive as the full AUDIT-C for unhealthy use"
+                },
+                {
+                  "q": "Any stomach problems, liver problems, or times you've felt shaky or unwell without a drink?",
+                  "probes": "Screens the complications of excess alcohol — GI bleeding, liver disease, and withdrawal — rather than relying on quantity alone"
+                },
+                {
+                  "q": "Has anyone close to you commented on your drinking?",
+                  "probes": "Collateral concern often surfaces a pattern the patient themselves has normalised"
+                }
+              ]
             },
             {
               "n": "Recreational & injecting drugs",
@@ -631,6 +887,28 @@
                   "out",
                   "Judge relevance — no need to interrogate the 90-year-old nursing-home resident"
                 ]
+              ],
+              "followups": [
+                {
+                  "q": "How many times in the past year have you used a recreational drug, or taken a prescription medicine that wasn't prescribed to you?",
+                  "probes": "This single question is close to 100% sensitive for problem drug use — an efficient, non-judgemental opener"
+                },
+                {
+                  "q": "Which substances, and how often?",
+                  "probes": "Specific substance and frequency change both the risk profile and what to screen for next"
+                },
+                {
+                  "q": "How do you take it — smoked, swallowed, or injected?",
+                  "probes": "Route of use is what determines the additional risks — injecting carries blood-borne virus and endocarditis risk that other routes don't"
+                },
+                {
+                  "q": "If injecting — do you ever share needles or other equipment?",
+                  "probes": "Needle sharing is the single biggest modifiable risk factor for HIV and hepatitis transmission in this group"
+                },
+                {
+                  "q": "Has your use ever caused problems — with health, relationships, work, or the law?",
+                  "probes": "Functional consequences are a more reliable marker of a use disorder than frequency or amount alone"
+                }
               ]
             },
             {
@@ -646,6 +924,28 @@
                   "in",
                   "Poor diet / can’t cook / relies on others → nutritional and functional red flag in the frail or elderly"
                 ]
+              ],
+              "followups": [
+                {
+                  "q": "Tell me briefly what you typically eat in a day, and who does the cooking?",
+                  "probes": "Who cooks is a quiet clue to frailty and social support, not just a nutrition question"
+                },
+                {
+                  "q": "How physically active are you in a typical week?",
+                  "probes": "Establishes baseline cardiometabolic risk and a functional benchmark to track change against"
+                },
+                {
+                  "q": "Have you travelled overseas recently — where, and for how long?",
+                  "probes": "Reframes any current symptom, especially fever, around geography-specific infectious risk"
+                },
+                {
+                  "q": "What did you eat and drink there, and did you take any malaria prevention?",
+                  "probes": "Food/water exposure and prophylaxis adherence both change the differential for a returned traveller with fever"
+                },
+                {
+                  "q": "Did you need any medical care or hospital treatment while you were away?",
+                  "probes": "Overseas hospitalisation raises the risk of colonisation with multidrug-resistant organisms"
+                }
               ]
             },
             {
@@ -665,6 +965,29 @@
                   "out",
                   "Defer intrusive sexual/personal questions until rapport is established — good judgement on timing matters"
                 ]
+              ],
+              "followups": [
+                {
+                  "q": "In the past month, have you felt down, depressed, or hopeless — or lost interest or pleasure in the things you usually enjoy?",
+                  "probes": "The two-question screen — a 'no' to both makes major depression unlikely"
+                },
+                {
+                  "q": "How has this affected your sleep, appetite, or energy?",
+                  "probes": "Somatic symptoms add weight to a positive mood screen and gauge severity"
+                },
+                {
+                  "q": "Sometimes when people feel this low, they have thoughts that life isn't worth living — have you had thoughts like that?",
+                  "probes": "Asking directly does not increase risk — it's a required, protective part of the screen once a mood problem is suspected",
+                  "danger": true
+                },
+                {
+                  "q": "Any physical illness, or new medication, that started around the same time?",
+                  "probes": "Screens the organic mimics — hypothyroidism, Cushing's — before assuming a purely psychological cause"
+                },
+                {
+                  "q": "Is now a good time to ask a few questions about your sexual health, or would you rather we came back to it another time?",
+                  "probes": "Good judgement on timing matters — these questions land better once rapport is established, and deferring is sometimes the right clinical choice"
+                }
               ]
             }
           ],
