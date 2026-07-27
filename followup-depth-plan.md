@@ -10,6 +10,30 @@
 > Draft 2 replaced it with full SOCRATES instantiation + `slot` grouping — **also withdrawn, too heavy.**
 > See §2 for the shape that was actually settled on.
 
+## 0. Running this plan
+
+**Suggested config:** Sonnet, medium reasoning effort. The design work is finished — this is systematic
+execution against a settled pattern (read a Talley chapter → invert `points` → write ≤8 follow-ups →
+verify), not open-ended design. If a specific symptom's differential turns out genuinely ambiguous, stop
+and flag it rather than guessing.
+
+**Work one system per batch.** After each system:
+
+```bash
+python3 -c "import json; json.load(open('src/content.json')); print('JSON valid')"
+node build.mjs
+```
+
+Then spot-check the generated `NN-<system>.md` for the system just authored, and confirm the question
+counts in Drill → Screen mode for that system are unchanged (authoring `followups` must never touch
+`n`/`ask`/`minor`/question order — those were fixed in earlier work).
+
+**Before authoring a system's symptoms:** read `Cough` in `src/content.json` (`resp` system) as the shape
+reference, and `Headache` (`neuro`) as the second example. Both are done; don't re-touch them.
+
+**Git:** commit per system or per 2–3 systems, following this repo's existing commit style (what changed,
+why, in prose — see `git log` for tone). Don't push without being asked to.
+
 ---
 
 ## 1. The problem and the goal
