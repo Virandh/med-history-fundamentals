@@ -2256,7 +2256,43 @@
               "Difficulty initiating the swallow with coughing/nasal regurgitation → oropharyngeal/neurological (stroke, bulbar)"
             ]
           ],
-          "red": "Progressive dysphagia + weight loss → oesophageal cancer until excluded."
+          "red": "Progressive dysphagia + weight loss → oesophageal cancer until excluded.",
+          "followups": [
+            {
+              "q": "Do you have trouble with solids, liquids, or both?",
+              "probes": "Solids only → mechanical (cancer, stricture) · solids and liquids together → a motor problem (achalasia, spasm)"
+            },
+            {
+              "q": "Where does it feel like it's sticking — can you point?",
+              "probes": "Pointing to the lower oesophagus supports a mechanical obstruction there — but referred sensation is unreliable for lesions higher up"
+            },
+            {
+              "q": "Is it constant, or does it come and go — worse with the first few mouthfuls?",
+              "probes": "Intermittent, or worse on first swallows, → eosinophilic oesophagitis, a lower oesophageal ring, or (rarely) diffuse oesophageal spasm"
+            },
+            {
+              "q": "Has it been getting steadily worse?",
+              "probes": "Progressive difficulty → stricture, carcinoma, or achalasia",
+              "danger": true
+            },
+            {
+              "q": "Do you cough or choke as you start to swallow, or does fluid come back up your nose?",
+              "probes": "Suggests oropharyngeal dysphagia — a pharyngeal or neurological (bulbar) cause, not an oesophageal one"
+            },
+            {
+              "q": "Is it painful to swallow?",
+              "probes": "Odynophagia suggests acute inflammation — infective oesophagitis (Candida, herpes), a lodged pill, or caustic injury"
+            },
+            {
+              "q": "Any heartburn or acid regurgitation with it?",
+              "probes": "Supports GORD, with or without a peptic stricture, as the cause"
+            },
+            {
+              "q": "Have you lost weight? Do you have asthma or hay fever?",
+              "probes": "Weight loss raises concern for cancer; atopy supports eosinophilic oesophagitis",
+              "danger": true
+            }
+          ]
         },
         {
           "n": "Heartburn / dyspepsia",
@@ -2274,9 +2310,37 @@
             [
               "in",
               "Dyspepsia + ALARM features (Anaemia, Loss of weight, Anorexia, Recent onset/progressive, Melaena/haematemesis, Swallowing difficulty) → urgent endoscopy for gastric cancer (Talley's core alarm set is the four: dysphagia, weight loss, melaena, haematemesis)"
+            ],
+            [
+              "out",
+              "Radiates across the chest, down the arm, or into the jaw → raises myocardial ischaemia instead of reflux"
             ]
           ],
-          "red": "ALARM: Anaemia, Loss of weight, Anorexia, Recent/progressive onset, Melaena/haematemesis, Swallowing difficulty."
+          "red": "ALARM: Anaemia, Loss of weight, Anorexia, Recent/progressive onset, Melaena/haematemesis, Swallowing difficulty.",
+          "followups": [
+            {
+              "q": "How often does this happen — more than once a week?",
+              "probes": "More than weekly supports a diagnosis of GORD rather than occasional reflux"
+            },
+            {
+              "q": "Does it come on after meals, or when you bend forward or lie flat?",
+              "probes": "Typical triggers for acid reflux"
+            },
+            {
+              "q": "Does it radiate across your chest, down your arm, or into your jaw?",
+              "probes": "Raises concern for myocardial ischaemia rather than reflux — don't anchor on GORD until this is excluded",
+              "danger": true
+            },
+            {
+              "q": "Is it relieved by antacids, or does it come with a sudden rush of bitter fluid into your mouth?",
+              "probes": "Relief with antacids and true acid regurgitation both support reflux; a salty or tasteless fluid instead is waterbrash, not GORD"
+            },
+            {
+              "q": "Any trouble swallowing, weight loss, or black stools/vomited blood with it?",
+              "probes": "The ALARM features that mean this isn't straightforward reflux and needs endoscopy",
+              "danger": true
+            }
+          ]
         },
         {
           "n": "Nausea and vomiting",
@@ -2295,7 +2359,31 @@
               "out",
               "Early morning vomiting → raised ICP, pregnancy, alcohol"
             ]
-          ]
+          ],
+          "followups": [
+            {
+              "q": "Does it happen right after eating, or hours later?",
+              "probes": "Delayed more than an hour after meals → gastric outlet obstruction or gastroparesis · early morning, before eating, → pregnancy, alcohol, or raised intracranial pressure"
+            },
+            {
+              "q": "What does the vomit look like — bile-stained, old food, or blood?",
+              "probes": "Bile → an open duodenal–gastric connection · old food → outlet obstruction · blood → ulceration, needing its own work-up",
+              "danger": true
+            },
+            {
+              "q": "Any abdominal pain, colicky pain with distension, or absence of flatus?",
+              "probes": "Points towards bowel obstruction rather than a primary vomiting disorder"
+            },
+            {
+              "q": "Is it actually vomiting, or does food come back up effortlessly and get re-swallowed or spat out?",
+              "probes": "Effortless regurgitation of recently eaten food is rumination, not true vomiting — a different diagnosis entirely"
+            },
+            {
+              "q": "Any headaches, or is this a recurring pattern with well periods in between?",
+              "probes": "Worsening headaches raise raised intracranial pressure; distinct well-then-vomiting cycles suggest cyclical vomiting syndrome"
+            }
+          ],
+          "approach": "nausea-vomiting"
         },
         {
           "n": "Haematemesis",
@@ -2308,7 +2396,22 @@
             ]
           ],
           "red": "Haematemesis — ask about NSAIDs, alcohol, known liver disease.",
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Was it fresh red blood, or did it look like coffee grounds?",
+              "probes": "Fresh blood suggests a brisk, ongoing bleed; coffee-grounds suggests blood altered by acid — a slower or older bleed",
+              "danger": true
+            },
+            {
+              "q": "Did the blood come with the first vomit, or only after repeated retching?",
+              "probes": "Blood appearing only after several episodes of clear vomiting suggests a Mallory–Weiss tear rather than a primary ulcer bleed"
+            },
+            {
+              "q": "Are you on aspirin, NSAIDs, or steroids, and do you drink alcohol or have known liver disease?",
+              "probes": "The core risk factors for peptic ulcer bleeding and for varices"
+            }
+          ]
         },
         {
           "n": "Abdominal pain",
@@ -2340,13 +2443,82 @@
               "Central, poorly localised, then localising → the visceral-to-parietal progression of many surgical abdomens"
             ]
           ],
-          "red": "Sudden \"worst ever\" + shock → perforation, ruptured AAA, mesenteric ischaemia, ruptured ectopic."
+          "red": "Sudden \"worst ever\" + shock → perforation, ruptured AAA, mesenteric ischaemia, ruptured ectopic.",
+          "followups": [
+            {
+              "q": "Can you point to exactly where it is, and does it move anywhere else?",
+              "probes": "Site follows embryological origin — epigastric (foregut), periumbilical (midgut), suprapubic (hindgut); radiation to the back suggests pancreas, to the scapula suggests gallbladder/diaphragm"
+            },
+            {
+              "q": "Does it come in waves, or is it constant?",
+              "probes": "Colicky (waves) → obstruction (bowel, ureter) · steady/constant → inflammation or ischaemia"
+            },
+            {
+              "q": "Is it related to eating — worse after meals, or when fasting?",
+              "probes": "Meal-related epigastric pain suggests peptic disease, though the link isn't reliable; pain specifically provoked by eating can also be intestinal ischaemia"
+            },
+            {
+              "q": "Do you feel better moving around, or do you want to lie perfectly still?",
+              "probes": "Restlessness/rolling around → colicky pain (obstruction); lying still, reluctant to move → peritonitis"
+            },
+            {
+              "q": "Does passing wind or a bowel motion ease it?",
+              "probes": "Temporary relief with defecation/flatus points to colonic disease"
+            },
+            {
+              "q": "Any fever, jaundice, or vomiting with it?",
+              "probes": "Fever + jaundice + RUQ pain → cholangitis; vomiting is common with biliary and pancreatic pain"
+            },
+            {
+              "q": "Did it come on suddenly and severely — the worst pain you've ever had?",
+              "probes": "Sudden, maximal-at-onset, severe pain with shock → perforation, ruptured AAA, mesenteric ischaemia, ruptured ectopic",
+              "danger": true
+            },
+            {
+              "q": "Any change in bowel habit, blood in the stool, or weight loss alongside it?",
+              "probes": "Reframes chronic abdominal pain as a possible malignancy work-up rather than a functional one",
+              "danger": true
+            }
+          ],
+          "approach": "abdominal-pain"
         },
         {
           "n": "Appetite and weight",
           "ask": "How is your appetite? Any weight loss?",
           "why": "Ties GI complaints to the constitutional malignancy screen; weight loss escalates the urgency of every symptom above.",
-          "points": []
+          "points": [
+            [
+              "in",
+              "Anorexia + weight loss together → raises suspicion of underlying malignancy (but also occurs in depression and other disease)"
+            ],
+            [
+              "in",
+              "Weight loss with an increased appetite → malabsorption or a hypermetabolic state, e.g. thyrotoxicosis"
+            ],
+            [
+              "out",
+              "Early satiety/postprandial fullness without weight loss → functional dyspepsia"
+            ]
+          ],
+          "followups": [
+            {
+              "q": "Has your appetite changed — more, less, or the same?",
+              "probes": "Loss of appetite + weight loss raises concern for malignancy; weight loss with an increased appetite suggests malabsorption or a hypermetabolic state (e.g. thyrotoxicosis)"
+            },
+            {
+              "q": "How much weight, and over what period?",
+              "probes": "Quantify — document onset and rate; rapid, unintentional loss is what escalates urgency"
+            },
+            {
+              "q": "Do you fill up quickly, or feel uncomfortably full after normal-sized meals?",
+              "probes": "Early satiety/postprandial fullness can be gastric cancer, peptic ulcer, or functional dyspepsia"
+            },
+            {
+              "q": "Any change in how food tastes, or reason you might be eating less — low mood, dentition, swallowing?",
+              "probes": "Taste disturbance can occur with liver disease; screens for non-GI explanations before assuming malignancy"
+            }
+          ],
+          "approach": "weight-loss"
         },
         {
           "n": "Change in bowel habit",
@@ -2369,7 +2541,44 @@
               "in",
               "Explosive diarrhoea after travel/antibiotics → infective"
             ]
-          ]
+          ],
+          "followups": [
+            {
+              "q": "What's changed, exactly — more or less often, looser or harder, compared to your normal?",
+              "probes": "Anchor to the patient's own baseline — \"normal\" is individual"
+            },
+            {
+              "q": "How long has this been going on, and did it come on suddenly or gradually?",
+              "probes": "Acute → more likely infective; chronic/persistent needs a systematic work-up"
+            },
+            {
+              "q": "Any blood, mucus, or pus in the stool? Do you have to rush to the toilet?",
+              "probes": "Blood/mucus/pus and urgency point to colonic inflammation — IBD or infective colitis",
+              "danger": true
+            },
+            {
+              "q": "Any weight loss, or waking at night specifically because of your bowels?",
+              "probes": "Weight loss or nocturnal symptoms are organic red flags — they don't fit a purely functional diagnosis",
+              "danger": true
+            },
+            {
+              "q": "Any recent antibiotics, or travel?",
+              "probes": "Antibiotics → consider C. difficile; travel → consider Giardia and other infective causes"
+            },
+            {
+              "q": "Is any pain relieved by opening your bowels, and does it come with bloating or a feeling of incomplete emptying?",
+              "probes": "Supports IBS by the Rome criteria — a positive diagnosis, not one of exclusion, once red flags are absent"
+            },
+            {
+              "q": "Any family history of bowel cancer, coeliac disease, or inflammatory bowel disease?",
+              "probes": "Shifts pre-test probability and may prompt earlier investigation"
+            },
+            {
+              "q": "Any joint pains, mouth ulcers, or eye redness alongside the bowel symptoms?",
+              "probes": "Extra-intestinal features support inflammatory bowel disease"
+            }
+          ],
+          "approach": "abnormal-stools"
         },
         {
           "n": "Rectal bleeding / melaena",
@@ -2388,7 +2597,40 @@
               "in",
               "Blood mixed through the stool + change in habit + weight loss → colorectal cancer"
             ]
-          ]
+          ],
+          "followups": [
+            {
+              "q": "Is the blood bright red or black and tarry?",
+              "probes": "Bright red → usually a lower source · black, tarry, offensive (melaena) → usually an upper GI bleed",
+              "danger": true
+            },
+            {
+              "q": "Is it on the paper/coating the stool, or mixed all through it?",
+              "probes": "On the surface/paper → anorectal (haemorrhoids, fissure) · mixed through the stool → a more proximal colonic source, including cancer"
+            },
+            {
+              "q": "Any change in bowel habit or weight loss alongside it?",
+              "probes": "Blood + altered habit + weight loss → colorectal cancer until excluded",
+              "danger": true
+            },
+            {
+              "q": "Have you vomited any blood or coffee-ground material?",
+              "probes": "Pairs melaena with the haematemesis question — confirms an upper GI source"
+            },
+            {
+              "q": "Any abdominal pain with it?",
+              "probes": "Painless vs pain-associated bleeding narrows the differential (e.g. painless diverticular bleed vs painful colitis)"
+            },
+            {
+              "q": "Any family or personal history of polyps, bowel cancer, or inflammatory bowel disease?",
+              "probes": "Raises pre-test probability and may change the urgency of investigation"
+            },
+            {
+              "q": "Are you on aspirin, other blood thinners, or NSAIDs?",
+              "probes": "These provoke and worsen GI bleeding from any source and change the immediate risk"
+            }
+          ],
+          "approach": "abnormal-stools"
         },
         {
           "n": "Mucus",
@@ -2412,7 +2654,17 @@
               "Pale, greasy, floating, hard-to-flush stool → fat malabsorption (pancreatic insufficiency, biliary obstruction, coeliac disease)"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Do you see oil droplets in the toilet, or does the stool float and stick to the bowl?",
+              "probes": "Oil droplets suggest chronic pancreatitis specifically; floating and hard-to-flush is the general fat-malabsorption pattern"
+            },
+            {
+              "q": "Any weight loss, or a personal/family history of coeliac disease?",
+              "probes": "Helps distinguish pancreatic insufficiency, biliary obstruction, and coeliac disease as the three big causes"
+            }
+          ]
         },
         {
           "n": "Jaundice",
@@ -2426,7 +2678,52 @@
             [
               "out",
               "Jaundice ± anaemia, normal urine/stool → pre-hepatic (haemolysis)"
+            ],
+            [
+              "in",
+              "Fever + abdominal pain + jaundice → cholangitis, needs urgent treatment"
+            ],
+            [
+              "in",
+              "Painless jaundice + weight loss → think pancreatic head cancer (Courvoisier) until excluded"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Is your urine darker than usual, and are your stools pale?",
+              "probes": "Dark urine + pale stools → an obstructive (post-hepatic) picture"
+            },
+            {
+              "q": "Any itching?",
+              "probes": "Itch tracks with the same cholestatic/obstructive picture"
+            },
+            {
+              "q": "Any fever, or abdominal pain?",
+              "probes": "Fever + RUQ pain + jaundice → cholangitis, needs urgent treatment",
+              "danger": true
+            },
+            {
+              "q": "Any change in appetite or weight loss?",
+              "probes": "Painless jaundice with weight loss raises pancreatic head cancer (Courvoisier)",
+              "danger": true
+            },
+            {
+              "q": "Any vomiting blood, or black stools?",
+              "probes": "Suggests coagulopathy from liver disease, or a separate GI bleed — needs its own work-up",
+              "danger": true
+            },
+            {
+              "q": "How much alcohol do you drink, and for how long? Any past hepatitis, or new medications?",
+              "probes": "The core drug/alcohol/viral triad for a hepatic cause"
+            },
+            {
+              "q": "Any tattoos, IV drug use, blood transfusions, or high-risk sexual contact?",
+              "probes": "Risk factors for viral hepatitis B/C"
+            },
+            {
+              "q": "Any recent travel to areas where hepatitis is common?",
+              "probes": "Hepatitis A exposure risk"
+            }
           ]
         },
         {
@@ -2439,7 +2736,17 @@
               "Dark urine + pale stools → obstructive (post-hepatic) jaundice: gallstones, or if painless with weight loss, pancreatic head cancer (Courvoisier)"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Any yellowing of your eyes or skin, or itching?",
+              "probes": "Confirms this sits within the same obstructive/cholestatic picture as jaundice, rather than an isolated urine colour change"
+            },
+            {
+              "q": "Any abdominal pain, or unexplained weight loss?",
+              "probes": "Painful → gallstones; painless with weight loss → think pancreatic head cancer (Courvoisier)"
+            }
+          ]
         },
         {
           "n": "Itch (pruritus)",
@@ -2451,7 +2758,17 @@
               "Generalised itch with jaundice → cholestasis (obstructive or hepatic)"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is it generalised, or worse in particular areas — like your hands and feet?",
+              "probes": "Generalised itch, worse over the extremities, is typical of cholestatic liver disease"
+            },
+            {
+              "q": "Any yellowing of the eyes/skin, dark urine, or pale stools with it?",
+              "probes": "Confirms the cholestatic picture rather than a primary skin cause (eczema, scabies, dry skin)"
+            }
+          ]
         }
       ],
       "checklist": [
