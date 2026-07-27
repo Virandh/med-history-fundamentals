@@ -4152,7 +4152,43 @@
               "Axial (spine/sacroiliac) in a young adult with inflammatory pattern → ankylosing spondylitis"
             ]
           ],
-          "red": "A single acutely hot, swollen, painful joint is septic arthritis until proven otherwise — needs aspiration, not reassurance."
+          "red": "A single acutely hot, swollen, painful joint is septic arthritis until proven otherwise — needs aspiration, not reassurance.",
+          "followups": [
+            {
+              "q": "Which joints are sore — one, or several? Can you point exactly where?",
+              "probes": "Monoarthritis vs oligo/polyarthritis, and the exact site vs referred pain, is the first branch point"
+            },
+            {
+              "q": "Is it symmetrical — the same joints on both sides — or one-sided, and are they small joints or large?",
+              "probes": "Symmetrical small joints (MCPs, PIPs, wrists) → RA · asymmetrical large weight-bearing joints → OA or seronegative disease"
+            },
+            {
+              "q": "Did it come on suddenly, or gradually — and any injury beforehand?",
+              "probes": "Sudden with no obvious cause suggests gout, infection, or reactive arthritis; gradual favours OA or RA"
+            },
+            {
+              "q": "Any swelling, warmth, or redness around the joint?",
+              "probes": "Arthritis (visible inflammation) vs arthralgia (pain alone) — a single hot red joint needs urgent exclusion of septic arthritis",
+              "danger": true
+            },
+            {
+              "q": "Does activity make it better or worse, and what about cold weather?",
+              "probes": "Improves with activity → inflammatory; worse with activity, better with rest → mechanical"
+            },
+            {
+              "q": "How long has this been going on, and is it constant or does it come and go?",
+              "probes": "Constant/progressive vs episodic/migratory changes the differential — migratory large-joint pain suggests rheumatic fever, gonococcal, or reactive arthritis"
+            },
+            {
+              "q": "Any recent infection — a sore throat, gut bug, or new sexual partner?",
+              "probes": "Recent infection elsewhere raises reactive arthritis or, in a child, rheumatic fever"
+            },
+            {
+              "q": "Any change in your range of motion, or difficulty with daily tasks because of it?",
+              "probes": "Functional impact tracks severity better than pain alone and flags when to escalate"
+            }
+          ],
+          "approach": "limb-joint-pain"
         },
         {
           "n": "Back pain",
@@ -4172,7 +4208,45 @@
               "Radiating below the knee + dermatomal numbness/weakness → radiculopathy (disc)"
             ]
           ],
-          "red": "Bladder/bowel dysfunction + saddle anaesthesia (cauda equina), thoracic pain, fever/IVDU (discitis/abscess), weight loss/history of cancer (metastasis), age <20 or >55 new onset, trauma/osteoporosis (fracture)."
+          "red": "Bladder/bowel dysfunction + saddle anaesthesia (cauda equina), thoracic pain, fever/IVDU (discitis/abscess), weight loss/history of cancer (metastasis), age <20 or >55 new onset, trauma/osteoporosis (fracture).",
+          "followups": [
+            {
+              "q": "Where exactly is the pain, and does it radiate anywhere — down a leg, or across to the front?",
+              "probes": "Radiation below the knee with dermatomal numbness/weakness → radiculopathy (disc); radiation from the abdomen/chest to the back raises a vascular cause (dissection)"
+            },
+            {
+              "q": "Did it come on suddenly, or gradually?",
+              "probes": "Sudden with minimal or no trauma → think osteoporotic crush fracture, especially with risk factors (steroids, menopause, alcohol)",
+              "danger": true
+            },
+            {
+              "q": "Is it worse with activity and better with rest, or the opposite — worse at rest/at night, better with movement?",
+              "probes": "Worse with activity, better with rest, no systemic features → mechanical; worse at night/at rest, eases with exercise, in a young adult → inflammatory (spondyloarthritis)"
+            },
+            {
+              "q": "Any numbness around your saddle area, or new problems controlling your bladder or bowel?",
+              "probes": "Saddle anaesthesia + sphincter disturbance → cauda equina, a surgical emergency",
+              "danger": true
+            },
+            {
+              "q": "Any fever, unexplained weight loss, or a history of cancer?",
+              "probes": "Fever raises discitis/abscess (especially with IVDU); weight loss or a cancer history raises metastatic disease",
+              "danger": true
+            },
+            {
+              "q": "How old are you, and is this a new problem?",
+              "probes": "New onset under 20 or over 55 is itself a red flag warranting further work-up rather than assuming mechanical back pain",
+              "danger": true
+            },
+            {
+              "q": "Any morning stiffness with it, and does exercise help?",
+              "probes": "Morning stiffness that eases with exercise, in a young adult, supports inflammatory back pain (spondyloarthritis) over a mechanical cause"
+            },
+            {
+              "q": "Any recent trauma, or known osteoporosis/long-term steroid use?",
+              "probes": "Combines with sudden onset to support a fragility fracture as the cause"
+            }
+          ]
         },
         {
           "n": "Stiffness",
@@ -4191,6 +4265,33 @@
               "in",
               "Proximal (shoulder/hip girdle) stiffness in someone >50 + raised inflammatory markers → polymyalgia rheumatica (ask about GCA symptoms)"
             ]
+          ],
+          "followups": [
+            {
+              "q": "How long does the morning stiffness last before it eases?",
+              "probes": "≥1 hour is classic for RA (≥30 min in axial spondyloarthritis); under 30 minutes points to a mechanical/OA pattern"
+            },
+            {
+              "q": "Does it ease as you get moving, or get worse through the day?",
+              "probes": "Eases with activity → inflammatory; worse with use through the day → mechanical"
+            },
+            {
+              "q": "Is it only after a period of sitting still, or is it there first thing regardless?",
+              "probes": "Stiffness specifically after inactivity (not necessarily overnight) is characteristic of OA of the hip or knee"
+            },
+            {
+              "q": "Which joints are affected — small hands and wrists, or hips and shoulders?",
+              "probes": "Small peripheral joints → RA pattern; proximal shoulder/hip girdle stiffness in someone over 50 → polymyalgia rheumatica"
+            },
+            {
+              "q": "Are you over 50, and have you had any scalp tenderness, jaw pain chewing, or visual changes?",
+              "probes": "Proximal stiffness + age >50 raises polymyalgia rheumatica — screen for coexisting giant cell arteritis, which can cause permanent visual loss",
+              "danger": true
+            },
+            {
+              "q": "Is the stiffness widespread, with poor sleep and generalised pain, rather than joint-specific?",
+              "probes": "Widespread stiffness with non-refreshing sleep and diffuse pain, without deformity, suggests fibromyalgia rather than an inflammatory arthropathy"
+            }
           ]
         },
         {
@@ -4210,21 +4311,78 @@
               "in",
               "Single hot red swollen joint → gout/pseudogout/sepsis"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Is the swelling soft and boggy, or does it feel hard and bony?",
+              "probes": "Soft, boggy swelling → synovitis (inflammatory); hard bony swelling at the DIPs → Heberden's nodes (OA)"
+            },
+            {
+              "q": "Is it warm or red to look at?",
+              "probes": "Warmth and redness raise infection or crystal arthropathy over simple mechanical swelling"
+            },
+            {
+              "q": "Is it one joint, or several — and did it come on suddenly?",
+              "probes": "A single hot, swollen joint of sudden onset is septic arthritis until excluded — needs aspiration, not reassurance",
+              "danger": true
+            },
+            {
+              "q": "Does the swelling come and go, or is it persistent?",
+              "probes": "Persistent, symmetrical small-joint swelling supports RA; episodic swelling around a single joint supports gout or pseudogout"
+            }
           ]
         },
         {
           "n": "Functional impact (ADLs)",
           "ask": "What can't you do now that you could before — dressing, gripping, stairs?",
           "why": "Rheumatology is a functional specialty; disability drives management and reveals severity better than pain scores.",
-          "points": [],
-          "minor": true
+          "points": [
+            [
+              "in",
+              "Difficulty with fine tasks (buttons, jar lids, gripping) → hand involvement affecting function, independent of pain severity"
+            ],
+            [
+              "in",
+              "Needing walking aids or help with self-care → higher-grade functional impairment, guiding escalation of treatment"
+            ]
+          ],
+          "minor": true,
+          "followups": [
+            {
+              "q": "What specifically can't you manage now — dressing, gripping a cup, stairs, opening jars?",
+              "probes": "Concrete functional examples are more reliable and specific than a global severity rating"
+            },
+            {
+              "q": "Has this been getting steadily worse, or does it fluctuate with flares?",
+              "probes": "Steady decline suggests accumulating joint damage; fluctuation with flares tracks disease activity instead"
+            }
+          ]
         },
         {
           "n": "Deformity / instability",
           "ask": "Any visible deformity, or joints giving way / feeling unstable?",
           "why": "Deformity and instability signal structural joint damage — chronic erosive disease or ligamentous injury — rather than active inflammation alone.",
-          "points": [],
-          "minor": true
+          "points": [
+            [
+              "in",
+              "Progressive deformity (e.g. ulnar deviation, swan-neck fingers) → chronic erosive joint damage from longstanding inflammatory arthritis"
+            ],
+            [
+              "in",
+              "Joint \"giving way\" or dislocating → ligamentous instability or muscle weakness, a mechanical rather than inflammatory problem"
+            ]
+          ],
+          "minor": true,
+          "followups": [
+            {
+              "q": "Has the shape of the joint changed gradually, or did it happen suddenly, like after an injury?",
+              "probes": "Progressive change suggests chronic erosive joint damage; sudden change after trauma suggests dislocation or ligament injury"
+            },
+            {
+              "q": "Does it feel like it \"gives way\" or comes out of place?",
+              "probes": "Giving way suggests instability from ligamentous laxity or muscle weakness rather than active inflammation alone"
+            }
+          ]
         },
         {
           "n": "Skin, mucosal & eye screen",
@@ -4248,7 +4406,21 @@
               "Arthritis + diarrhoea/bloody stool or eye inflammation → enteropathic/reactive (the seronegative spectrum)"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Any rash that comes up in the sun, or mouth ulcers?",
+              "probes": "Photosensitive rash + mouth ulcers + arthralgia → SLE"
+            },
+            {
+              "q": "Any psoriasis — on your skin, scalp, or nails?",
+              "probes": "Psoriasis + arthritis → psoriatic arthritis, and joint disease can precede the rash"
+            },
+            {
+              "q": "Any diarrhoea, blood in the stool, or red/painful eyes alongside the joint symptoms?",
+              "probes": "Arthritis + GI or eye inflammation → the seronegative/reactive/enteropathic spectrum"
+            }
+          ]
         },
         {
           "n": "Raynaud's, hair loss & fatigue",
@@ -4260,7 +4432,21 @@
               "Raynaud's (white→blue→red fingers in cold) + rash/arthralgia → SLE, systemic sclerosis, mixed CTD"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Do your fingers or toes go white, then blue, then red in the cold?",
+              "probes": "The triphasic colour change is what distinguishes true Raynaud's from simply feeling cold"
+            },
+            {
+              "q": "Is it just your fingers, or do you get skin tightening, difficulty swallowing, or breathlessness too?",
+              "probes": "Additional features alongside Raynaud's raise systemic sclerosis or another connective tissue disease rather than primary (benign) Raynaud's"
+            },
+            {
+              "q": "Any patchy hair loss, or fatigue that's more than just being busy or tired?",
+              "probes": "Non-specific alone, but a common accompaniment of active connective tissue disease when combined with the other features"
+            }
+          ]
         }
       ],
       "checklist": [
