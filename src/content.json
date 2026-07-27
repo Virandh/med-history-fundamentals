@@ -3172,7 +3172,22 @@
               "Acute confusion over hours–days, fluctuating, ± reversed sleep–wake → delirium — look for the systemic cause (infection, drugs, metabolic)"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Did this come on suddenly, over hours to days, and does it come and go through the day?",
+              "probes": "Acute, fluctuating, often worse at night → delirium; gradual and steady over months → dementia instead"
+            },
+            {
+              "q": "Any fever, new medications, or recent illness?",
+              "probes": "Delirium always has an underlying trigger — infection, drugs, or a metabolic disturbance — go looking for it rather than treating confusion as the diagnosis"
+            },
+            {
+              "q": "Has anyone else noticed this — family, carers?",
+              "probes": "A collateral history is often more reliable than the patient's own account, especially with impaired insight"
+            }
+          ],
+          "approach": "confusion-delirium"
         },
         {
           "n": "Memory",
@@ -3184,7 +3199,21 @@
               "Progressive memory loss + functional decline in the elderly → dementia (get collateral history)"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is it more that you forget recent things, or old memories too?",
+              "probes": "Recent memory loss with preserved distant memory is the typical early pattern of most dementias"
+            },
+            {
+              "q": "Is it affecting daily activities — finances, medications, driving?",
+              "probes": "Functional decline alongside memory loss is what separates dementia from benign age-related forgetfulness"
+            },
+            {
+              "q": "Has anyone else noticed a change, and how has it progressed?",
+              "probes": "Collateral history is essential — patients with dementia often underreport their own memory loss"
+            }
+          ]
         },
         {
           "n": "Speech",
@@ -3200,7 +3229,23 @@
               "Gradual word-finding difficulty in an older adult → consider primary progressive aphasia / early dementia"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Did this come on suddenly, or has it developed gradually?",
+              "probes": "Sudden → stroke/TIA until excluded; gradual in an older adult → consider primary progressive aphasia or early dementia",
+              "danger": true
+            },
+            {
+              "q": "Is it that you can't find the right words, or that the words come out slurred?",
+              "probes": "Word-finding difficulty (dysphasia) localises to the dominant hemisphere; slurred articulation (dysarthria) localises to the cerebellum, bulbar muscles, or their nerve supply"
+            },
+            {
+              "q": "Any weakness, numbness, or facial droop alongside it?",
+              "probes": "Any accompanying focal deficit strengthens a stroke/TIA localisation",
+              "danger": true
+            }
+          ]
         },
         {
           "n": "Vision (neuro screen)",
@@ -3212,7 +3257,18 @@
               "Sudden painless monocular visual loss (\"curtain\") → amaurosis fugax / retinal artery occlusion — a TIA warning"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Did it come on suddenly, like a curtain coming down over one eye?",
+              "probes": "Sudden painless monocular visual loss in this pattern is amaurosis fugax — a TIA warning",
+              "danger": true
+            },
+            {
+              "q": "Was it one eye, or both? Has it come back, or is it still there?",
+              "probes": "Monocular points to the eye or optic nerve; transient and resolved is the classic TIA-warning pattern"
+            }
+          ]
         },
         {
           "n": "Hearing (neuro screen)",
@@ -3224,7 +3280,17 @@
               "Unilateral hearing loss + facial numbness/weakness or ataxia → consider a cerebellopontine angle lesion (e.g. acoustic neuroma)"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is it one side or both, and did it come on suddenly or gradually?",
+              "probes": "Sudden unilateral hearing loss is an otological emergency in its own right; gradual unilateral loss raises a cerebellopontine angle lesion"
+            },
+            {
+              "q": "Any facial numbness, weakness, or unsteadiness alongside it?",
+              "probes": "Combined with other cranial nerve signs or ataxia, consider a cerebellopontine angle lesion (e.g. acoustic neuroma)"
+            }
+          ]
         },
         {
           "n": "Smell",
@@ -3236,7 +3302,13 @@
               "Isolated anosmia, older adult, no nasal cause → consider a neurodegenerative cause"
             ]
           ],
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is it just smell, or has your sense of taste changed too? Any nasal congestion or history of head injury?",
+              "probes": "Excludes the common local causes (rhinosinusitis, prior head trauma) before considering a neurodegenerative cause"
+            }
+          ]
         },
         {
           "n": "Facial weakness",
@@ -3253,7 +3325,22 @@
             ]
           ],
           "red": "Sudden facial weakness with other focal neuro signs → stroke until excluded.",
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Can you raise your eyebrows and close your eyes tightly on both sides?",
+              "probes": "Forehead spared (can still raise eyebrows) → UMN pattern (stroke); whole side including the forehead → LMN pattern (Bell's palsy)"
+            },
+            {
+              "q": "Did it come on suddenly, with any other weakness or speech trouble?",
+              "probes": "Sudden facial weakness with other focal signs → stroke until excluded",
+              "danger": true
+            },
+            {
+              "q": "Any ear pain, rash near the ear, or a lump in front of the ear?",
+              "probes": "Ear pain/vesicular rash → Ramsay Hunt syndrome; a parotid lump → tumour infiltrating the nerve, not Bell's palsy"
+            }
+          ]
         },
         {
           "n": "Diplopia (neuro screen)",
@@ -3266,7 +3353,22 @@
             ]
           ],
           "red": "Painful third nerve palsy with a fixed dilated pupil → compressive aneurysm, a neurosurgical emergency.",
-          "minor": true
+          "minor": true,
+          "followups": [
+            {
+              "q": "Is the double vision side-by-side, or up-and-down? Does it go away if you cover one eye?",
+              "probes": "Resolves with one eye covered → true binocular diplopia from a cranial nerve palsy (III, IV, VI), not an ocular/refractive problem"
+            },
+            {
+              "q": "Any eyelid droop, or is one pupil bigger than the other? Any pain?",
+              "probes": "Painful third nerve palsy with a dilated pupil → compressive aneurysm, a neurosurgical emergency",
+              "danger": true
+            },
+            {
+              "q": "Did it come on suddenly, and do you have diabetes or vascular risk factors?",
+              "probes": "Sudden onset with vascular risk factors supports a microvascular (diabetic) cause — usually pupil-sparing, unlike a compressive lesion"
+            }
+          ]
         },
         {
           "n": "Weakness",
@@ -3290,7 +3392,44 @@
               "Weakness worse with use, better with rest, ± ptosis/diplopia → myasthenia"
             ]
           ],
-          "red": "Weakness + a sensory level + bladder involvement → cord compression."
+          "red": "Weakness + a sensory level + bladder involvement → cord compression.",
+          "followups": [
+            {
+              "q": "How quickly did it come on — seconds, over days, or gradually over months?",
+              "probes": "Sudden (seconds–minutes) → vascular (stroke/TIA) · subacute (days) → inflammatory/infective (Guillain–Barré, myasthenia) · gradual (months) → myopathy or a compressive lesion"
+            },
+            {
+              "q": "Is it one side of the body, or both? Does it involve the face as well?",
+              "probes": "One-sided face/arm/leg → stroke/TIA — a time-critical red flag",
+              "danger": true
+            },
+            {
+              "q": "Has it improved, or is it still there?",
+              "probes": "Resolution within 24 hours → TIA; persisting beyond that → stroke, with imaging changes to match"
+            },
+            {
+              "q": "Any trouble with speech or swallowing alongside it?",
+              "probes": "Cortical/brainstem involvement — reinforces a stroke localisation"
+            },
+            {
+              "q": "Is it worse with repeated use through the day, with drooping eyelids or double vision?",
+              "probes": "Fatigable weakness plus ptosis/diplopia → myasthenia gravis"
+            },
+            {
+              "q": "Any pins and needles, back pain, or bladder/bowel symptoms with it?",
+              "probes": "Weakness + a sensory level + bladder involvement → cord compression, a surgical emergency",
+              "danger": true
+            },
+            {
+              "q": "Do you have high blood pressure, high cholesterol, diabetes, atrial fibrillation, or a smoking history?",
+              "probes": "Sets the pre-test probability for a vascular cause and shapes secondary prevention"
+            },
+            {
+              "q": "Are you on blood thinners, or do you have a history of a heart valve problem or fevers?",
+              "probes": "Anticoagulation changes the bleed-vs-clot calculus; endocarditis is an embolic source worth excluding"
+            }
+          ],
+          "approach": "weakness"
         },
         {
           "n": "Sensory disturbance",
@@ -3317,6 +3456,25 @@
               "in",
               "One-sided, sudden, with weakness → stroke"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Where exactly do you feel it — can you show me the boundary?",
+              "probes": "Distribution maps the lesion: glove-and-stocking → peripheral neuropathy · a single nerve territory → entrapment · a dermatomal band → nerve root · a level on the trunk → spinal cord"
+            },
+            {
+              "q": "Did it come on suddenly, with any weakness alongside it?",
+              "probes": "Sudden, one-sided, with weakness → stroke",
+              "danger": true
+            },
+            {
+              "q": "Is it worse at night, and does shaking your hand or hanging your arm off the bed help?",
+              "probes": "Nocturnal worsening relieved by shaking the hand (the flick sign) is classic for carpal tunnel/median nerve entrapment"
+            },
+            {
+              "q": "Do you have diabetes, drink alcohol, or have any nutritional deficiencies?",
+              "probes": "The common causes of a symmetrical peripheral neuropathy"
+            }
           ]
         },
         {
@@ -3340,6 +3498,28 @@
               "in",
               "High-stepping (foot drop) → peripheral nerve"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Is it worse in the dark, or when you close your eyes — like in the shower?",
+              "probes": "Worse without visual input → sensory (proprioceptive) ataxia; unaffected by vision → cerebellar"
+            },
+            {
+              "q": "Any slurred speech, tremor, or clumsiness with your hands as well?",
+              "probes": "Adds cerebellar signs to the picture, rather than a purely proprioceptive or peripheral one"
+            },
+            {
+              "q": "Are your steps small and shuffling, and do your arms swing normally when you walk?",
+              "probes": "Shuffling, stooped, reduced arm swing → parkinsonism"
+            },
+            {
+              "q": "Do you find yourself lifting your foot higher than normal, or tripping on your toes?",
+              "probes": "A high-stepping gait to clear a dropped foot → peripheral nerve (e.g. common peroneal palsy, peripheral neuropathy)"
+            },
+            {
+              "q": "How many falls, and were you injured? What were you doing each time?",
+              "probes": "Circumstances and injury pattern separate a mechanical/gait problem from a blackout — falls are a major cause of morbidity in the elderly and worth quantifying"
+            }
           ]
         },
         {
@@ -3356,7 +3536,26 @@
               "Isolated urge/stress incontinence → see GU (usually not neurological)"
             ]
           ],
-          "red": "Sphincter disturbance + saddle anaesthesia + bilateral leg weakness → cauda equina — urgent."
+          "red": "Sphincter disturbance + saddle anaesthesia + bilateral leg weakness → cauda equina — urgent.",
+          "followups": [
+            {
+              "q": "Is this new, and does it affect your bladder, your bowels, or both?",
+              "probes": "New sphincter disturbance, especially combined, is what raises concern — long-standing stress incontinence is a different, usually non-neurological, problem"
+            },
+            {
+              "q": "Any numbness around your bottom or inner thighs — like sitting on a saddle?",
+              "probes": "Saddle anaesthesia + sphincter disturbance + leg weakness → cauda equina syndrome, a surgical emergency",
+              "danger": true
+            },
+            {
+              "q": "Any weakness or numbness in the legs alongside it?",
+              "probes": "Bilateral leg symptoms with sphincter change points to the cord/cauda equina rather than an isolated urological cause"
+            },
+            {
+              "q": "Any back pain that came before this?",
+              "probes": "A preceding disc-type back pain supports a compressive cause at the cord or cauda equina level"
+            }
+          ]
         },
         {
           "n": "Blackouts",
@@ -3378,7 +3577,47 @@
             [
               "in",
               "Always seek a collateral history from a witness — the patient by definition didn't see it"
+            ],
+            [
+              "in",
+              "Recurrent episodes with a family history of sudden death or epilepsy → raises an inherited arrhythmia or epilepsy syndrome"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Did you lose consciousness completely, and for how long?",
+              "probes": "Confirms true loss of consciousness rather than presyncope or a non-syncopal spell"
+            },
+            {
+              "q": "What were you doing right before — standing up quickly, exercising, or passing urine at night?",
+              "probes": "Standing → postural hypotension · exercise → cardiac outflow obstruction, a dangerous one · micturition at night → micturition syncope",
+              "danger": true
+            },
+            {
+              "q": "Any warning — feeling sick and in a stuffy room, or a strange smell/déjà vu?",
+              "probes": "Nausea in a stuffy room → vasovagal; a strange smell or déjà vu is an aura, and points to seizure instead"
+            },
+            {
+              "q": "Did you bite your tongue, or lose bladder control during it?",
+              "probes": "Supports seizure, though of limited value alone — these can occur in convulsive syncope too"
+            },
+            {
+              "q": "Did anyone see it, and were there jerking movements? Has anyone filmed it?",
+              "probes": "A witness account or video is often the single most useful piece of evidence — jerking makes seizure more likely but can occur with cardiac syncope too"
+            },
+            {
+              "q": "Did you wake up feeling normal, or drowsy and confused?",
+              "probes": "Normal on waking → cardiac syncope; drowsy/confused → seizure"
+            },
+            {
+              "q": "What medications are you on — blood pressure tablets, heart rhythm drugs, or antiepileptics?",
+              "probes": "Antihypertensives and antiarrhythmics can precipitate the episode itself"
+            },
+            {
+              "q": "Has this happened before, and is there a family history of blackouts, sudden death, or epilepsy?",
+              "probes": "Recurrence pattern and family history shift the differential toward an inherited arrhythmia or epilepsy syndrome",
+              "danger": true
+            }
           ]
         },
         {
@@ -3394,6 +3633,40 @@
               "in",
               "Precipitants: alcohol withdrawal, sleep deprivation, missed medication"
             ]
+          ],
+          "followups": [
+            {
+              "q": "Can you describe exactly what happened, from the very start?",
+              "probes": "A detailed blow-by-blow account is more useful than the label \"seizure\" — establishes focal vs generalised onset"
+            },
+            {
+              "q": "Did you get any warning beforehand — an odd smell or taste, déjà vu, or a rising feeling in your chest?",
+              "probes": "An aura is itself a focal (aware) seizure and localises the onset"
+            },
+            {
+              "q": "Were you stiff and jerking, or did you just go blank and stare?",
+              "probes": "Tonic–clonic movements → generalised or focal-to-bilateral seizure; blank staring with automatisms (picking, lip-smacking) → focal impaired-awareness seizure"
+            },
+            {
+              "q": "Did you bite your tongue, or lose bladder control?",
+              "probes": "Supports a seizure, though of limited value alone"
+            },
+            {
+              "q": "How did you feel afterwards — confused, drowsy, or any weakness that took a while to settle?",
+              "probes": "Post-ictal drowsiness/confusion supports seizure; transient weakness afterward is Todd's paresis, not a new stroke"
+            },
+            {
+              "q": "Any missed medication, heavy alcohol use or a recent stop, lack of sleep, or flashing lights beforehand?",
+              "probes": "The classic precipitants — worth asking specifically, as patients often don't volunteer them"
+            },
+            {
+              "q": "Has this happened before? How often, and is there a pattern — time of day, during sleep?",
+              "probes": "Recurrence and timing shape the diagnosis of epilepsy versus a single provoked event"
+            },
+            {
+              "q": "Is there a family history of epilepsy, or any past head injury, meningitis, or brain scan?",
+              "probes": "Family history and a structural cause (old injury, past infection) both raise the pre-test probability of a seizure disorder"
+            }
           ]
         },
         {
@@ -3413,6 +3686,41 @@
               "in",
               "Unsteady only when walking → gait/proprioceptive/cerebellar"
             ]
+          ],
+          "followups": [
+            {
+              "q": "When you say dizzy, do you mean the room is spinning, or more that you feel faint/light-headed?",
+              "probes": "Forces the split between vertigo (vestibular) and presyncope (cardiovascular) — patients are poor at distinguishing these unprompted"
+            },
+            {
+              "q": "Does it happen with a change in head position — rolling over in bed, or looking up?",
+              "probes": "Brief, positional, seconds to minutes → BPPV"
+            },
+            {
+              "q": "How long does each episode last — seconds, hours, or is it constant?",
+              "probes": "Seconds–minutes and positional → BPPV · hours with hearing loss/tinnitus → Ménière's · persistent over 24h without hearing loss → vestibular neuritis"
+            },
+            {
+              "q": "Any hearing loss or ringing in the ears with it?",
+              "probes": "Present suggests a labyrinthine/cochlear process (labyrinthitis, Ménière's, or rarely a stroke affecting the inner ear); absent favours vestibular neuritis or BPPV"
+            },
+            {
+              "q": "Any double vision, slurred speech, weakness, or clumsiness alongside it?",
+              "probes": "Any of these with vertigo points to a central (brainstem/cerebellar) cause — a red flag, not simple peripheral vertigo",
+              "danger": true
+            },
+            {
+              "q": "Can you still stand and walk during an episode, or does it stop you completely?",
+              "probes": "Able to walk, though unsteady → peripheral; unable to stand or walk at all → more suggestive of a central cause"
+            },
+            {
+              "q": "Any nausea, vomiting, sweating, or headache with it?",
+              "probes": "Common with severe vertigo of either origin, but headache alongside neuro signs raises central causes"
+            },
+            {
+              "q": "Is it only present on standing, or does it happen at rest too?",
+              "probes": "Only on standing → presyncope/orthostatic — back to the cardiovascular pathway, not a primary vestibular problem"
+            }
           ]
         },
         {
