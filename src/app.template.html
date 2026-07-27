@@ -260,6 +260,30 @@
   .fu-row.danger .fu-q { font-weight: 600; }
   .fu-row .fu-probes { font-size: .8rem; color: var(--ink-faint); }
   .fu-row.danger .fu-probes { color: var(--red); }
+
+  /* Drill navigation: pick-a-system grid (reuses .sys-grid/.sys-card) + pick-a-symptom list */
+  .sys-card.picked { border-color: var(--accent); background: var(--accent-soft); }
+  .sys-card.picked .sc-name { color: var(--accent-ink); }
+  .drill-picker-lbl {
+    font-family: var(--mono); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--ink-faint); margin: 4px 0 8px;
+  }
+  .fu-sym-list { display: flex; flex-direction: column; gap: 8px; margin: 4px 0 0; }
+  .fu-sym-row {
+    appearance: none; cursor: pointer; text-align: left; width: 100%;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 15px;
+    font-family: var(--sans); color: var(--ink); box-shadow: var(--shadow); transition: transform .12s, border-color .12s;
+  }
+  .fu-sym-row:hover { transform: translateY(-1px); border-color: var(--accent); }
+  .fu-sym-row .fsr-name { font-weight: 600; font-size: .95rem; }
+  .fu-sym-row .fsr-ask { display: block; font-family: var(--serif); font-style: italic; font-size: .82rem; color: var(--ink-faint); margin-top: 2px; }
+  .fu-crumbs { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 8px 0 2px; font-size: .84rem; color: var(--ink-faint); }
+  .fu-crumbs button {
+    appearance: none; background: none; border: none; cursor: pointer; padding: 0;
+    color: var(--ink-soft); font-family: var(--sans); font-size: .84rem; text-decoration: underline; text-underline-offset: 2px;
+  }
+  .fu-crumbs button:hover { color: var(--accent-ink); }
   .fu { display: flex; flex-direction: column; gap: 2px; padding-left: 11px; border-left: 2px solid var(--line); }
   .fu.danger { border-left-color: var(--red); }
   .fu-q { font-family: var(--serif); font-style: italic; font-size: .93rem; color: var(--ink); line-height: 1.5; }
@@ -483,6 +507,9 @@ __CONTENT_DATA__
 const app = document.getElementById('app');
 let mode = 'reference';
 let currentSystem = null;
+// Foundations is a meta/how-to section (different shape, no real "symptoms" to
+// screen-drill or follow up on) — Drill mode navigates DRILL_SYSTEMS, never SYSTEMS.
+const DRILL_SYSTEMS = SYSTEMS.filter(s=>s.id!=='foundations');
 
 /* ---------- persistence (localStorage) ---------- */
 const STORE_KEY = 'srr-console-v1';
@@ -525,15 +552,15 @@ function gradeItem(id, grade, m){
 }
 function gradeSystem(id, grade){ gradeItem(id, grade, store.srs); }
 // systems eligible for scheduling/recall (excludes nothing here; Exam pool is filtered separately in wave 2)
-function dueSystems(){ return SYSTEMS.filter(s=>isDue(s.id)); }
+function dueSystems(){ return DRILL_SYSTEMS.filter(s=>isDue(s.id)); }
 function nextDueId(afterId){
-  const order = SYSTEMS.slice();
+  const order = DRILL_SYSTEMS.slice();
   // rotate so search starts after the current one
   if(afterId){ const i = order.findIndex(s=>s.id===afterId); if(i>=0) order.push(...order.splice(0,i+1)); }
   const due = order.find(s=>isDue(s.id));
   if(due) return due.id;
   // none due: pick the soonest-due
-  return SYSTEMS.slice().sort((a,b)=>srsOf(a.id).due - srsOf(b.id).due)[0].id;
+  return DRILL_SYSTEMS.slice().sort((a,b)=>srsOf(a.id).due - srsOf(b.id).due)[0].id;
 }
 
 /* ---------- per-question recall tracking ---------- */
@@ -552,7 +579,7 @@ function fuKey(sysId, sectionName, qName){ return sysId + '::fu::' + (sectionNam
 // Every question carrying a `followups` block, flattened across systems and sections.
 function allFollowupSymptoms(){
   const out = [];
-  SYSTEMS.forEach(s=>{
+  DRILL_SYSTEMS.forEach(s=>{
     const add = (sectionName, q) => {
       if(!q.followups || !q.followups.length) return;
       out.push({ sysId:s.id, sysName:s.name, color:s.color, sectionName, q, key:fuKey(s.id, sectionName, q.n) });
@@ -738,7 +765,11 @@ function renderChecklist(){
 }
 
 /* ---------- DRILL ---------- */
-let drillState = { sys:null, revealed:false, checked:new Set(), mode:(store.drillMode==='followup'?'followup':'screen'), fuKey:null };
+let drillState = {
+  sys:null, revealed:false, checked:new Set(),
+  mode:(store.drillMode==='followup'?'followup':'screen'),
+  fuSys:(store.drillFuSys||null), fuKey:null
+};
 function setDrillSystem(id){
   drillState.sys = id; drillState.revealed = false; drillState.checked = new Set();
   store.drillSys = id; saveStore();
@@ -790,7 +821,7 @@ function drillListTier(s){
 }
 function srsStripHTML(){
   const dueN = dueSystems().length;
-  const weakSys = SYSTEMS.filter(s=>isWeak(s.id));
+  const weakSys = DRILL_SYSTEMS.filter(s=>isWeak(s.id));
   const sysChips = weakSys.length
     ? `<span class="srs-count">weak systems</span><span class="weak-chips">${weakSys.map(s=>`<span class="weak-chip" data-weak="${s.id}">${esc(s.name)}</span>`).join('')}</span>`
     : `<span class="srs-count">weak systems</span><span style="color:var(--ink-faint)">none flagged yet</span>`;
@@ -799,7 +830,7 @@ function srsStripHTML(){
     ? `<span style="width:1px;height:16px;background:var(--line)"></span><span class="srs-count">often missed</span><span class="weak-chips">${weakQ.map(q=>`<span class="weak-chip q" data-weakq="${esc(q.sysId)}" title="${esc(q.sysName)} — forgot ${q.forgot}/${q.total}">${esc(q.label)}</span>`).join('')}</span>`
     : '';
   return `<div class="srs-strip">
-    <span class="srs-count">due</span><span class="srs-due-n">${dueN}</span><span style="color:var(--ink-faint)">/ ${SYSTEMS.length} systems</span>
+    <span class="srs-count">due</span><span class="srs-due-n">${dueN}</span><span style="color:var(--ink-faint)">/ ${DRILL_SYSTEMS.length} systems</span>
     <span style="width:1px;height:16px;background:var(--line)"></span>
     ${sysChips}
     ${qChips}
@@ -823,7 +854,16 @@ function renderDrill(){
 }
 
 /* ---------- FOLLOW-UP DRILL ---------- */
+// Two-stage navigation: pick a system, then pick a symptom within it, then drill.
 // "You're taking a Respiratory history. The patient says YES to Cough. What now?"
+function fuGroupBySystem(list){
+  const bySys = {};
+  list.forEach(x=>{ (bySys[x.sysId] = bySys[x.sysId] || { sysId:x.sysId, sysName:x.sysName, color:x.color, items:[] }).items.push(x); });
+  return bySys;
+}
+function goFuSystem(id){ drillState.fuSys = id; drillState.fuKey = null; store.drillFuSys = id; store.drillFu = null; saveStore(); renderDrillFollowup(); window.scrollTo(0,0); }
+function goFuSymptom(key){ drillState.fuKey = key; drillState.revealed = false; drillState.checked = new Set(); store.drillFu = key; saveStore(); renderDrillFollowup(); window.scrollTo(0,0); }
+
 function renderDrillFollowup(){
   const list = allFollowupSymptoms();
   if(!list.length){
@@ -831,21 +871,71 @@ function renderDrillFollowup(){
       <div class="drill-card"><p class="drill-prompt">No symptoms have follow-up questions yet.</p></div>${disclaimer()}`;
     wireDrillModeSwitch(); return;
   }
-  if(!drillState.fuKey || !list.some(x=>x.key===drillState.fuKey)){
-    drillState.fuKey = (store.drillFu && list.some(x=>x.key===store.drillFu)) ? store.drillFu : nextDueFuKey();
+  const bySys = fuGroupBySystem(list);
+
+  // validate persisted picks against what actually exists
+  if(drillState.fuSys && !bySys[drillState.fuSys]) drillState.fuSys = null;
+  if(drillState.fuKey){
+    const item = list.find(x=>x.key===drillState.fuKey);
+    if(!item || item.sysId !== drillState.fuSys) drillState.fuKey = null;
   }
-  const cur = list.find(x=>x.key===drillState.fuKey) || list[0];
-  drillState.fuKey = cur.key; store.drillFu = cur.key; saveStore();
 
-  // dropdown grouped by system
-  const bySys = {};
-  list.forEach(x=>{ (bySys[x.sysName] = bySys[x.sysName] || []).push(x); });
-  const options = Object.entries(bySys).map(([sysName, items]) =>
-    `<optgroup label="${esc(sysName)}">${items.map(x=>{
-      const dot = HEALTH_DOT[systemHealth(x.key, store.srsFu)] || '⚪';
-      return `<option value="${esc(x.key)}" ${x.key===cur.key?'selected':''}>${dot} ${esc(x.q.n)}${isDue(x.key, store.srsFu)?' • due':''}</option>`;
-    }).join('')}</optgroup>`).join('');
+  if(!drillState.fuSys) return renderFuPickSystem(list, bySys);
+  if(!drillState.fuKey) return renderFuPickSymptom(list, bySys[drillState.fuSys]);
+  return renderFuDrilling(list, bySys[drillState.fuSys], list.find(x=>x.key===drillState.fuKey));
+}
 
+// Stage 1 — pick a system
+function renderFuPickSystem(list, bySys){
+  const dueN = list.filter(x=>isDue(x.key, store.srsFu)).length;
+  const cards = DRILL_SYSTEMS.filter(s=>bySys[s.id]).map(s=>{
+    const g = bySys[s.id];
+    const due = g.items.filter(x=>isDue(x.key, store.srsFu)).length;
+    const badge = due ? `${due} due / ${g.items.length} symptom${g.items.length>1?'s':''}` : `${g.items.length} symptom${g.items.length>1?'s':''}`;
+    return `<button class="sys-card" data-fusys="${s.id}">
+      <div class="sc-name"><span class="sc-dot" style="background:${s.color}"></span>${esc(s.name)}</div>
+      <div class="sc-scaffold">${esc(badge)}</div>
+    </button>`;
+  }).join('');
+  app.innerHTML = `
+    <h2 class="mode-h">Drill</h2>
+    <p class="mode-lede">Active recall. <b>Follow-up</b> mode simulates the moment a screening question comes back positive: the sub-history opens up, and you have to know what to ask next — and why.</p>
+    ${drillModeSwitchHTML()}
+    <div class="srs-strip"><span class="srs-count">due</span><span class="srs-due-n">${dueN}</span><span style="color:var(--ink-faint)">/ ${list.length} symptoms</span></div>
+    <div class="drill-picker-lbl">Pick a system</div>
+    <div class="sys-grid">${cards}</div>
+    ${disclaimer()}`;
+  wireDrillModeSwitch();
+  app.querySelectorAll('[data-fusys]').forEach(b=>b.addEventListener('click',()=>goFuSystem(b.dataset.fusys)));
+}
+
+// Stage 2 — pick a symptom within the chosen system
+function renderFuPickSymptom(list, group){
+  const rows = group.items.map(x=>{
+    const r = srsOf(x.key, store.srsFu);
+    const badge = isDue(x.key, store.srsFu)
+      ? `<span class="srs-badge due">due now</span>`
+      : `<span class="srs-badge box">box ${r.box}</span>`;
+    return `<button class="fu-sym-row" data-fusymptom="${esc(x.key)}">
+      <span><span class="fsr-name">${esc(x.q.n)}</span><span class="fsr-ask">${esc(x.q.ask)}</span></span>
+      ${badge}
+    </button>`;
+  }).join('');
+  app.innerHTML = `
+    <h2 class="mode-h">Drill</h2>
+    ${drillModeSwitchHTML()}
+    <div class="fu-crumbs"><button id="toSysPick">‹ All systems</button></div>
+    <div class="drill-sys" style="margin:6px 0 2px"><span class="sc-dot" style="background:${group.color}"></span><h3>${esc(group.sysName)}</h3></div>
+    <div class="drill-picker-lbl">Pick a symptom</div>
+    <div class="fu-sym-list">${rows}</div>
+    ${disclaimer()}`;
+  wireDrillModeSwitch();
+  document.getElementById('toSysPick').addEventListener('click',()=>{ drillState.fuSys = null; store.drillFuSys = null; saveStore(); renderDrillFollowup(); window.scrollTo(0,0); });
+  app.querySelectorAll('[data-fusymptom]').forEach(b=>b.addEventListener('click',()=>goFuSymptom(b.dataset.fusymptom)));
+}
+
+// Stage 3 — the drill itself
+function renderFuDrilling(list, group, cur){
   const r = srsOf(cur.key, store.srsFu);
   const badge = isDue(cur.key, store.srsFu)
     ? `<span class="srs-badge due">due now</span>`
@@ -875,15 +965,11 @@ function renderDrillFollowup(){
         <div class="btn-row" style="margin-top:0"><button class="act" id="finishBtn">Finish → schedule &amp; next due</button></div>
       </div>`;
   }
-  const dueN = list.filter(x=>isDue(x.key, store.srsFu)).length;
 
   app.innerHTML = `
     <h2 class="mode-h">Drill</h2>
-    <p class="mode-lede">Active recall. <b>Follow-up</b> mode simulates the moment a screening question comes back positive: the sub-history opens up, and you have to know what to ask next — and why.</p>
     ${drillModeSwitchHTML()}
-    <div class="srs-strip"><span class="srs-count">due</span><span class="srs-due-n">${dueN}</span><span style="color:var(--ink-faint)">/ ${list.length} symptoms</span></div>
-    <label style="font-size:.82rem;color:var(--ink-faint);font-family:var(--mono);letter-spacing:.05em;text-transform:uppercase">Symptom</label>
-    <select id="fuSel" style="display:block;margin:6px 0 16px;padding:10px 12px;border-radius:9px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-family:var(--sans);font-size:.95rem;width:100%;max-width:360px">${options}</select>
+    <div class="fu-crumbs"><button id="toSysPick">‹ All systems</button><span>·</span><button id="toSymPick">${esc(group.sysName)} symptoms</button></div>
     <div class="drill-card">
       <div class="drill-sys"><span class="sc-dot" style="background:${cur.color}"></span><h3>${esc(cur.q.n)}</h3>${healthBadge}${badge}</div>
       <div class="fu-scenario">You're taking a <b>${esc(cur.sysName)}</b> history. You ask:
@@ -900,17 +986,19 @@ function renderDrillFollowup(){
     ${disclaimer()}`;
 
   wireDrillModeSwitch();
-  document.getElementById('fuSel').addEventListener('change',e=>{
-    drillState.fuKey = e.target.value; drillState.revealed = false; drillState.checked = new Set();
-    store.drillFu = drillState.fuKey; saveStore(); renderDrillFollowup();
-  });
+  document.getElementById('toSysPick').addEventListener('click',()=>{ drillState.fuSys = null; drillState.fuKey = null; store.drillFuSys = null; store.drillFu = null; saveStore(); renderDrillFollowup(); window.scrollTo(0,0); });
+  document.getElementById('toSymPick').addEventListener('click',()=>{ drillState.fuKey = null; store.drillFu = null; saveStore(); renderDrillFollowup(); window.scrollTo(0,0); });
   document.getElementById('revealBtn').addEventListener('click',()=>{
     drillState.revealed = !drillState.revealed;
     if(!drillState.revealed) drillState.checked = new Set();
     renderDrillFollowup();
   });
   document.getElementById('nextBtn').addEventListener('click',()=>{
-    drillState.fuKey = nextDueFuKey(drillState.fuKey); drillState.revealed = false; drillState.checked = new Set();
+    const nk = nextDueFuKey(drillState.fuKey);
+    const item = list.find(x=>x.key===nk);
+    drillState.fuSys = item ? item.sysId : drillState.fuSys;
+    drillState.fuKey = nk; drillState.revealed = false; drillState.checked = new Set();
+    store.drillFuSys = drillState.fuSys; store.drillFu = nk; saveStore();
     renderDrillFollowup(); window.scrollTo(0,0);
   });
   app.querySelectorAll('.markbtn[data-fuid]').forEach(b=>b.addEventListener('click',()=>{
@@ -932,18 +1020,28 @@ function renderDrillFollowup(){
     });
     const ratio = cur.q.followups.length ? remembered/cur.q.followups.length : 0;
     gradeItem(cur.key, ratio>=0.85 ? 'good' : ratio>0.4 ? 'hard' : 'again', store.srsFu);
-    drillState.fuKey = nextDueFuKey(cur.key); drillState.revealed = false; drillState.checked = new Set();
+    const nk = nextDueFuKey(cur.key);
+    const item = list.find(x=>x.key===nk);
+    drillState.fuSys = item ? item.sysId : drillState.fuSys;
+    drillState.fuKey = nk; drillState.revealed = false; drillState.checked = new Set();
+    store.drillFuSys = drillState.fuSys; store.drillFu = nk;
     saveStore(); renderDrillFollowup(); window.scrollTo(0,0);
   });
 }
 
 function renderDrillScreen(){
-  if(!drillState.sys){ setDrillSystem((store.drillSys && SYSTEMS.some(s=>s.id===store.drillSys)) ? store.drillSys : nextDueId()); }
-  const s = SYSTEMS.find(x=>x.id===drillState.sys) || SYSTEMS[0];
+  if(!drillState.sys || !DRILL_SYSTEMS.some(s=>s.id===drillState.sys)){
+    setDrillSystem((store.drillSys && DRILL_SYSTEMS.some(s=>s.id===store.drillSys)) ? store.drillSys : nextDueId());
+  }
+  const s = DRILL_SYSTEMS.find(x=>x.id===drillState.sys) || DRILL_SYSTEMS[0];
   drillState.sys = s.id; store.drillSys = s.id; saveStore();
-  const options = SYSTEMS.map(x=>{
-    const dot = HEALTH_DOT[systemHealth(x.id)] || '⚪';
-    return `<option value="${x.id}" ${x.id===s.id?'selected':''}>${dot} ${esc(x.name)}${isDue(x.id)?' • due':''}</option>`;
+  const cards = DRILL_SYSTEMS.map(x=>{
+    const health = systemHealth(x.id);
+    const badge = isDue(x.id) ? 'due now' : health ? `box ${srsOf(x.id).box}` : 'not drilled yet';
+    return `<button class="sys-card${x.id===s.id?' picked':''}" data-drillsys="${x.id}">
+      <div class="sc-name"><span class="sc-dot" style="background:${x.color}"></span>${esc(x.name)}</div>
+      <div class="sc-scaffold">${HEALTH_DOT[health]||'⚪'} ${esc(badge)}</div>
+    </button>`;
   }).join('');
   const r = srsOf(s.id);
   const badge = isDue(s.id)
@@ -974,8 +1072,8 @@ function renderDrillScreen(){
     <p class="mode-lede">Active recall. Pick a system, recite it aloud from memory, then reveal and tap ✓ next to every question you got right — anything left unchecked counts as forgotten. The app schedules the system's next review and tracks which questions you commonly forget.</p>
     ${drillModeSwitchHTML()}
     ${srsStripHTML()}
-    <label style="font-size:.82rem;color:var(--ink-faint);font-family:var(--mono);letter-spacing:.05em;text-transform:uppercase">System</label>
-    <select id="drillSel" style="display:block;margin:6px 0 16px;padding:10px 12px;border-radius:9px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-family:var(--sans);font-size:.95rem;width:100%;max-width:360px">${options}</select>
+    <div class="drill-picker-lbl">Pick a system</div>
+    <div class="sys-grid" style="margin-bottom:18px">${cards}</div>
     <div class="drill-card">
       <div class="drill-sys"><span class="sc-dot" style="background:${s.color}"></span><h3>${esc(s.name)}</h3>${healthBadge}${badge}</div>
       <p class="drill-prompt">Before revealing: name the scaffold${s.sections?'s':' chunks'}, then every screening question. Say them aloud.</p>
@@ -988,7 +1086,7 @@ function renderDrillScreen(){
     </div>
     ${disclaimer()}`;
   wireDrillModeSwitch();
-  document.getElementById('drillSel').addEventListener('change',e=>{ setDrillSystem(e.target.value); renderDrill(); });
+  app.querySelectorAll('[data-drillsys]').forEach(b=>b.addEventListener('click',()=>{ setDrillSystem(b.dataset.drillsys); renderDrill(); window.scrollTo(0,0); }));
   document.getElementById('revealBtn').addEventListener('click',()=>{
     drillState.revealed = !drillState.revealed;
     if(!drillState.revealed) drillState.checked = new Set();
